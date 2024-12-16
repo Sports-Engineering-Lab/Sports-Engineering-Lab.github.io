@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Engineering Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <script src="js/carousel.js" defer></script>
 </head>
 <body>
     <div class="top-bar">
         <div class="top-bar__container">
-            <a href="https://www.snu.ac.kr/" class="top-bar__logo">Seoul National University</a>
             <div class="top-bar__links">
+                <a href="https://www.snu.ac.kr/">Seoul National University</a>
                 <a href="https://sports.snu.ac.kr/">Department of Physical Education</a>
             </div>
         </div>
     </div>
 
-    <h1><img src="images/logo.png" alt="Sports Engineering Lab Logo"></h1>
+    <h1 style="margin-left: 5%;">
+        <a href="/">
+            <img src="assets/SEL_logo.png" alt="Sports Engineering Lab Logo" style="width: 25vw; min-width: 200px; max-width: 400px; height: auto;">
+        </a>
+    </h1>
     <nav class="main-nav">
         <ul>
             <li><a href="/">Home</a></li>
@@ -26,24 +33,21 @@
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="carousel-container">
+    <div class="carousel-container" style="max-width: 100%; margin: 0;">
         <div class="carousel">
             <div class="carousel-slide">
-                <img src="images/lab1.jpg" alt="Lab View 1">
+                <img src="assets/images/sample_image_1.jpg" alt="Lab View 1">
             </div>
             <div class="carousel-slide">
-                <img src="images/lab2.jpg" alt="Lab View 2"> 
+                <img src="assets/images/sample_image_2.jpg" alt="Lab View 2">
             </div>
             <div class="carousel-slide">
-                <img src="images/lab3.jpg" alt="Lab Equipment">
+                <img src="assets/images/sample_image_3.jpg" alt="Lab Equipment">
             </div>
             <div class="carousel-slide">
-                <img src="images/lab4.jpg" alt="Lab Members">
+                <img src="assets/images/sample_image_4.jpg" alt="Lab Members">
             </div>
         </div>
-        
-        <button class="carousel-button prev">&#10094;</button>
-        <button class="carousel-button next">&#10095;</button>
         
         <div class="carousel-dots">
             <span class="dot active"></span>
@@ -53,7 +57,24 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="css/carousel.css">
-    <script src="js/carousel.js"></script>
+    <div class="mission-statement">
+        <h2>We are dedicated to</h2>
+        <ul>
+            <li>Enhancing sports performance</li>
+            <li>Improving human motor function</li>
+            <li>Understanding human motor control</li>
+            <li>Quantifying human motor perfomance</li>
+        </ul>
+        
+        <div class="professor-quote">
+            <blockquote>
+                "We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, 
+                EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are 
+                the students. They are the 'Avengers' in the field of sports engineering, who have strong passion 
+                and expertise in either kinesiology, engineering or both."
+            </blockquote>
+            <cite>- Prof. Ahn</cite>
+        </div>
+    </div>
 </body>
 </html>
