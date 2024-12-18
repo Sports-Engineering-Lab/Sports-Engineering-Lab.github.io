@@ -12,7 +12,10 @@ async function parseMemberMD(filename) {
             name: lines[0].replace('# ', ''),
             category: '',
             photo: '',
-            position: []
+            position: [],
+            bio: [],  // Bio 섹션을 저장할 배열 추가
+            contact: {},
+            links: []
         };
 
         // 카테고리 체크
@@ -20,8 +23,16 @@ async function parseMemberMD(filename) {
                            'Doctoral Students', "Master's Students", 
                            'Undergraduate Students', 'Lab Alumni'];
         
+        let currentSection = '';
+        
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
+            
+            // 섹션 헤더 확인
+            if (line.startsWith('##')) {
+                currentSection = line.replace('##', '').trim();
+                continue;
+            }
             
             // 카테고리 찾기
             if (line.includes('[x]')) {
@@ -33,30 +44,46 @@ async function parseMemberMD(filename) {
                 }
             }
             
-            // 사진 찾기
-            if (line.startsWith('## Photo')) {
-                // 다음 비어있지 않은 줄을 찾아서 파일명으로 사용
-                let j = i + 1;
-                while (j < lines.length && !lines[j].trim()) {
-                    j++;
-                }
-                if (j < lines.length) {
-                    member.photo = lines[j].trim();
-                }
-            }
-            
-            // 직위 찾기
-            if (line.startsWith('## Position')) {
-                let j = i + 1;
-                while (j < lines.length && !lines[j].startsWith('##')) {
-                    const pos = lines[j].trim();
-                    if (pos) {
-                        // 쉼표로 구분된 직위를 분리하여 각각 추가
-                        const positions = pos.split(',').map(p => p.trim());
+            switch (currentSection) {
+                case 'Photo':
+                    if (line && !line.startsWith('<!--')) {
+                        member.photo = line;
+                    }
+                    break;
+                    
+                case 'Position':
+                    if (line && !line.startsWith('<!--')) {
+                        const positions = line.split(',').map(p => p.trim());
                         member.position.push(...positions);
                     }
-                    j++;
-                }
+                    break;
+                    
+                case 'Bio':
+                    // Bio 항목 파싱 (불릿 포인트로 시작하는 라인)
+                    if (line.startsWith('-') && !line.startsWith('<!--')) {
+                        member.bio.push(line.substring(2).trim());
+                    }
+                    break;
+                    
+                case 'Contact':
+                    if (line && !line.startsWith('<!--')) {
+                        const [key, value] = line.split(':').map(s => s.trim());
+                        if (key && value) {
+                            member.contact[key] = value;
+                        }
+                    }
+                    break;
+                    
+                case 'Link':
+                    // 마크다운 링크 형식 파싱
+                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+                    if (linkMatch && !line.startsWith('<!--')) {
+                        member.links.push({
+                            title: linkMatch[1],
+                            url: linkMatch[2]
+                        });
+                    }
+                    break;
             }
         }
         
@@ -72,11 +99,11 @@ function addMemberToSection(member, category) {
     const section = document.querySelector(`[data-category="${category}"]`);
     if (!section) return;
 
-    console.log('Adding member:', member);  // 디버깅: 멤버 정보 출력
-    console.log('Photo path:', `../assets/people/photos/${member.photo}`);  // 디버깅: 이미지 경로 출력
+    console.log('Adding member:', member);
 
     const memberElement = document.createElement('div');
     memberElement.className = 'person';
+
     memberElement.innerHTML = `
         <a href="member.html?name=${encodeURIComponent(member.name)}">
             <img src="../assets/people/photos/${member.photo}" 
@@ -91,7 +118,7 @@ function addMemberToSection(member, category) {
     section.querySelector('.people-grid').appendChild(memberElement);
 }
 
-// ��이지 로드 시 실행
+// 이지 로드 시 실행
 async function initializePeoplePage() {
     try {
         // members.json 파일 로드
@@ -103,6 +130,9 @@ async function initializePeoplePage() {
         
         // 각 멤버의 마크다운 파일 파싱
         for (const filename of data.members) {
+            // profile_format.md 파일은 건너뛰기
+            if (filename === 'profile_format.md') continue;
+            
             const member = await parseMemberMD(filename);
             if (member && member.category) {
                 addMemberToSection(member, member.category);

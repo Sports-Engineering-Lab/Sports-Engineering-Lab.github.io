@@ -14,73 +14,62 @@ async function parseMemberMD(memberName) {
         name: lines[0].replace('# ', ''),
         photo: '',
         position: [],
+        bio: [],
         contact: {},
         links: [],
         description: ''
     };
 
     let currentSection = '';
+    let descriptionLines = [];
     
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
         
-        if (line.startsWith('## Photo')) {
-            // 다음 비어있지 않은 줄을 찾아서 파일명으로 사용
-            let j = i + 1;
-            while (j < lines.length && !lines[j].trim()) {
-                j++;
-            }
-            if (j < lines.length) {
-                member.photo = lines[j].trim();
-            }
+        if (line.startsWith('##')) {
+            currentSection = line.replace('##', '').trim();
+            continue;
         }
-        else if (line.startsWith('## Position')) {
-            currentSection = 'position';
-        }
-        else if (line.startsWith('## Contact')) {
-            currentSection = 'contact';
-        }
-        else if (line.startsWith('## Link')) {
-            currentSection = 'links';
-        }
-        else if (line.startsWith('## Description')) {
-            currentSection = 'description';
-        }
-        else if (line && !line.startsWith('#')) {
+
+        if (line && !line.startsWith('<!--')) {
             switch (currentSection) {
-                case 'position':
-                    if (line) {
-                        // 쉼표로 구분된 직위를 분리하여 각각 추가
-                        const positions = line.split(',').map(p => p.trim());
-                        member.position.push(...positions);
+                case 'Photo':
+                    member.photo = line;
+                    break;
+                case 'Position':
+                    const positions = line.split(',').map(p => p.trim());
+                    member.position.push(...positions);
+                    break;
+                case 'Bio':
+                    if (line.startsWith('-')) {
+                        member.bio.push(line.substring(2).trim());
                     }
                     break;
-                case 'contact':
-                    if (line) {
-                        const [key, value] = line.split(':').map(s => s.trim());
+                case 'Contact':
+                    const [key, value] = line.split(':').map(s => s.trim());
+                    if (key && value) {
                         member.contact[key] = value;
                     }
                     break;
-                case 'links':
-                    if (line.includes('[')) {
-                        const matches = line.match(/\[(.*?)\]\((.*?)\)/);
-                        if (matches) {
-                            member.links.push({
-                                name: matches[1],
-                                url: matches[2]
-                            });
-                        }
+                case 'Link':
+                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+                    if (linkMatch) {
+                        member.links.push({
+                            title: linkMatch[1],
+                            url: linkMatch[2]
+                        });
                     }
                     break;
-                case 'description':
+                case 'Description':
                     if (line) {
-                        member.description += line + '\n';
+                        descriptionLines.push(line);
                     }
                     break;
             }
         }
     }
     
+    member.description = descriptionLines.join('\n');
     return member;
 }
 
@@ -88,39 +77,161 @@ async function parseMemberMD(memberName) {
 function displayMemberProfile(member) {
     const profileSection = document.querySelector('.member-profile');
     
-    profileSection.innerHTML = `
-        <div class="member-header">
-            <img src="../assets/people/photos/${member.photo}" 
-                 alt="${member.name}"
-                 onerror="console.error('Image failed to load:', this.src)"
-                 onload="console.log('Image loaded successfully:', this.src)">
-            <h2>${member.name}</h2>
-            ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
+    const topSectionHTML = `
+        <div class="top-section">
+            <div class="profile-left">
+                <img src="../assets/people/photos/${member.photo}" 
+                     alt="${member.name}"
+                     onerror="console.error('Image failed to load:', this.src)"
+                     onload="console.log('Image loaded successfully:', this.src)">
+                <h2>${member.name}</h2>
+                ${member.position.join('<br>')}
+            </div>
+            <div class="profile-right">
+                <div class="member-bio">
+                    <h3>Bio</h3>
+                    <ul>
+                        ${member.bio.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="member-info">
-            <div class="member-contact">
-                <h3>Contact</h3>
-                ${Object.entries(member.contact).map(([key, value]) => 
-                    `<p><strong>${key}:</strong> ${value}</p>`
-                ).join('')}
-            </div>
-            
-            <div class="member-links">
-                <h3>Links</h3>
-                ${member.links.map(link => 
-                    `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.name}</a>`
-                ).join(' | ')}
-            </div>
-            
-            <div class="member-description">
-                <h3>About</h3>
+    `;
+
+    const bottomSectionHTML = `
+        <div class="bottom-section">
+            <div class="description-content">
                 ${member.description.split('\n').map(para => 
                     para ? `<p>${para}</p>` : ''
                 ).join('')}
             </div>
+            <div class="side-info">
+                <div class="member-contact">
+                    <h3>Contact</h3>
+                    ${Object.entries(member.contact).map(([key, value]) => 
+                        `<p><strong>${key}:</strong> ${value}</p>`
+                    ).join('')}
+                </div>
+                <div class="member-links">
+                    <h3>Links</h3>
+                    ${member.links.map(link => 
+                        `<a href="${link.url}" target="_blank">${link.title}</a>`
+                    ).join(' | ')}
+                </div>
+            </div>
         </div>
     `;
+
+    profileSection.innerHTML = topSectionHTML + bottomSectionHTML;
+
+    const style = document.createElement('style');
+    style.textContent = `
+        .top-section {
+            display: grid;
+            grid-template-columns: 1.2fr 3fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .profile-left {
+            text-align: center;
+        }
+        .profile-left img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .profile-left h2 {
+            margin-bottom: 0.5rem;
+        }
+        .position {
+            margin: 0.3rem 0;
+            color: #666;
+            white-space: nowrap;
+            overflow: visible;
+        }
+        .member-bio h3,
+        .member-contact h3,
+        .member-links h3 {
+            color: #8B0000;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .member-bio ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .member-bio li {
+            margin-bottom: 0.5rem;
+        }
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description-content {
+            line-height: 1.6;
+        }
+        .description-content p {
+            margin-bottom: 1.5rem;
+        }
+        .description-content p:last-child {
+            margin-bottom: 0;
+        }
+        .side-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .member-contact {
+            margin-top: 0.3rem;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            margin-bottom: 2rem;
+        }
+        .member-links {
+            margin-top: 0.3rem;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+        }
+        .member-contact p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .member-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .member-links a:hover {
+            text-decoration: underline;
+        }
+        .profile-right {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+        }
+        .member-bio {
+            width: 100%;
+        }
+        .member-contact p strong {
+            font-size: 0.9rem;
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // 페이지 로드 시 실행
