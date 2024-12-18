@@ -25,7 +25,14 @@ async function parseMemberMD(memberName) {
         const line = lines[i].trim();
         
         if (line.startsWith('## Photo')) {
-            member.photo = lines[i + 1].trim();
+            // 다음 비어있지 않은 줄을 찾아서 파일명으로 사용
+            let j = i + 1;
+            while (j < lines.length && !lines[j].trim()) {
+                j++;
+            }
+            if (j < lines.length) {
+                member.photo = lines[j].trim();
+            }
         }
         else if (line.startsWith('## Position')) {
             currentSection = 'position';
@@ -42,7 +49,11 @@ async function parseMemberMD(memberName) {
         else if (line && !line.startsWith('#')) {
             switch (currentSection) {
                 case 'position':
-                    if (line) member.position.push(line);
+                    if (line) {
+                        // 쉼표로 구분된 직위를 분리하여 각각 추가
+                        const positions = line.split(',').map(p => p.trim());
+                        member.position.push(...positions);
+                    }
                     break;
                 case 'contact':
                     if (line) {
@@ -79,7 +90,10 @@ function displayMemberProfile(member) {
     
     profileSection.innerHTML = `
         <div class="member-header">
-            <img src="../assets/people/photos/${member.photo}" alt="${member.name}">
+            <img src="../assets/people/photos/${member.photo}" 
+                 alt="${member.name}"
+                 onerror="console.error('Image failed to load:', this.src)"
+                 onload="console.log('Image loaded successfully:', this.src)">
             <h2>${member.name}</h2>
             ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
         </div>

@@ -35,7 +35,14 @@ async function parseMemberMD(filename) {
             
             // 사진 찾기
             if (line.startsWith('## Photo')) {
-                member.photo = lines[i + 1].trim();
+                // 다음 비어있지 않은 줄을 찾아서 파일명으로 사용
+                let j = i + 1;
+                while (j < lines.length && !lines[j].trim()) {
+                    j++;
+                }
+                if (j < lines.length) {
+                    member.photo = lines[j].trim();
+                }
             }
             
             // 직위 찾기
@@ -43,7 +50,11 @@ async function parseMemberMD(filename) {
                 let j = i + 1;
                 while (j < lines.length && !lines[j].startsWith('##')) {
                     const pos = lines[j].trim();
-                    if (pos) member.position.push(pos);
+                    if (pos) {
+                        // 쉼표로 구분된 직위를 분리하여 각각 추가
+                        const positions = pos.split(',').map(p => p.trim());
+                        member.position.push(...positions);
+                    }
                     j++;
                 }
             }
@@ -61,11 +72,17 @@ function addMemberToSection(member, category) {
     const section = document.querySelector(`[data-category="${category}"]`);
     if (!section) return;
 
+    console.log('Adding member:', member);  // 디버깅: 멤버 정보 출력
+    console.log('Photo path:', `../assets/people/photos/${member.photo}`);  // 디버깅: 이미지 경로 출력
+
     const memberElement = document.createElement('div');
     memberElement.className = 'person';
     memberElement.innerHTML = `
         <a href="member.html?name=${encodeURIComponent(member.name)}">
-            <img src="../assets/people/photos/${member.photo}" alt="${member.name}">
+            <img src="../assets/people/photos/${member.photo}" 
+                 alt="${member.name}"
+                 onerror="console.error('Image failed to load:', this.src)"
+                 onload="console.log('Image loaded successfully:', this.src)">
             <h3>${member.name}</h3>
             ${member.position.map(pos => `<p>${pos}</p>`).join('')}
         </a>
@@ -74,7 +91,7 @@ function addMemberToSection(member, category) {
     section.querySelector('.people-grid').appendChild(memberElement);
 }
 
-// 페이지 로드 시 실행
+// ��이지 로드 시 실행
 async function initializePeoplePage() {
     try {
         // members.json 파일 로드

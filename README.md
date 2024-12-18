@@ -13,3 +13,8 @@
 ## Photos 추가 방법
 
 1. 
+
+## 제작자(문의) 정보
+
+이준혁
+Email: jmjh98@snu.ac.kr

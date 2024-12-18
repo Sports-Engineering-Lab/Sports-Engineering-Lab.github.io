@@ -297,18 +297,24 @@ h1 a:hover {
 }
 
 .person {
+    width: 300px;
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
+}
+
+.person a {
+    text-decoration: none;
+    display: block;
 }
 
 .person img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
 .person h3 {
@@ -323,6 +329,7 @@ h1 a:hover {
     margin-bottom: 5px;
     font-size: 1.1em;
     line-height: 1.4;
+    padding: 0 10px;
 }
 
 .person-links {
@@ -342,10 +349,11 @@ h1 a:hover {
 }
 
 .people-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
+    justify-content: center;
 }
 
 .alumni-list {
@@ -746,5 +754,32 @@ h1 a:hover {
 @media (max-width: 768px) {
     .member-info {
         grid-template-columns: 1fr;
+    }
+} 
+
+/* 그리드 아이템이 한 줄에 3개까지만 표시되도록 설정 */
+@media (min-width: 1200px) {
+    .people-grid {
+        max-width: 960px; /* 300px * 3 + 30px * 2(gap) */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 화면이 작을 때는 2개씩 표시 */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .people-grid {
+        max-width: 630px; /* 300px * 2 + 30px */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 모바일에서는 1개씩 표시 */
+@media (max-width: 767px) {
+    .people-grid {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 } 
