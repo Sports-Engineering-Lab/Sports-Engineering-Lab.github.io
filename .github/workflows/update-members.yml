@@ -1,0 +1,32 @@
+name: Update Members List
+
+on:
+  push:
+    paths:
+      - 'assets/people/*.md'  # .md 파일이 변경될 때만 실행
+    branches:
+      - main  # 또는 master
+
+jobs:
+  update-members:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Update members list
+        run: python scripts/update_members.py
+        
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/people/members.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update members list"
+          git push 

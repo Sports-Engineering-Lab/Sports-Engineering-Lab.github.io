@@ -269,17 +269,31 @@ h1 a:hover {
     padding: 0 20px;
 }
 
-.people-section h2 {
+.people-category {
+    margin-bottom: 60px;
+}
+
+.people-category h2 {
     color: #333;
     font-size: 2em;
     font-weight: 300;
     margin-bottom: 40px;
     text-align: center;
     letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-.faculty {
-    margin-bottom: 60px;
+.people-category h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8C001A, transparent);
+    box-shadow: 0 2px 4px rgba(140, 0, 26, 0.1);
 }
 
 .person {
@@ -327,15 +341,11 @@ h1 a:hover {
     color: #bf0023;
 }
 
-.students-grid {
+.people-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 30px;
-}
-
-.alumni {
-    margin-top: 60px;
 }
 
 .alumni-list {
@@ -638,4 +648,103 @@ h1 a:hover {
     content: "↑";
     font-size: 24px;
     font-weight: bold;
+} 
+
+/* Member Profile Page Styles */
+.member-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.member-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.member-header img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-header h2 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.member-header .position {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.member-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.member-info h3 {
+    color: #8C001A;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.member-contact, .member-links {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-contact p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.member-contact strong {
+    color: #444;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.member-links a {
+    color: #8C001A;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.member-links a:hover {
+    color: #bf0023;
+}
+
+.member-description {
+    grid-column: 1 / -1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-description p {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .member-info {
+        grid-template-columns: 1fr;
+    }
 } 
