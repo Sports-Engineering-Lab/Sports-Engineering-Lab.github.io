@@ -9,8 +9,8 @@
 - [ ] Undergraduate Students
 - [x] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
   - [ ] Postdoctoral Alumni
-  - [x] Doctoral Alumni
-  - [ ] Master's Alumni
+  - [ ] Doctoral Alumni
+  - [x] Master's Alumni
   - [ ] Undergraduate Alumni
 
 ## Photo

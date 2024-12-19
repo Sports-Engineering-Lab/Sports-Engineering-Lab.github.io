@@ -53,13 +53,23 @@ async function parseMemberMD(filename) {
                         member.category = category;
                         // Alumni인 경우 타입 체크
                         if (category === 'Alumni') {
-                            // 다음 라인들을 확인하여 Alumni 타입 찾기
-                            for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
+                            // Alumni 타입 체크를 위해 현재 위치부터 검사
+                            let j = i;
+                            while (j < lines.length) {
                                 const alumniLine = lines[j].trim();
-                                if (alumniLine.includes('[x]')) {
-                                    member.alumniType = alumniLine.replace('-', '').replace('[x]', '').trim();
-                                    break;
+                                
+                                if (alumniLine.includes('[x]') && 
+                                    (alumniLine.includes('Postdoctoral Alumni') ||
+                                     alumniLine.includes('Doctoral Alumni') ||
+                                     alumniLine.includes("Master's Alumni") ||
+                                     alumniLine.includes('Undergraduate Alumni'))) {
+                                    const match = alumniLine.match(/- \[x\] (.*?) Alumni/);
+                                    if (match) {
+                                        member.alumniType = match[1].trim();
+                                        break;
+                                    }
                                 }
+                                j++;
                             }
                         }
                         break;
@@ -84,7 +94,7 @@ async function parseMemberMD(filename) {
                     break;
                     
                 case 'Bio':
-                    // Bio 항목 파싱 (불릿 포인트로 시작하는 라인)
+                    // Bio 항목 파싱 (불릿 �����로 시작하는 라인)
                     if (line.startsWith('-')) {
                         member.bio.push(line.substring(2).trim());
                     }
@@ -122,20 +132,17 @@ function addMemberToSection(member, category) {
     const section = document.querySelector(`[data-category="${category}"]`);
     if (!section) return;
 
-    console.log('Adding member:', member);
-
     const memberElement = document.createElement('div');
     memberElement.className = 'person';
 
     memberElement.innerHTML = `
         <a href="member.html?name=${encodeURIComponent(member.name)}">
             <img src="../assets/people/photos/${member.photo}" 
-                 alt="${member.name}"
-                 onerror="console.error('Image failed to load:', this.src)"
-                 onload="console.log('Image loaded successfully:', this.src)">
+                 alt="${member.name}">
             <h3>${member.name}</h3>
+            ${member.category === 'Alumni' && member.alumniType ? 
+                `<p class="alumni-type">${member.alumniType} ${member.category}</p>` : ''}
             ${member.position.map(pos => `<p>${pos}</p>`).join('')}
-            ${member.category === 'Alumni' && member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
         </a>
     `;
     
@@ -167,5 +174,117 @@ async function initializePeoplePage() {
     }
 }
 
+// URL에서 멤버 이름을 가져오는 함수
+function getMemberNameFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('name');
+}
+
 // 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', initializePeoplePage); 
+document.addEventListener('DOMContentLoaded', async () => {
+    // member.html 페이지 체크를 더 유연하게 수정
+    if (window.location.pathname.endsWith('member.html') || 
+        window.location.pathname.includes('/member.html')) {
+        const memberName = getMemberNameFromURL();
+        console.log('Member name from URL:', memberName);
+        
+        // member-detail 요소 존재 확인
+        const memberDetailElement = document.querySelector('.member-detail');
+        if (!memberDetailElement) {
+            console.error('Could not find .member-detail element');
+            return;
+        }
+        
+        if (memberName) {
+            try {
+                await displayMemberDetail(memberName);
+            } catch (error) {
+                console.error('Error in displayMemberDetail:', error);
+            }
+        } else {
+            console.error('No member name provided in URL');
+        }
+    } else {
+        // people.html 페이지인 경우
+        await initializePeoplePage();
+    }
+});
+
+// 기존의 페이지 로드 이벤트 리스너는 제거
+// document.addEventListener('DOMContentLoaded', initializePeoplePage);
+
+function displayMembers(members) {
+    members.forEach(member => {
+        let categoryDisplay = member.category;
+        if (member.category === 'Alumni' && member.alumniType) {
+            categoryDisplay = `${member.alumniType} ${member.category}`;
+        }
+        
+        // 멤버 표시 로직...
+    });
+} 
+
+// 멤버 상세 정보를 표시하는 함수 수정
+async function displayMemberDetail(memberName) {
+    try {
+        console.log('Loading member detail for:', memberName);
+        const response = await fetch(`../assets/people/${memberName}.md`);
+        if (!response.ok) {
+            console.error('Failed to fetch member file:', response.status);
+            throw new Error('Member file not found');
+        }
+        
+        const content = await response.text();
+        console.log('Loaded markdown content:', content);
+        
+        const member = await parseMemberMD(`${memberName}.md`);
+        console.log('Parsed member data:', member);
+        
+        if (!member) {
+            throw new Error('Failed to parse member data');
+        }
+        
+        const memberDetailElement = document.querySelector('.member-detail');
+        if (!memberDetailElement) {
+            throw new Error('Could not find .member-detail element');
+        }
+        
+        memberDetailElement.innerHTML = `
+            <div class="member-header">
+                <img src="../assets/people/photos/${member.photo}" alt="${member.name}">
+                <div class="member-info">
+                    <h1>${member.name}</h1>
+                    ${member.category === 'Alumni' && member.alumniType ? 
+                        `<p class="alumni-type">${member.alumniType} ${member.category}</p>` : ''}
+                    ${member.position.map(pos => `<p>${pos}</p>`).join('')}
+                </div>
+            </div>
+            <div class="member-contact">
+                ${Object.entries(member.contact).map(([key, value]) => 
+                    `<p><strong>${key}:</strong> ${value}</p>`
+                ).join('')}
+            </div>
+            ${member.links.length > 0 ? `
+                <div class="member-links">
+                    ${member.links.map(link => 
+                        `<a href="${link.url}" target="_blank">${link.title}</a>`
+                    ).join(' | ')}
+                </div>
+            ` : ''}
+            <div class="member-bio">
+                <h2>Bio</h2>
+                <ul>
+                    ${member.bio.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    } catch (error) {
+        console.error('Error in displayMemberDetail:', error);
+        document.querySelector('.member-detail').innerHTML = `
+            <div class="error-message">
+                <h2>Error loading member details</h2>
+                <p>${error.message}</p>
+            </div>
+        `;
+    }
+} 
