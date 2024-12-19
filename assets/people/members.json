@@ -1,6 +1,5 @@
-[
-  {
-    "name": "Jooeun Ahn",
-    "email": "ahnjooeun@snu.ac.kr"
-  }
-]
+{
+    "members": [
+        "Jooeun Ahn.md"
+    ]
+}
