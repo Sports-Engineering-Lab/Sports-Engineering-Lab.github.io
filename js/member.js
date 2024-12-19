@@ -77,6 +77,13 @@ async function parseMemberMD(memberName) {
 function displayMemberProfile(member) {
     const profileSection = document.querySelector('.member-profile');
     
+    // Go back 버튼 추가
+    const goBackButton = document.createElement('a');
+    goBackButton.href = 'people.html';
+    goBackButton.className = 'go-back-btn';
+    goBackButton.innerHTML = '← Go back';
+    document.querySelector('main').prepend(goBackButton);
+    
     const topSectionHTML = `
         <div class="top-section">
             <div class="profile-left">
@@ -230,6 +237,20 @@ function displayMemberProfile(member) {
         .member-contact p strong {
             font-size: 0.9rem;
         }
+        .go-back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .go-back-btn:hover {
+            background-color: #e9ecef;
+        }
     `;
     document.head.appendChild(style);
 }
@@ -254,3 +275,23 @@ async function initializeMemberPage() {
 
 // 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', initializeMemberPage); 
+
+function createMemberPage(memberData) {
+    return `
+    <div class="member-container">
+        <a href="people.html" class="go-back-btn">← Go back</a>
+        
+        <div class="member-profile">
+            <!-- 기존 멤버 프로필 내용 -->
+            <h1>${memberData.name}</h1>
+            <p class="position">${memberData.position || ''}</p>
+            <p class="email">${memberData.email || ''}</p>
+            <p class="interests"><strong>Research Interests:</strong> ${memberData.interests || ''}</p>
+            <div class="education">
+                <strong>Education:</strong>
+                <p>${memberData.education || ''}</p>
+            </div>
+        </div>
+    </div>
+    `;
+} 
