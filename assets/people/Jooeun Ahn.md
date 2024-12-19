@@ -42,7 +42,7 @@ Telephone: +82-2-880-7785
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->
-Jooeun Ahn is a professor at Seoul National University. Her research focuses on sports biomechanics and engineering, utilizing various cutting-edge equipment and technologies to understand human movement and performance.
+Jooeun Ahn is a professor at Seoul National University. Her research focuses on sports biomechanics and engineering, utilizing various cutting-edge equipment and technologies to understand human movement and performance. test test. github actions test.
 
 We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both.
 
