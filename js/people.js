@@ -22,7 +22,7 @@ async function parseMemberMD(filename) {
         // 카테고리 체크
         const categories = ['Principal Investigator', 'Postdoctoral researcher', 
                            'Doctoral Students', "Master's Students", 
-                           'Undergraduate Students', 'Lab Alumni'];
+                           'Undergraduate Students', 'Alumni'];
         
         let currentSection = '';
         
@@ -52,7 +52,7 @@ async function parseMemberMD(filename) {
                     if (line.includes(category)) {
                         member.category = category;
                         // Alumni인 경우 타입 체크
-                        if (category === 'Lab Alumni') {
+                        if (category === 'Alumni') {
                             // 다음 라인들을 확인하여 Alumni 타입 찾기
                             for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
                                 const alumniLine = lines[j].trim();
@@ -135,7 +135,7 @@ function addMemberToSection(member, category) {
                  onload="console.log('Image loaded successfully:', this.src)">
             <h3>${member.name}</h3>
             ${member.position.map(pos => `<p>${pos}</p>`).join('')}
-            ${member.category === 'Lab Alumni' && member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
+            ${member.category === 'Alumni' && member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
         </a>
     `;
     

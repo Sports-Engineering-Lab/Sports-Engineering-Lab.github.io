@@ -44,7 +44,7 @@ async function parseMemberMD(memberName) {
         }
 
         // Alumni 타입 체크
-        if (line.includes('Lab Alumni') && line.includes('[x]')) {
+        if (line.includes('Alumni') && line.includes('[x]')) {
             for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
                 const alumniLine = lines[j].trim();
                 if (alumniLine.includes('[x]')) {
