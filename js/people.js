@@ -9,13 +9,14 @@ async function parseMemberMD(filename) {
         const lines = text.split('\n');
         
         const member = {
-            name: lines[0].replace('# ', ''),
+            name: '',
             category: '',
             photo: '',
             position: [],
             bio: [],  // Bio 섹션을 저장할 배열 추가
             contact: {},
-            links: []
+            links: [],
+            alumniType: '' // Alumni 타입을 저장할 필드 추가
         };
 
         // 카테고리 체크
@@ -28,6 +29,17 @@ async function parseMemberMD(filename) {
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             
+            // 주석 라인 무시
+            if (line.startsWith('<!--') || line.includes('-->')) {
+                continue;
+            }
+            
+            // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
+            if (line.startsWith('# ') && !member.name) {
+                member.name = line.replace('# ', '');
+                continue;
+            }
+            
             // 섹션 헤더 확인
             if (line.startsWith('##')) {
                 currentSection = line.replace('##', '').trim();
@@ -39,45 +51,56 @@ async function parseMemberMD(filename) {
                 for (const category of categories) {
                     if (line.includes(category)) {
                         member.category = category;
+                        // Alumni인 경우 타입 체크
+                        if (category === 'Lab Alumni') {
+                            // 다음 라인들을 확인하여 Alumni 타입 찾기
+                            for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
+                                const alumniLine = lines[j].trim();
+                                if (alumniLine.includes('[x]')) {
+                                    member.alumniType = alumniLine.replace('-', '').replace('[x]', '').trim();
+                                    break;
+                                }
+                            }
+                        }
                         break;
                     }
                 }
+                continue;
+            }
+            
+            // 빈 라인이나 주석 라인 무시
+            if (!line || line.startsWith('<!--')) {
+                continue;
             }
             
             switch (currentSection) {
                 case 'Photo':
-                    if (line && !line.startsWith('<!--')) {
-                        member.photo = line;
-                    }
+                    member.photo = line;
                     break;
                     
                 case 'Position':
-                    if (line && !line.startsWith('<!--')) {
-                        const positions = line.split(',').map(p => p.trim());
-                        member.position.push(...positions);
-                    }
+                    const positions = line.split(',').map(p => p.trim());
+                    member.position.push(...positions);
                     break;
                     
                 case 'Bio':
                     // Bio 항목 파싱 (불릿 포인트로 시작하는 라인)
-                    if (line.startsWith('-') && !line.startsWith('<!--')) {
+                    if (line.startsWith('-')) {
                         member.bio.push(line.substring(2).trim());
                     }
                     break;
                     
                 case 'Contact':
-                    if (line && !line.startsWith('<!--')) {
-                        const [key, value] = line.split(':').map(s => s.trim());
-                        if (key && value) {
-                            member.contact[key] = value;
-                        }
+                    const [key, value] = line.split(':').map(s => s.trim());
+                    if (key && value) {
+                        member.contact[key] = value;
                     }
                     break;
                     
                 case 'Link':
                     // 마크다운 링크 형식 파싱
                     const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
-                    if (linkMatch && !line.startsWith('<!--')) {
+                    if (linkMatch) {
                         member.links.push({
                             title: linkMatch[1],
                             url: linkMatch[2]
@@ -112,6 +135,7 @@ function addMemberToSection(member, category) {
                  onload="console.log('Image loaded successfully:', this.src)">
             <h3>${member.name}</h3>
             ${member.position.map(pos => `<p>${pos}</p>`).join('')}
+            ${member.category === 'Lab Alumni' && member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
         </a>
     `;
     

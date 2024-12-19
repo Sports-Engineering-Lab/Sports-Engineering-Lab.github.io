@@ -11,13 +11,14 @@ async function parseMemberMD(memberName) {
     const lines = text.split('\n');
     
     const member = {
-        name: lines[0].replace('# ', ''),
+        name: '',
         photo: '',
         position: [],
         bio: [],
         contact: {},
         links: [],
-        description: ''
+        description: '',
+        alumniType: ''
     };
 
     let currentSection = '';
@@ -26,46 +27,71 @@ async function parseMemberMD(memberName) {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
         
+        // 주석 라인 무시
+        if (line.startsWith('<!--') || line.includes('-->')) {
+            continue;
+        }
+        
+        // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
+        if (line.startsWith('# ') && !member.name) {
+            member.name = line.replace('# ', '');
+            continue;
+        }
+        
         if (line.startsWith('##')) {
             currentSection = line.replace('##', '').trim();
             continue;
         }
 
-        if (line && !line.startsWith('<!--')) {
-            switch (currentSection) {
-                case 'Photo':
-                    member.photo = line;
+        // Alumni 타입 체크
+        if (line.includes('Lab Alumni') && line.includes('[x]')) {
+            for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
+                const alumniLine = lines[j].trim();
+                if (alumniLine.includes('[x]')) {
+                    member.alumniType = alumniLine.replace('-', '').replace('[x]', '').trim();
                     break;
-                case 'Position':
-                    const positions = line.split(',').map(p => p.trim());
-                    member.position.push(...positions);
-                    break;
-                case 'Bio':
-                    if (line.startsWith('-')) {
-                        member.bio.push(line.substring(2).trim());
-                    }
-                    break;
-                case 'Contact':
-                    const [key, value] = line.split(':').map(s => s.trim());
-                    if (key && value) {
-                        member.contact[key] = value;
-                    }
-                    break;
-                case 'Link':
-                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
-                    if (linkMatch) {
-                        member.links.push({
-                            title: linkMatch[1],
-                            url: linkMatch[2]
-                        });
-                    }
-                    break;
-                case 'Description':
-                    if (line) {
-                        descriptionLines.push(line);
-                    }
-                    break;
+                }
             }
+        }
+
+        // 빈 라인이나 주석 라인 무시
+        if (!line || line.startsWith('<!--')) {
+            continue;
+        }
+
+        switch (currentSection) {
+            case 'Photo':
+                member.photo = line;
+                break;
+            case 'Position':
+                const positions = line.split(',').map(p => p.trim());
+                member.position.push(...positions);
+                break;
+            case 'Bio':
+                if (line.startsWith('-')) {
+                    member.bio.push(line.substring(2).trim());
+                }
+                break;
+            case 'Contact':
+                const [key, value] = line.split(':').map(s => s.trim());
+                if (key && value) {
+                    member.contact[key] = value;
+                }
+                break;
+            case 'Link':
+                const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+                if (linkMatch) {
+                    member.links.push({
+                        title: linkMatch[1],
+                        url: linkMatch[2]
+                    });
+                }
+                break;
+            case 'Description':
+                if (line) {
+                    descriptionLines.push(line);
+                }
+                break;
         }
     }
     
@@ -93,6 +119,7 @@ function displayMemberProfile(member) {
                      onload="console.log('Image loaded successfully:', this.src)">
                 <h2>${member.name}</h2>
                 ${member.position.join('<br>')}
+                ${member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
             </div>
             <div class="profile-right">
                 <div class="member-bio">

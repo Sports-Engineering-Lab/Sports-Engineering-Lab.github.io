@@ -332,6 +332,13 @@ h1 a:hover {
     padding: 0 10px;
 }
 
+.alumni-type {
+    color: #8C001A;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9em !important;
+}
+
 .person-links {
     margin-top: 20px;
 }
