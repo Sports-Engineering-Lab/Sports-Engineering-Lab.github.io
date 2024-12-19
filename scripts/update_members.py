@@ -1,30 +1,42 @@
 import os
 import json
+import re
 from pathlib import Path
 
-def update_members_list():
-    # 프로젝트 루트 디렉토리 찾기
-    script_dir = Path(__file__).parent
-    root_dir = script_dir.parent
-    people_dir = root_dir / 'assets' / 'people'
+def parse_md_file(file_path):
+    """마크다운 파일에서 멤버 정보를 추출"""
+    data = {}
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    # 파일 이름에서 이름 추출
+    name = os.path.splitext(os.path.basename(file_path))[0]
+    data['name'] = name
     
-    # .md 파일 목록 수집
+    # 기본 필드들 추출
+    fields = ['position', 'email', 'interests', 'education']
+    for field in fields:
+        match = re.search(f'{field}:\\s*(.+)', content, re.IGNORECASE)
+        if match:
+            data[field.lower()] = match.group(1).strip()
+    
+    return data
+
+def main():
+    # assets/people 디렉토리의 모든 .md 파일 처리
+    people_dir = Path('assets/people')
     members = []
-    for file_path in people_dir.glob('*.md'):
-        if file_path.name != 'README.md':  # README.md 제외
-            members.append(file_path.name)
     
-    # 알파벳 순으로 정렬
-    members.sort()
+    for md_file in people_dir.glob('*.md'):
+        if md_file.name != 'profile_format.md':  # 형식 파일 제외
+            member_data = parse_md_file(md_file)
+            if member_data:
+                members.append(member_data)
     
-    # members.json 파일 생성 또는 업데이트
+    # members.json 파일 생성
     output_file = people_dir / 'members.json'
-    with output_file.open('w', encoding='utf-8') as f:
-        json.dump({'members': members}, f, indent=2, ensure_ascii=False)
-    
-    print(f"멤버 목록이 업데이트되었습니다. 총 {len(members)}명의 멤버가 등록되어 있습니다.")
-    for member in members:
-        print(f"- {member}")
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(members, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':
-    update_members_list() 
+    main() 
