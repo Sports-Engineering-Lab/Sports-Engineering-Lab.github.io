@@ -142,13 +142,6 @@ async function parseMemberMD(memberName) {
 function displayMemberProfile(member) {
     const profileSection = document.querySelector('.member-profile');
     
-    // Go back 버튼 추가
-    const goBackButton = document.createElement('a');
-    goBackButton.href = 'people.html';
-    goBackButton.className = 'go-back-btn';
-    goBackButton.innerHTML = '← Go back';
-    document.querySelector('main').prepend(goBackButton);
-    
     const topSectionHTML = `
         <div class="top-section">
             <div class="profile-left">

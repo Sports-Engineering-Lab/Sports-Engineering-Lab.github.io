@@ -131,21 +131,4 @@
 
 .member-links a:hover {
     text-decoration: underline;
-}
-
-/* 뒤로가기 버튼 */
-.go-back-btn {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.go-back-btn:hover {
-    background-color: #e9ecef;
 } 
