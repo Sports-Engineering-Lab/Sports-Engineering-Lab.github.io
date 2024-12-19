@@ -1,0 +1,151 @@
+/* 레이아웃 */
+.top-section {
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 프로필 왼쪽 영역 */
+.profile-left {
+    text-align: center;
+}
+
+.profile-left img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-left h2 {
+    margin-bottom: 0.5rem;
+}
+
+.alumni-type {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.position {
+    margin: 0.3rem 0;
+    color: #666;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+/* 프로필 오른쪽 영역 */
+.profile-right {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.member-bio {
+    width: 100%;
+}
+
+/* 섹션 헤더 스타일 */
+.member-bio h3,
+.member-contact h3,
+.member-links h3 {
+    color: #8B0000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Bio 리스트 스타일 */
+.member-bio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.member-bio li {
+    margin-bottom: 0.5rem;
+}
+
+/* 설명 영역 */
+.description-content {
+    line-height: 1.6;
+}
+
+.description-content p {
+    margin-bottom: 1.5rem;
+}
+
+.description-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 사이드 정보 영역 */
+.side-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.member-contact,
+.member-links {
+    margin-top: 0.3rem;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.member-contact {
+    margin-bottom: 2rem;
+}
+
+.member-contact p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.member-contact p strong {
+    font-size: 0.9rem;
+}
+
+.member-links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.member-links a:hover {
+    text-decoration: underline;
+}
+
+/* 뒤로가기 버튼 */
+.go-back-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.go-back-btn:hover {
+    background-color: #e9ecef;
+} 

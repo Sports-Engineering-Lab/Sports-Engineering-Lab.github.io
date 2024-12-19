@@ -6,97 +6,136 @@ function getMemberNameFromURL() {
 
 // 마크다운 파일 파싱
 async function parseMemberMD(memberName) {
-    const response = await fetch(`../assets/people/${memberName}.md`);
-    const text = await response.text();
-    const lines = text.split('\n');
-    
-    const member = {
-        name: '',
-        photo: '',
-        position: [],
-        bio: [],
-        contact: {},
-        links: [],
-        description: '',
-        alumniType: ''
-    };
+    try {
+        const response = await fetch(`../assets/people/${memberName}.md`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch ${memberName}`);
+        }
+        const text = await response.text();
+        const lines = text.split('\n');
+        
+        const member = {
+            name: '',
+            category: '',
+            photo: '',
+            position: [],
+            bio: [],
+            contact: {},
+            links: [],
+            description: '',
+            alumniType: ''
+        };
 
-    let currentSection = '';
-    let descriptionLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
+        // 카테고리 체크
+        const categories = ['Principal Investigator', 'Postdoctoral researcher', 
+                           'Doctoral Students', "Master's Students", 
+                           'Undergraduate Students', 'Alumni'];
         
-        // 주석 라인 무시
-        if (line.startsWith('<!--') || line.includes('-->')) {
-            continue;
-        }
+        let currentSection = '';
+        let descriptionLines = [];
         
-        // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
-        if (line.startsWith('# ') && !member.name) {
-            member.name = line.replace('# ', '');
-            continue;
-        }
-        
-        if (line.startsWith('##')) {
-            currentSection = line.replace('##', '').trim();
-            continue;
-        }
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            
+            // 주석 라인 무시
+            if (line.startsWith('<!--') || line.includes('-->')) {
+                continue;
+            }
+            
+            // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
+            if (line.startsWith('# ') && !member.name) {
+                member.name = line.replace('# ', '');
+                continue;
+            }
+            
+            // 섹션 헤더 확인
+            if (line.startsWith('##')) {
+                currentSection = line.replace('##', '').trim();
+                continue;
+            }
 
-        // Alumni 타입 체크
-        if (line.includes('Alumni') && line.includes('[x]')) {
-            for (let j = i + 1; j < lines.length && lines[j].trim().startsWith('-'); j++) {
-                const alumniLine = lines[j].trim();
-                if (alumniLine.includes('[x]')) {
-                    member.alumniType = alumniLine.replace('-', '').replace('[x]', '').trim();
-                    break;
+            // 카테고리 체크
+            if (line.includes('[x]')) {
+                for (const category of categories) {
+                    if (line.includes(category)) {
+                        member.category = category;
+                        // Alumni인 경우 타입 체크
+                        if (category === 'Alumni') {
+                            // Alumni 타입 체크를 위해 현재 위치부터 검사
+                            let j = i;
+                            while (j < lines.length) {
+                                const alumniLine = lines[j].trim();
+                                
+                                if (alumniLine.includes('[x]') && 
+                                    (alumniLine.includes('Postdoctoral Alumni') ||
+                                     alumniLine.includes('Doctoral Alumni') ||
+                                     alumniLine.includes("Master's Alumni") ||
+                                     alumniLine.includes('Undergraduate Alumni'))) {
+                                    const match = alumniLine.match(/- \[x\] (.*?) Alumni/);
+                                    if (match) {
+                                        member.alumniType = match[1].trim();
+                                        break;
+                                    }
+                                }
+                                j++;
+                            }
+                        }
+                        break;
+                    }
                 }
+                continue;
+            }
+            
+            // 빈 라인이나 주석 라인 무시
+            if (!line || line.startsWith('<!--')) {
+                continue;
+            }
+            
+            switch (currentSection) {
+                case 'Photo':
+                    member.photo = line;
+                    break;
+                case 'Position':
+                    const positions = line.split(',').map(p => p.trim());
+                    member.position.push(...positions);
+                    break;
+                case 'Bio':
+                    if (line.startsWith('-')) {
+                        const bioItem = line.substring(2).trim();
+                        member.bio.push(bioItem);
+                    }
+                    break;
+                case 'Contact':
+                    const [key, value] = line.split(':').map(s => s.trim());
+                    if (key && value) {
+                        member.contact[key] = value;
+                    }
+                    break;
+                case 'Link':
+                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+                    if (linkMatch) {
+                        member.links.push({
+                            title: linkMatch[1],
+                            url: linkMatch[2]
+                        });
+                    }
+                    break;
+                case 'Description':
+                    if (line) {
+                        descriptionLines.push(line);
+                    }
+                    break;
             }
         }
-
-        // 빈 라인이나 주석 라인 무시
-        if (!line || line.startsWith('<!--')) {
-            continue;
-        }
-
-        switch (currentSection) {
-            case 'Photo':
-                member.photo = line;
-                break;
-            case 'Position':
-                const positions = line.split(',').map(p => p.trim());
-                member.position.push(...positions);
-                break;
-            case 'Bio':
-                if (line.startsWith('-')) {
-                    member.bio.push(line.substring(2).trim());
-                }
-                break;
-            case 'Contact':
-                const [key, value] = line.split(':').map(s => s.trim());
-                if (key && value) {
-                    member.contact[key] = value;
-                }
-                break;
-            case 'Link':
-                const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
-                if (linkMatch) {
-                    member.links.push({
-                        title: linkMatch[1],
-                        url: linkMatch[2]
-                    });
-                }
-                break;
-            case 'Description':
-                if (line) {
-                    descriptionLines.push(line);
-                }
-                break;
-        }
+        
+        member.description = descriptionLines.join('\n');
+        console.log('=== Parsed Member Data ===');
+        console.log(member);
+        return member;
+    } catch (error) {
+        console.error('Error parsing member markdown:', error);
+        throw error;
     }
-    
-    member.description = descriptionLines.join('\n');
-    return member;
 }
 
 // 멤버 정보를 페이지에 표시
@@ -118,8 +157,9 @@ function displayMemberProfile(member) {
                      onerror="console.error('Image failed to load:', this.src)"
                      onload="console.log('Image loaded successfully:', this.src)">
                 <h2>${member.name}</h2>
+                ${member.category === 'Alumni' && member.alumniType ? 
+                    `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
                 ${member.position.join('<br>')}
-                ${member.alumniType ? `<p class="alumni-type">${member.alumniType}</p>` : ''}
             </div>
             <div class="profile-right">
                 <div class="member-bio">
@@ -157,129 +197,6 @@ function displayMemberProfile(member) {
     `;
 
     profileSection.innerHTML = topSectionHTML + bottomSectionHTML;
-
-    const style = document.createElement('style');
-    style.textContent = `
-        .top-section {
-            display: grid;
-            grid-template-columns: 1.2fr 3fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .profile-left {
-            text-align: center;
-        }
-        .profile-left img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-        .profile-left h2 {
-            margin-bottom: 0.5rem;
-        }
-        .position {
-            margin: 0.3rem 0;
-            color: #666;
-            white-space: nowrap;
-            overflow: visible;
-        }
-        .member-bio h3,
-        .member-contact h3,
-        .member-links h3 {
-            color: #8B0000;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #ddd;
-        }
-        .member-bio ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .member-bio li {
-            margin-bottom: 0.5rem;
-        }
-        .bottom-section {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .description-content {
-            line-height: 1.6;
-        }
-        .description-content p {
-            margin-bottom: 1.5rem;
-        }
-        .description-content p:last-child {
-            margin-bottom: 0;
-        }
-        .side-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-        }
-        .member-contact {
-            margin-top: 0.3rem;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            margin-bottom: 2rem;
-        }
-        .member-links {
-            margin-top: 0.3rem;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-        }
-        .member-contact p {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-        .member-links a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .member-links a:hover {
-            text-decoration: underline;
-        }
-        .profile-right {
-            display: flex;
-            align-items: flex-end;
-            height: 100%;
-        }
-        .member-bio {
-            width: 100%;
-        }
-        .member-contact p strong {
-            font-size: 0.9rem;
-        }
-        .go-back-btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 20px;
-            background-color: #f8f9fa;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .go-back-btn:hover {
-            background-color: #e9ecef;
-        }
-    `;
-    document.head.appendChild(style);
 }
 
 // 페이지 로드 시 실행
