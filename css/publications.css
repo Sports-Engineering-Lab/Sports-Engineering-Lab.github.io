@@ -1,0 +1,102 @@
+/* 컨테이너 */
+.publications-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 섹션 제목 */
+.recent-highlights h2,
+.every-publication h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Recent Highlights 섹션 */
+.recent-highlights {
+    margin-bottom: 4rem;
+}
+
+.research-topic {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.research-topic:last-child {
+    border-bottom: none;
+}
+
+.research-topic h3 {
+    color: #8B0000;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.research-topic p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 링크 스타일 (공통) */
+.topic-links,
+.paper-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.topic-links a,
+.paper-links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.topic-links a:hover,
+.paper-links a:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+/* Every Publication 섹��� */
+.every-publication .publication-entry {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.every-publication .publication-entry:last-child {
+    border-bottom: none;
+}
+
+.every-publication .citation {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.paper-links {
+    margin-bottom: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .publications-container {
+        padding: 1rem;
+    }
+    
+    .research-topic h3 {
+        font-size: 1.2rem;
+    }
+    
+    .topic-links,
+    .paper-links {
+        flex-wrap: wrap;
+    }
+} 
