@@ -13,10 +13,7 @@ async function parseMemberMD(filename) {
             category: '',
             photo: '',
             position: [],
-            bio: [],  // Bio 섹션을 저장할 배열 추가
-            contact: {},
-            links: [],
-            alumniType: '' // Alumni 타입을 저장할 필드 추가
+            alumniType: ''
         };
 
         // 카테고리 체크
@@ -25,6 +22,12 @@ async function parseMemberMD(filename) {
                            'Undergraduate Students', 'Alumni'];
         
         let currentSection = '';
+        let foundRequiredInfo = {
+            name: false,
+            category: false,
+            photo: false,
+            position: false
+        };
         
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
@@ -35,8 +38,11 @@ async function parseMemberMD(filename) {
             }
             
             // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
-            if (line.startsWith('# ') && !member.name) {
+            if (line.startsWith('# ') && !foundRequiredInfo.name) {
                 member.name = line.replace('# ', '');
+                foundRequiredInfo.name = true;
+                // 모든 필수 정보를 찾았는지 확인
+                if (Object.values(foundRequiredInfo).every(v => v)) break;
                 continue;
             }
             
@@ -47,10 +53,11 @@ async function parseMemberMD(filename) {
             }
             
             // 카테고리 찾기
-            if (line.includes('[x]')) {
+            if (line.includes('[x]') && !foundRequiredInfo.category) {
                 for (const category of categories) {
                     if (line.includes(category)) {
                         member.category = category;
+                        foundRequiredInfo.category = true;
                         // Alumni인 경우 타입 체크
                         if (category === 'Alumni') {
                             // Alumni 타입 체크를 위해 현재 위치부터 검사
@@ -72,6 +79,8 @@ async function parseMemberMD(filename) {
                                 j++;
                             }
                         }
+                        // 모든 필수 정보를 찾았는지 확인
+                        if (Object.values(foundRequiredInfo).every(v => v)) break;
                         break;
                     }
                 }
@@ -85,38 +94,28 @@ async function parseMemberMD(filename) {
             
             switch (currentSection) {
                 case 'Photo':
-                    member.photo = line;
+                    if (!foundRequiredInfo.photo) {
+                        member.photo = line;
+                        foundRequiredInfo.photo = true;
+                        // 모든 필수 정보를 찾았는지 확인
+                        if (Object.values(foundRequiredInfo).every(v => v)) break;
+                    }
                     break;
                     
                 case 'Position':
-                    const positions = line.split(',').map(p => p.trim());
-                    member.position.push(...positions);
-                    break;
-                    
-                case 'Bio':
-                    // Bio 항목 파싱 (불릿 ���작하는 라인)
-                    if (line.startsWith('-')) {
-                        member.bio.push(line.substring(2).trim());
+                    if (!foundRequiredInfo.position) {
+                        const positions = line.split(',').map(p => p.trim());
+                        member.position.push(...positions);
+                        foundRequiredInfo.position = true;
+                        // 모든 필수 정보를 찾았는지 확인
+                        if (Object.values(foundRequiredInfo).every(v => v)) break;
                     }
                     break;
-                    
-                case 'Contact':
-                    const [key, value] = line.split(':').map(s => s.trim());
-                    if (key && value) {
-                        member.contact[key] = value;
-                    }
-                    break;
-                    
-                case 'Link':
-                    // 마크다운 링크 형식 파싱
-                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
-                    if (linkMatch) {
-                        member.links.push({
-                            title: linkMatch[1],
-                            url: linkMatch[2]
-                        });
-                    }
-                    break;
+            }
+            
+            // 모든 필수 정보를 찾았다면 파싱 중단
+            if (Object.values(foundRequiredInfo).every(v => v)) {
+                break;
             }
         }
         
