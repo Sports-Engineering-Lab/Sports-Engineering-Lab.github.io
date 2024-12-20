@@ -127,49 +127,56 @@ async function parseMemberMD(filename) {
 }
 
 // 멤버 정보를 해당하는 섹션에 추가하는 함수
-function addMemberToSection(member, category) {
-    const section = document.querySelector(`[data-category="${category}"]`);
+function addMemberToSection(memberInfo, filename) {
+    const section = document.querySelector(`[data-category="${memberInfo.category}"]`);
     if (!section) return;
 
     const memberElement = document.createElement('div');
     memberElement.className = 'person';
 
     // 이미지 로드 실패 시 기본 로고로 대체하는 이벤트 핸들러 추가
-    const imgSrc = member.photo ? `../assets/people/photos/${member.photo}` : '../assets/logo/SEL_favicon.png';
+    const imgSrc = memberInfo.photo ? `../assets/people/photos/${memberInfo.photo}` : '../assets/logo/SEL_favicon.png';
 
     memberElement.innerHTML = `
-        <a href="member.html?name=${encodeURIComponent(member.name)}">
+        <a href="member.html?name=${encodeURIComponent(filename.replace('.md', ''))}">
             <img src="${imgSrc}" 
-                 alt="${member.name}"
+                 alt="${memberInfo.name}"
                  onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">
-            <h3>${member.name}</h3>
-            ${member.category === 'Alumni' && member.alumniType ? 
-                `<p class="alumni-type">${member.alumniType} ${member.category}</p>` : ''}
-            ${member.position.map(pos => `<p>${pos}</p>`).join('')}
+            <h3>${memberInfo.name}</h3>
+            ${memberInfo.category === 'Alumni' && memberInfo.alumniType ? 
+                `<p class="alumni-type">${memberInfo.alumniType} ${memberInfo.category}</p>` : ''}
+            ${memberInfo.position.map(pos => `<p>${pos}</p>`).join('')}
         </a>
     `;
     
     section.querySelector('.people-grid').appendChild(memberElement);
 }
 
-// 이지 로드 시 실행
+// 페이지 로드 시 실행
 async function initializePeoplePage() {
     try {
-        // members.json 파일 로드
-        const response = await fetch('../assets/people/members.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch members list');
+        // members.json과 members_cache.json 파일을 동시에 로드
+        const [membersResponse, cacheResponse] = await Promise.all([
+            fetch('../assets/people/members.json'),
+            fetch('../assets/people/members_cache.json')
+        ]);
+
+        if (!membersResponse.ok || !cacheResponse.ok) {
+            throw new Error('Failed to fetch members data');
         }
-        const data = await response.json();
-        
-        // 각 멤버의 마크다운 파일 파싱
-        for (const filename of data.members) {
-            // profile_format.md 파일은 건너뛰기
+
+        const [membersData, cacheData] = await Promise.all([
+            membersResponse.json(),
+            cacheResponse.json()
+        ]);
+
+        // 캐시된 정보를 사용하여 멤버 카드 생성
+        for (const filename of membersData.members) {
             if (filename === 'profile_format.md') continue;
             
-            const member = await parseMemberMD(filename);
-            if (member && member.category) {
-                addMemberToSection(member, member.category);
+            const memberInfo = cacheData[filename];
+            if (memberInfo) {
+                addMemberToSection(memberInfo, filename);
             }
         }
     } catch (error) {
