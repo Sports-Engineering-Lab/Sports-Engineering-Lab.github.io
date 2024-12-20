@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/people/members.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update members list"
+          git add assets/people/members.json assets/people/members_cache.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update members list and cache"
           git push
