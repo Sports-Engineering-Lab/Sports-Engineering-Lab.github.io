@@ -142,54 +142,69 @@ async function parseMemberMD(memberName) {
 function displayMemberProfile(member) {
     const profileSection = document.querySelector('.member-profile');
     
-    const topSectionHTML = `
-        <div class="top-section">
-            <div class="profile-left">
-                <img src="../assets/people/photos/${member.photo}" 
-                     alt="${member.name}"
-                     onerror="console.error('Image failed to load:', this.src)"
-                     onload="console.log('Image loaded successfully:', this.src)">
-                <h2>${member.name}</h2>
-                ${member.category === 'Alumni' && member.alumniType ? 
-                    `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
-                ${member.position.join('<br>')}
-            </div>
-            <div class="profile-right">
-                <div class="member-bio">
-                    <h3>Bio</h3>
-                    <ul>
-                        ${member.bio.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
+    // 이미지 로드를 시도하고 실패하면 파비콘으로 대체
+    const loadImage = async () => {
+        return new Promise((resolve) => {
+            if (!member.photo) {
+                resolve('../assets/logo/SEL_favicon.png');
+                return;
+            }
+
+            const img = new Image();
+            img.onload = () => resolve(`../assets/people/photos/${member.photo}`);
+            img.onerror = () => resolve('../assets/logo/SEL_favicon.png');
+            img.src = `../assets/people/photos/${member.photo}`;
+        });
+    };
+
+    loadImage().then(photoSrc => {
+        const topSectionHTML = `
+            <div class="top-section">
+                <div class="profile-left">
+                    <img src="${photoSrc}" 
+                         alt="${member.name}">
+                    <h2>${member.name}</h2>
+                    ${member.category === 'Alumni' && member.alumniType ? 
+                        `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
+                    ${member.position.join('<br>')}
+                </div>
+                <div class="profile-right">
+                    <div class="member-bio">
+                        <h3>Bio</h3>
+                        <ul>
+                            ${member.bio.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
 
-    const bottomSectionHTML = `
-        <div class="bottom-section">
-            <div class="description-content">
-                ${member.description.split('\n').map(para => 
-                    para ? `<p>${para}</p>` : ''
-                ).join('')}
-            </div>
-            <div class="side-info">
-                <div class="member-contact">
-                    <h3>Contact</h3>
-                    ${Object.entries(member.contact).map(([key, value]) => 
-                        `<p><strong>${key}:</strong> ${value}</p>`
+        const bottomSectionHTML = `
+            <div class="bottom-section">
+                <div class="description-content">
+                    ${member.description.split('\n').map(para => 
+                        para ? `<p>${para}</p>` : ''
                     ).join('')}
                 </div>
-                <div class="member-links">
-                    <h3>Links</h3>
-                    ${member.links.map(link => 
-                        `<a href="${link.url}" target="_blank">${link.title}</a>`
-                    ).join(' | ')}
+                <div class="side-info">
+                    <div class="member-contact">
+                        <h3>Contact</h3>
+                        ${Object.entries(member.contact).map(([key, value]) => 
+                            `<p><strong>${key}:</strong> ${value}</p>`
+                        ).join('')}
+                    </div>
+                    <div class="member-links">
+                        <h3>Links</h3>
+                        ${member.links.map(link => 
+                            `<a href="${link.url}" target="_blank">${link.title}</a>`
+                        ).join(' | ')}
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
 
-    profileSection.innerHTML = topSectionHTML + bottomSectionHTML;
+        profileSection.innerHTML = topSectionHTML + bottomSectionHTML;
+    });
 }
 
 // 페이지 로드 시 실행

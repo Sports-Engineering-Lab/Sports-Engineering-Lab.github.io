@@ -94,7 +94,7 @@ async function parseMemberMD(filename) {
                     break;
                     
                 case 'Bio':
-                    // Bio 항목 파싱 (불릿 �����로 시작하는 라인)
+                    // Bio 항목 파싱 (불릿 ���작하는 라인)
                     if (line.startsWith('-')) {
                         member.bio.push(line.substring(2).trim());
                     }
@@ -135,10 +135,14 @@ function addMemberToSection(member, category) {
     const memberElement = document.createElement('div');
     memberElement.className = 'person';
 
+    // 이미지 로드 실패 시 기본 로고로 대체하는 이벤트 핸들러 추가
+    const imgSrc = member.photo ? `../assets/people/photos/${member.photo}` : '../assets/logo/SEL_favicon.png';
+
     memberElement.innerHTML = `
         <a href="member.html?name=${encodeURIComponent(member.name)}">
-            <img src="../assets/people/photos/${member.photo}" 
-                 alt="${member.name}">
+            <img src="${imgSrc}" 
+                 alt="${member.name}"
+                 onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">
             <h3>${member.name}</h3>
             ${member.category === 'Alumni' && member.alumniType ? 
                 `<p class="alumni-type">${member.alumniType} ${member.category}</p>` : ''}
@@ -251,7 +255,11 @@ async function displayMemberDetail(memberName) {
         
         memberDetailElement.innerHTML = `
             <div class="member-header">
-                <img src="../assets/people/photos/${member.photo}" alt="${member.name}">
+                <div class="profile-left">
+                    <img src="${member.photo ? `../assets/people/photos/${member.photo}` : '../assets/logo/SEL_favicon.png'}" 
+                         alt="${member.name}"
+                         onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png'">
+                </div>
                 <div class="member-info">
                     <h1>${member.name}</h1>
                     ${member.category === 'Alumni' && member.alumniType ? 
