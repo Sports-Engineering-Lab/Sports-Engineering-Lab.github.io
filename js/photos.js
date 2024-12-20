@@ -16,25 +16,36 @@ async function parsePhotosMD() {
         let currentSection = '';
         let currentPhoto = null;
         
+        function addCurrentPhotoToSection() {
+            if (currentPhoto && currentSection) {
+                photos[currentSection].push(currentPhoto);
+            }
+        }
+        
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             
             if (!line) continue;
             
             // 섹션 체크
-            if (line.startsWith('## Facilities')) {
-                currentSection = 'facilities';
-                continue;
-            } else if (line.startsWith('## Activities')) {
-                currentSection = 'activities';
+            if (line.startsWith('## ')) {
+                // 섹션 변경 시 이전 사진 추가
+                addCurrentPhotoToSection();
+                
+                if (line.includes('Facilities')) {
+                    currentSection = 'facilities';
+                } else if (line.includes('Activities')) {
+                    currentSection = 'activities';
+                }
+                currentPhoto = null;  // 섹션이 바뀔 때 현재 사진 초기화
                 continue;
             }
             
             // 새로운 사진 항목 체크
             if (line.startsWith('### ')) {
-                if (currentPhoto) {
-                    photos[currentSection].push(currentPhoto);
-                }
+                // 이전 사진 추가
+                addCurrentPhotoToSection();
+                
                 currentPhoto = {
                     title: line.replace('### ', ''),
                     file: '',
@@ -44,18 +55,16 @@ async function parsePhotosMD() {
             }
             
             // 사진 정보 파싱
-            if (line.startsWith('- ')) {
+            if (line.startsWith('- ') && currentPhoto) {
                 const [key, value] = line.substring(2).split(': ');
-                if (currentPhoto && value) {
+                if (value) {
                     currentPhoto[key] = value;
                 }
             }
         }
         
         // 마지막 사진 추가
-        if (currentPhoto) {
-            photos[currentSection].push(currentPhoto);
-        }
+        addCurrentPhotoToSection();
         
         return photos;
     } catch (error) {
@@ -103,6 +112,12 @@ function displayPhotos(photos) {
 
 // 모달 표시
 function showPhotoModal(file, title, description) {
+    // 기존 모달이 있다면 제거
+    const existingModal = document.querySelector('.photo-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+
     const modal = document.createElement('div');
     modal.className = 'photo-modal';
     modal.innerHTML = `
@@ -119,18 +134,22 @@ function showPhotoModal(file, title, description) {
     document.body.appendChild(modal);
     
     // 모달 외부 클릭 시 닫기
-    modal.addEventListener('click', (e) => {
+    const handleClick = (e) => {
         if (e.target === modal) {
             modal.remove();
+            document.removeEventListener('click', handleClick);
         }
-    });
+    };
+    modal.addEventListener('click', handleClick);
     
     // ESC 키로 모달 닫기
-    document.addEventListener('keydown', (e) => {
+    const handleKeyDown = (e) => {
         if (e.key === 'Escape') {
             modal.remove();
+            document.removeEventListener('keydown', handleKeyDown);
         }
-    });
+    };
+    document.addEventListener('keydown', handleKeyDown);
 }
 
 // 페이지 로드 시 실행
