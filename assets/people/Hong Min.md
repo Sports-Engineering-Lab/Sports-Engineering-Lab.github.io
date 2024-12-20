@@ -3,8 +3,8 @@
 - [ ] Principal Investigator
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
-- [x] Master's Students
-- [ ] Undergraduate Students
+- [ ] Master's Students
+- [x] Undergraduate Students
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni

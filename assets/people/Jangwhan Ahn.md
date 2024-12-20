@@ -1,9 +1,9 @@
 # Jangwhan Ahn
 
-- [x] Principal Investigator
+- [ ] Principal Investigator
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
-- [ ] Master's Students
+- [x] Master's Students
 - [ ] Undergraduate Students
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
