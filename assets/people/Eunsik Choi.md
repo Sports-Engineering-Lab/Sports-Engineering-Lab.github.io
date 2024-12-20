@@ -1,4 +1,4 @@
-# Eunsik Chio
+# Eunsik Choi
 
 - [ ] Principal Investigator
 - [ ] Postdoctoral researcher
