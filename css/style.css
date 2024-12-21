@@ -77,6 +77,10 @@ html, body {
     justify-content: space-between;
     padding: 15px 0 0;
     margin-bottom: 15px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 h1 {
@@ -188,6 +192,25 @@ h1 a:hover {
     font-weight: 500;
     font-size: 0.9em;
     padding-right: 20px;
+}
+
+/* 반응형 탑바 폰트 크기 */
+@media (max-width: 1024px) {
+    .top-bar__links {
+        font-size: 0.8em;
+        gap: 4px;
+    }
+    
+    .top-bar__links a {
+        padding-left: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar__links {
+        font-size: 0.7em;
+        gap: 3px;
+    }
 }
 
 .top-bar__links span {
@@ -764,7 +787,7 @@ h1 a:hover {
     }
 } 
 
-/* 그리드 아이템이 한 줄에 3개까지만 표시되도록 설정 */
+/* 그리��� 아이템이 한 줄에 3개까지만 표시되도록 설정 */
 @media (min-width: 1200px) {
     .people-grid {
         max-width: 960px; /* 300px * 3 + 30px * 2(gap) */
@@ -789,4 +812,114 @@ h1 a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+} 
+
+/* 햄버거 메뉴 아이콘 */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    right: 20px;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #8C001A;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* 모바일 메뉴가 열렸을 때의 햄버거 아이콘 애니메이션 */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* 반응형 네비게이션 */
+@media (max-width: 1000px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .main-nav li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+}
+
+/* 푸터 반응형 */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__section {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* 오버레이 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.overlay.active {
+    display: block;
 } 
