@@ -131,4 +131,90 @@
 
 .member-links a:hover {
     text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .top-section {
+        grid-template-columns: 1fr 2fr;
+        padding: 0 1rem;
+    }
+
+    .bottom-section {
+        grid-template-columns: 2fr 1fr;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .bottom-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-left img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-right {
+        align-items: center;
+    }
+
+    .member-bio {
+        text-align: center;
+        order: 1;
+    }
+
+    .member-bio ul {
+        text-align: left;
+    }
+
+    .side-info {
+        text-align: center;
+        order: 2;
+    }
+
+    .description-content {
+        margin-bottom: 0;
+        order: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-section {
+        gap: 1rem;
+    }
+
+    .bottom-section {
+        gap: 1rem;
+    }
+
+    .profile-left img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .member-bio h3,
+    .member-contact h3,
+    .member-links h3 {
+        font-size: 1.1rem;
+    }
+
+    .member-bio li,
+    .member-contact p,
+    .member-links a {
+        font-size: 0.85rem;
+    }
 } 
