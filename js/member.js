@@ -129,11 +129,8 @@ async function parseMemberMD(memberName) {
         }
         
         member.description = descriptionLines.join('\n');
-        console.log('=== Parsed Member Data ===');
-        console.log(member);
         return member;
     } catch (error) {
-        console.error('Error parsing member markdown:', error);
         throw error;
     }
 }
@@ -220,7 +217,6 @@ async function initializeMemberPage() {
         displayMemberProfile(member);
         document.title = `${member.name} - Sports Engineering Lab`;
     } catch (error) {
-        console.error('Error loading member data:', error);
         window.location.href = 'people.html';
     }
 }

@@ -320,7 +320,7 @@ h1 a:hover {
 }
 
 .person {
-    width: 300px;
+    width: 260px;
     text-align: center;
     margin: 0;
 }
@@ -331,8 +331,8 @@ h1 a:hover {
 }
 
 .person img {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 20px;
@@ -350,7 +350,7 @@ h1 a:hover {
 .person p {
     color: #666;
     margin-bottom: 5px;
-    font-size: 1.1em;
+    font-size: 0.95em;
     line-height: 1.4;
     padding: 0 10px;
 }
@@ -787,30 +787,51 @@ h1 a:hover {
     }
 } 
 
-/* 그리��� 아이템이 한 줄에 3개까지만 표시되도록 설정 */
+/* 그리드 아이템이 한 줄에 4개까지 표시되도록 설정 */
 @media (min-width: 1200px) {
     .people-grid {
-        max-width: 960px; /* 300px * 3 + 30px * 2(gap) */
+        max-width: 1120px;
         margin-left: auto;
         margin-right: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .person {
+        width: 260px;
+        margin: 0;
     }
 }
 
-/* 화면이 작을 때는 2개씩 표시 */
-@media (max-width: 1199px) and (min-width: 768px) {
+/* 화면이 작을 때는 3개씩 표시 */
+@media (max-width: 1199px) and (min-width: 992px) {
     .people-grid {
-        max-width: 630px; /* 300px * 2 + 30px */
+        max-width: 860px;
         margin-left: auto;
         margin-right: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* 더 작은 화면에서는 2개씩 표시 */
+@media (max-width: 991px) and (min-width: 768px) {
+    .people-grid {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        gap: 20px;
     }
 }
 
 /* 모바일에서는 1개씩 표시 */
 @media (max-width: 767px) {
     .people-grid {
-        max-width: 300px;
+        max-width: 260px;
         margin-left: auto;
         margin-right: auto;
+        justify-content: center;
     }
 } 
 
