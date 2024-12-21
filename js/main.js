@@ -28,4 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+    // 네비게이션 메뉴 클릭 이벤트 처리
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // people 페이지로 이동하는 경우 스크롤 정보 초기화
+            if (this.getAttribute('href').includes('people.html')) {
+                sessionStorage.removeItem('peoplePageScroll');
+            }
+        });
+    });
 }); 
