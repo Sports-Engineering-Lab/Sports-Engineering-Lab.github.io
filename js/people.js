@@ -179,49 +179,38 @@ async function initializePeoplePage() {
                 addMemberToSection(memberInfo, filename);
             }
         }
+
+        // 페이지 로드가 완료된 후 저장된 스크롤 위치로 복원
+        restoreScrollPosition();
     } catch (error) {
         console.error('Error loading member data:', error);
     }
 }
+
+// 스크롤 위치 저장
+function saveScrollPosition() {
+    sessionStorage.setItem('peoplePageScroll', window.scrollY);
+}
+
+// 스크롤 위치 복원
+function restoreScrollPosition() {
+    const savedPosition = sessionStorage.getItem('peoplePageScroll');
+    if (savedPosition !== null) {
+        window.scrollTo(0, parseInt(savedPosition));
+    }
+}
+
+// 페이지 로드 시 실행
+document.addEventListener('DOMContentLoaded', initializePeoplePage);
+
+// 페이지를 떠날 때 스크롤 위치 저장
+window.addEventListener('beforeunload', saveScrollPosition);
 
 // URL에서 멤버 이름을 가져오는 함수
 function getMemberNameFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('name');
 }
-
-// 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', async () => {
-    // member.html 페이지 체크를 더 유연하게 수정
-    if (window.location.pathname.endsWith('member.html') || 
-        window.location.pathname.includes('/member.html')) {
-        const memberName = getMemberNameFromURL();
-        console.log('Member name from URL:', memberName);
-        
-        // member-detail 요소 존재 확인
-        const memberDetailElement = document.querySelector('.member-detail');
-        if (!memberDetailElement) {
-            console.error('Could not find .member-detail element');
-            return;
-        }
-        
-        if (memberName) {
-            try {
-                await displayMemberDetail(memberName);
-            } catch (error) {
-                console.error('Error in displayMemberDetail:', error);
-            }
-        } else {
-            console.error('No member name provided in URL');
-        }
-    } else {
-        // people.html 페이지인 경우
-        await initializePeoplePage();
-    }
-});
-
-// 기존의 페이지 로드 이벤트 리스너는 제거
-// document.addEventListener('DOMContentLoaded', initializePeoplePage);
 
 function displayMembers(members) {
     members.forEach(member => {
