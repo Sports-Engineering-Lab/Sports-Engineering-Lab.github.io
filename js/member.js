@@ -222,7 +222,16 @@ async function initializeMemberPage() {
 }
 
 // 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', initializeMemberPage); 
+document.addEventListener('DOMContentLoaded', () => {
+    initializeMemberPage();
+    
+    // 네비게이션 메뉴와 로고 클릭 시 스크롤 위치 초기화
+    document.querySelectorAll('.header-container a').forEach(link => {
+        link.addEventListener('click', () => {
+            sessionStorage.removeItem('peoplePageScroll');
+        });
+    });
+});
 
 function createMemberPage(memberData) {
     return `

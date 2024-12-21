@@ -138,7 +138,7 @@ function addMemberToSection(memberInfo, filename) {
     const imgSrc = memberInfo.photo ? `../assets/people/photos/${memberInfo.photo}` : '../assets/logo/SEL_favicon.png';
 
     memberElement.innerHTML = `
-        <a href="member.html?name=${encodeURIComponent(filename.replace('.md', ''))}">
+        <a href="/member/?name=${encodeURIComponent(filename.replace('.md', ''))}">
             <img src="${imgSrc}" 
                  alt="${memberInfo.name}"
                  onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">

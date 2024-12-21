@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Sports Engineering Lab</title>
+    <title>People - Sports Engineering Lab</title>
     <link rel="shortcut icon" href="../assets/logo/SEL_favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/SEL_favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/logo/SEL_favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/SEL_favicon.png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/photos.css">
 </head>
 <body class="sub-page">
     <div class="top-bar">
@@ -35,20 +34,58 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="photos.html" class="active">Photos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/people/" class="active">People</a></li>
+                <li><a href="/publications/">Publications</a></li>
+                <li><a href="/photos/">Photos</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
         </nav>
     </div>
     <div class="overlay"></div>
 
-    <main>
-        <div class="photos-container">
-            <!-- 사진들이 여기에 동적으로 로드됩니다 -->
+    <div class="people-section">
+        <div class="people-category" data-category="Principal Investigator">
+            <h2>Principal Investigator</h2>
+            <div class="people-grid">
+                <!-- Principal Investigator profiles will be loaded dynamically -->
+            </div>
         </div>
-    </main>
+
+        <div class="people-category" data-category="Postdoctoral researcher">
+            <h2>Postdoctoral Researcher</h2>
+            <div class="people-grid">
+                <!-- Add postdoc profiles here -->
+            </div>
+        </div>
+
+        <div class="people-category" data-category="Doctoral Students">
+            <h2>Doctoral Students</h2>
+            <div class="people-grid">
+                <!-- Add doctoral student profiles here -->
+            </div>
+        </div>
+
+        <div class="people-category" data-category="Master's Students">
+            <h2>Master's Students</h2>
+            <div class="people-grid">
+                <!-- Add master's student profiles here -->
+            </div>
+        </div>
+
+        <div class="people-category" data-category="Undergraduate Students">
+            <h2>Undergraduate Students</h2>
+            <div class="people-grid">
+                <!-- Add undergraduate student profiles here -->
+            </div>
+        </div>
+
+        <div class="people-category" data-category="Alumni">
+            <h2>Alumni</h2>
+            <div class="people-grid">
+                <!-- Add alumni here -->
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer__container">
@@ -74,7 +111,7 @@
     <a href="#" class="back-to-top" aria-label="Back to top"></a>
 
     <script src="../js/back-to-top.js"></script>
-    <script src="../js/photos.js"></script>
+    <script src="../js/people.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html> 
