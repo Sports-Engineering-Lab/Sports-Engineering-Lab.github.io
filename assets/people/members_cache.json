@@ -111,7 +111,7 @@
     },
     "Hong Min.md": {
         "name": "Hong Min",
-        "category": "",
+        "category": "Interns",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
@@ -150,6 +150,6 @@
             "AI Development Specialist",
             "Republic of Korea Navy"
         ],
-        "alumniType": ""
+        "alumniType": "Intern"
     }
 }
