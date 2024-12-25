@@ -73,7 +73,7 @@ function displayActivities(activities) {
                         <div class="photo-item" onclick='showActivityModal("${safeActivityJson}")'>
                             <img src="../assets/activities/${activity.files[0]}" 
                                  alt="${activity.title}"
-                                 onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.jpg';">
+                                 onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.png';">
                             <h3>${activity.title}</h3>
                         </div>
                     `;
@@ -101,7 +101,7 @@ function createMediaElement(file, isActive = false) {
                     alt="" 
                     class="carousel-item ${isActive ? 'active' : ''}" 
                     loading="lazy"
-                    onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.jpg';">`;
+                    onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.png';">`;
     } else if (fileType === 'video') {
         return `
             <div class="carousel-item ${isActive ? 'active' : ''}" style="width: 100%; height: 100%;">
@@ -109,7 +109,7 @@ function createMediaElement(file, isActive = false) {
                     <source src="../assets/activities/${file}" type="video/${file.split('.').pop()}"
                             onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
                 </video>
-                <img src="../assets/logo/SEL_logo.jpg" 
+                <img src="../assets/logo/SEL_logo.png" 
                      style="width: 100%; height: 100%; object-fit: contain; display: block;" 
                      alt="">
                 <script>
@@ -121,7 +121,7 @@ function createMediaElement(file, isActive = false) {
             </div>
         `;
     }
-    return `<img src="../assets/logo/SEL_logo.jpg" class="carousel-item ${isActive ? 'active' : ''}" alt="">`;
+    return `<img src="../assets/logo/SEL_logo.png" class="carousel-item ${isActive ? 'active' : ''}" alt="">`;
 }
 
 // 모달 표시
