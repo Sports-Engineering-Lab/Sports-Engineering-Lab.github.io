@@ -187,6 +187,8 @@ function displayMemberProfile(member) {
                     <div class="member-contact">
                         <h3>Contact</h3>
                         ${Object.entries(member.contact).map(([key, value]) => 
+                            key.toLowerCase() === 'email' ?
+                            `<p><strong>${key}:</strong> <a href="mailto:${value}">${value}</a></p>` :
                             `<p><strong>${key}:</strong> ${value}</p>`
                         ).join('')}
                     </div>
