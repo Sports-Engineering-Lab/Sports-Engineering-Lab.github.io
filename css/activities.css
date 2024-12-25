@@ -54,7 +54,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,25 +68,105 @@
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.modal-content img {
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.modal-info {
+/* 캐러셀 컨테이너 */
+.carousel-container {
+    position: relative;
     width: 100%;
+    background: #000;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 캐러셀 아이템 */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    object-fit: contain;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 비디오 아이템 */
+.carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 캐러셀 버튼 */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-button.prev {
+    left: 20px;
+}
+
+.carousel-button.next {
+    right: 20px;
+}
+
+/* 캐러셀 닷 네비게이션 */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* 모달 정보 */
+.modal-info {
     padding: 1.5rem;
     background: #fff;
-    text-align: center;
 }
 
 .modal-info h3 {
@@ -101,6 +181,7 @@
     line-height: 1.6;
 }
 
+/* 닫기 버튼 */
 .close-button {
     position: absolute;
     top: 15px;
@@ -115,7 +196,7 @@
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 3;
     text-decoration: none;
     line-height: 1;
     padding-bottom: 2px;
@@ -138,5 +219,23 @@
     
     .modal-content {
         width: 95%;
+    }
+    
+    .carousel-track {
+        height: 50vh;
+    }
+    
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .carousel-button.prev {
+        left: 10px;
+    }
+    
+    .carousel-button.next {
+        right: 10px;
     }
 } 
