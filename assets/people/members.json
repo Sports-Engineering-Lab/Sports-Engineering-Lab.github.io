@@ -14,5 +14,19 @@
         "Hong Min.md",
         "Yoojin Choi.md",
         "Chae Lynne Kim.md"
+    ],
+    "categories": [
+        "Principal Investigator",
+        "Postdoctoral researcher",
+        "Doctoral Students",
+        "Master's Students",
+        "Interns",
+        "Alumni"
+    ],
+    "alumniTypes": [
+        "Postdoctoral Alumni",
+        "Doctoral Alumni",
+        "Master's Alumni",
+        "Intern Alumni"
     ]
 }

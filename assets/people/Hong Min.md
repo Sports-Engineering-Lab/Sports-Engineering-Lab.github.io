@@ -4,12 +4,12 @@
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [ ] Master's Students
-- [x] Undergraduate Students
+- [x] Interns
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
   - [ ] Master's Alumni
-  - [ ] Undergraduate Alumni
+  - [ ] Intern Alumni
 
 ## Photo
 member_photo.jpg

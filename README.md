@@ -14,12 +14,12 @@
     - [ ] Postdoctoral researcher
     - [ ] Doctoral Students
     - [ ] Master's Students
-    - [x] Undergraduate Students
+    - [x] Interns
     - [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
       - [ ] Postdoctoral Alumni
       - [ ] Doctoral Alumni
       - [ ] Master's Alumni
-      - [ ] Undergraduate Alumni
+      - [ ] Intern Alumni
 
     ## Photo
     <!-- 본인 파일명을 입력하세요. 사진은 assets/people/photos/ 디렉토리에 저장해주세요. -->
