@@ -9,74 +9,44 @@ async function parsePublicationsMD() {
         const lines = text.split('\n');
         
         const publications = {
-            recentResearch: [],
-            everyPublication: []
+            byYear: {}
         };
         
-        let currentSection = '';
-        let currentTopic = null;
+        let currentYear = '';
         
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             
             if (!line) continue;
             
-            // 섹션 체크
-            if (line.startsWith('## Our Recent Highlights')) {
-                currentSection = 'recent';
-                continue;
-            } else if (line.startsWith('## Every Publication')) {
-                currentSection = 'every';
-                continue;
-            }
-            
-            // Recent Research 토픽 체크
-            if (line.startsWith('### ') && currentSection === 'recent') {
-                if (currentTopic) {
-                    publications.recentResearch.push(currentTopic);
+            // 년도 체크
+            if (line.startsWith('## ')) {
+                currentYear = line.replace('## ', '');
+                if (!publications.byYear[currentYear]) {
+                    publications.byYear[currentYear] = [];
                 }
-                currentTopic = {
-                    title: line.replace('### ', ''),
-                    description: '',
-                    links: []
-                };
                 continue;
             }
             
             // 링크 체크
             if (line.startsWith('[')) {
                 const match = line.match(/\[(.*?)\]\((.*?)\)/);
-                if (match) {
+                if (match && currentYear) {
                     const [_, title, url] = match;
-                    if (currentSection === 'recent' && currentTopic) {
-                        currentTopic.links.push({ title, url });
-                    } else if (currentSection === 'every') {
-                        publications.everyPublication[
-                            publications.everyPublication.length - 1
-                        ].links.push({ title, url });
-                    }
+                    publications.byYear[currentYear][
+                        publications.byYear[currentYear].length - 1
+                    ].links.push({ title, url });
                 }
                 continue;
             }
             
             // 내용 처리
-            if (currentSection === 'recent' && currentTopic) {
-                if (currentTopic.description) {
-                    currentTopic.description += ' ' + line;
-                } else {
-                    currentTopic.description = line;
-                }
-            } else if (currentSection === 'every' && !line.startsWith('#')) {
-                publications.everyPublication.push({
+            if (currentYear && !line.startsWith('#')) {
+                publications.byYear[currentYear].push({
                     citation: line,
                     links: []
                 });
             }
-        }
-        
-        // 마지막 토픽 추가
-        if (currentTopic) {
-            publications.recentResearch.push(currentTopic);
         }
         
         return publications;
@@ -90,42 +60,25 @@ async function parsePublicationsMD() {
 function displayPublications(publications) {
     const container = document.querySelector('.publications-container');
     
-    // Recent Highlights 섹션
-    const recentHTML = `
-        <section class="recent-highlights">
-            <h2>Our Recent Highlights</h2>
-            ${publications.recentResearch.map(topic => `
-                <div class="research-topic">
-                    <h3>${topic.title}</h3>
-                    <p>${topic.description}</p>
-                    <div class="topic-links">
-                        ${topic.links.map(link => `
-                            <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
-                        `).join(' ')}
+    const yearsHTML = Object.entries(publications.byYear)
+        .sort(([yearA], [yearB]) => yearB - yearA) // 년도 내림차순 정렬
+        .map(([year, papers]) => `
+            <section class="year-section">
+                <h2>${year}</h2>
+                ${papers.map(paper => `
+                    <div class="publication-entry">
+                        <p class="citation">${paper.citation}</p>
+                        <div class="paper-links">
+                            ${paper.links.map(link => `
+                                <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
+                            `).join(' ')}
+                        </div>
                     </div>
-                </div>
-            `).join('')}
-        </section>
-    `;
+                `).join('')}
+            </section>
+        `).join('');
     
-    // Every Publication 섹션
-    const everyHTML = `
-        <section class="every-publication">
-            <h2>Every Publication</h2>
-            ${publications.everyPublication.map(paper => `
-                <div class="publication-entry">
-                    <p class="citation">${paper.citation}</p>
-                    <div class="paper-links">
-                        ${paper.links.map(link => `
-                            <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
-                        `).join(' ')}
-                    </div>
-                </div>
-            `).join('')}
-        </section>
-    `;
-    
-    container.innerHTML = recentHTML + everyHTML;
+    container.innerHTML = yearsHTML;
 }
 
 // 페이지 로드 시 실행

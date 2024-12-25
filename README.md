@@ -61,23 +61,14 @@
 ## Publications 추가 방법
 
 1. assets/publications.md 파일을 열기
-2. Our Recent Highlights에 내용을 추가하고 싶으면 ## Our Recent Highlights 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
-
-    ```markdown
-    ### Write title here
-    Write description herer. Write description herer. Write description herer. Write description herer. Write description herer. Write description herer. Write description herer. Write description herer.
-    [Paper](https://ieeexplore.ieee.org/document/~~~~~)
-    [Video](https://www.youtube.com/watch~~~~~)
-    ```
-
-3. Every Publication에 내용을 추가하고 싶으면 ## Our Recent Hightlights 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+2. 내용을 추가하고 싶으면 ## {해당년도} 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
 
     ```markdown
     Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format.
     [DOI](https://doi.org/~~~~)
     ```
 
-4. commit을 완료하면 assets/publications.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
+3. commit을 완료하면 assets/publications.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
 
 ## Photos 추가 방법
 

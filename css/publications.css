@@ -5,49 +5,58 @@
     padding: 2rem;
 }
 
-/* 섹션 제목 */
-.recent-highlights h2,
-.every-publication h2 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-/* Recent Highlights 섹션 */
-.recent-highlights {
+/* 년도 섹션 */
+.year-section {
     margin-bottom: 4rem;
+    position: relative;
 }
 
-.research-topic {
+.year-section h2 {
+    font-size: 4em;
+    color: #8C001A;  /* 메인 테마 색상 */
+    margin-bottom: 2rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    position: relative;
+    display: inline-block;
+}
+
+.year-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0.3em;
+    left: 100%;
+    margin-left: 2rem;
+    width: calc(100vw - 100% - 3rem);  /* 화면 끝까지 확장 */
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+}
+
+/* Publication 항목 */
+.publication-entry {
+    margin-left: 0.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.research-topic:last-child {
+.publication-entry:last-child {
     border-bottom: none;
 }
 
-.research-topic h3 {
-    color: #8B0000;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.research-topic p {
+.publication-entry .citation {
     color: #333;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05em;
 }
 
-/* 링크 스타일 (공통) */
-.topic-links,
+/* 링크 스타일 */
 .paper-links {
     display: flex;
     gap: 1rem;
 }
 
-.topic-links a,
 .paper-links a {
     color: #0066cc;
     text-decoration: none;
@@ -58,31 +67,9 @@
     transition: all 0.3s ease;
 }
 
-.topic-links a:hover,
 .paper-links a:hover {
     background-color: #0066cc;
     color: white;
-}
-
-/* Every Publication 섹��� */
-.every-publication .publication-entry {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-}
-
-.every-publication .publication-entry:last-child {
-    border-bottom: none;
-}
-
-.every-publication .citation {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.paper-links {
-    margin-bottom: 0;
 }
 
 /* 반응형 디자인 */
@@ -91,12 +78,11 @@
         padding: 1rem;
     }
     
-    .research-topic h3 {
-        font-size: 1.2rem;
-    }
-    
-    .topic-links,
     .paper-links {
         flex-wrap: wrap;
+    }
+    
+    .year-section h2 {
+        font-size: 3em;
     }
 } 
