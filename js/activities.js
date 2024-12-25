@@ -1,15 +1,14 @@
 // 마크다운 파일 파싱
 async function parsePhotosMD() {
     try {
-        const response = await fetch('../assets/photos/photos.md');
+        const response = await fetch('../assets/activities/activities.md');
         if (!response.ok) {
-            throw new Error('Failed to fetch photos data');
+            throw new Error('Failed to fetch activities data');
         }
         const text = await response.text();
         const lines = text.split('\n');
         
         const photos = {
-            facilities: [],
             activities: []
         };
         
@@ -29,25 +28,12 @@ async function parsePhotosMD() {
             
             // 섹션 체크
             if (line.startsWith('## ')) {
-                // 섹션 변경 시 이전 사진 추가
-                addCurrentPhotoToSection();
-                
-                if (line.includes('Facilities')) {
-                    currentSection = 'facilities';
-                } else if (line.includes('Activities')) {
-                    currentSection = 'activities';
-                }
-                currentPhoto = null;  // 섹션이 바뀔 때 현재 사진 초기화
-                continue;
-            }
-            
-            // 새로운 사진 항목 체크
-            if (line.startsWith('### ')) {
                 // 이전 사진 추가
                 addCurrentPhotoToSection();
+                currentSection = 'activities';
                 
                 currentPhoto = {
-                    title: line.replace('### ', ''),
+                    title: line.replace('## ', ''),
                     file: '',
                     description: ''
                 };
@@ -68,7 +54,7 @@ async function parsePhotosMD() {
         
         return photos;
     } catch (error) {
-        console.error('Error parsing photos:', error);
+        console.error('Error parsing activities:', error);
         throw error;
     }
 }
@@ -77,29 +63,13 @@ async function parsePhotosMD() {
 function displayPhotos(photos) {
     const container = document.querySelector('.photos-container');
     
-    // Facilities 섹션
-    const facilitiesHTML = `
-        <section class="facilities">
-            <h2>Facilities</h2>
-            <div class="photo-grid">
-                ${photos.facilities.map(photo => `
-                    <div class="photo-item" onclick="showPhotoModal('${photo.file}', '${photo.title}', '${photo.description}')">
-                        <img src="../assets/photos/${photo.file}" alt="${photo.title}">
-                        <h3>${photo.title}</h3>
-                    </div>
-                `).join('')}
-            </div>
-        </section>
-    `;
-    
     // Activities 섹션
     const activitiesHTML = `
         <section class="activities">
-            <h2>Activities</h2>
             <div class="photo-grid">
                 ${photos.activities.map(photo => `
                     <div class="photo-item" onclick="showPhotoModal('${photo.file}', '${photo.title}', '${photo.description}')">
-                        <img src="../assets/photos/${photo.file}" alt="${photo.title}">
+                        <img src="../assets/activities/${photo.file}" alt="${photo.title}">
                         <h3>${photo.title}</h3>
                     </div>
                 `).join('')}
@@ -107,7 +77,7 @@ function displayPhotos(photos) {
         </section>
     `;
     
-    container.innerHTML = facilitiesHTML + activitiesHTML;
+    container.innerHTML = activitiesHTML;
 }
 
 // 모달 표시
@@ -123,7 +93,7 @@ function showPhotoModal(file, title, description) {
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close-button" onclick="this.parentElement.parentElement.remove()">&times;</span>
-            <img src="../assets/photos/${file}" alt="${title}">
+            <img src="../assets/activities/${file}" alt="${title}">
             <div class="modal-info">
                 <h3>${title}</h3>
                 <p>${description}</p>
@@ -133,7 +103,7 @@ function showPhotoModal(file, title, description) {
     
     document.body.appendChild(modal);
     
-    // 모달 외부 클릭 시 닫기
+    // ���달 외부 클릭 시 닫기
     const handleClick = (e) => {
         if (e.target === modal) {
             modal.remove();
