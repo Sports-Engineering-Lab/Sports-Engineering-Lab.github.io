@@ -69,11 +69,32 @@ function displayActivities(activities) {
                         .replace(/\r/g, '\\r')
                         .replace(/\t/g, '\\t');
                     
+                    const firstFile = activity.files[0];
+                    const isVideo = getFileType(firstFile) === 'video';
+                    
                     return `
                         <div class="photo-item" onclick='showActivityModal("${safeActivityJson}")'>
-                            <img src="../assets/activities/${activity.files[0]}" 
-                                 alt="${activity.title}"
-                                 onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.png';">
+                            <div class="media-container">
+                                ${isVideo ? `
+                                    <div class="video-indicator">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <video src="../assets/activities/${firstFile}" 
+                                          style="width: 100%; height: 100%; object-fit: cover;"
+                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    </video>
+                                    <img src="../assets/logo/SEL_logo.png" 
+                                         style="width: 100%; height: 100%; object-fit: cover; display: none;"
+                                         alt="${activity.title}">
+                                ` : `
+                                    <img src="../assets/activities/${firstFile}" 
+                                         alt="${activity.title}"
+                                         style="width: 100%; height: 100%; object-fit: cover;"
+                                         onerror="this.onerror=null; this.src='../assets/logo/SEL_logo.png';">
+                                `}
+                            </div>
                             <h3>${activity.title}</h3>
                         </div>
                     `;
@@ -83,6 +104,15 @@ function displayActivities(activities) {
     `;
     
     container.innerHTML = activitiesHTML;
+
+    // 비디오 썸네일 설정
+    const videos = container.querySelectorAll('video');
+    videos.forEach(video => {
+        video.addEventListener('loadeddata', function() {
+            // 비디오가 로드되면 첫 프레임을 표시
+            video.currentTime = 0;
+        });
+    });
 }
 
 // 파일 타입 확인
@@ -105,19 +135,12 @@ function createMediaElement(file, isActive = false) {
     } else if (fileType === 'video') {
         return `
             <div class="carousel-item ${isActive ? 'active' : ''}" style="width: 100%; height: 100%;">
-                <video style="width: 100%; height: 100%; object-fit: contain; display: none;" controls>
-                    <source src="../assets/activities/${file}" type="video/${file.split('.').pop()}"
-                            onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
+                <video style="width: 100%; height: 100%; object-fit: contain;" controls>
+                    <source src="../assets/activities/${file}" type="video/${file.split('.').pop()}">
+                    <img src="../assets/logo/SEL_logo.png" 
+                         style="width: 100%; height: 100%; object-fit: contain;" 
+                         alt="Video thumbnail">
                 </video>
-                <img src="../assets/logo/SEL_logo.png" 
-                     style="width: 100%; height: 100%; object-fit: contain; display: block;" 
-                     alt="">
-                <script>
-                    document.currentScript.previousElementSibling.previousElementSibling.addEventListener('loadeddata', function() {
-                        this.style.display = 'block';
-                        this.nextElementSibling.style.display = 'none';
-                    });
-                </script>
             </div>
         `;
     }
@@ -197,7 +220,7 @@ function handleKeyDown(e) {
 // 현재 슬라이드 인덱스 추적
 let currentSlide = 0;
 
-// 캐러셀 이동
+// 캐러션 이동
 function moveCarousel(direction) {
     const track = document.querySelector('.carousel-track');
     const slides = track.querySelectorAll('.carousel-item');
@@ -205,18 +228,18 @@ function moveCarousel(direction) {
     
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
     
-    slides.forEach(slide => slide.classList.remove('active'));
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+        // 비디오 일시정지
+        const video = slide.querySelector('video');
+        if (video) {
+            video.pause();
+        }
+    });
     dots.forEach(dot => dot.classList.remove('active'));
     
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
-    
-    // 비디오 처리
-    slides.forEach(slide => {
-        if (slide.tagName === 'VIDEO') {
-            slide.pause();
-        }
-    });
 }
 
 // 특정 슬라이드로 이동
@@ -227,18 +250,18 @@ function goToSlide(index) {
     
     currentSlide = index;
     
-    slides.forEach(slide => slide.classList.remove('active'));
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+        // 비디오 일시정지
+        const video = slide.querySelector('video');
+        if (video) {
+            video.pause();
+        }
+    });
     dots.forEach(dot => dot.classList.remove('active'));
     
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
-    
-    // 비디오 처리
-    slides.forEach(slide => {
-        if (slide.tagName === 'VIDEO') {
-            slide.pause();
-        }
-    });
 }
 
 // 페이지 로드 시 실행

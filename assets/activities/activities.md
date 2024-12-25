@@ -5,7 +5,7 @@
 - description: Our team members discussing ongoing research projects and sharing insights.
 
 ## Lab Seminar Session
-- files: Activity_sample3.jpg, Activity_sample4.jpg, seminar_video.mp4
+- files: Cosmed_Mask.jpg, Delsys_EMG.jpg, sample_video.mp4
 - description: Regular seminar sessions where members present their research progress and findings.
 
 ## Lab Seminar Session
@@ -14,4 +14,8 @@
 
 ## Lab Seminar Session
 - files: Bertec_force_treadmil2.jpg, Bertec_force_treadmil.jpg
+- description: Regular seminar sessions where members present their research progress and findings.
+
+## Lab Seminar Session
+- files: sample_video.mp4, Cosmed_Mask.jpg, Delsys_EMG.jpg
 - description: Regular seminar sessions where members present their research progress and findings.
