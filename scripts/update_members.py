@@ -51,7 +51,7 @@ def parse_member_info(md_path):
             if line.startswith('- [x]') and not found_required['category']:
                 categories = ['Principal Investigator', 'Postdoctoral researcher', 
                             'Doctoral Students', "Master's Students", 
-                            'Undergraduate Students', 'Alumni']
+                            'Interns', 'Alumni']
                 for category in categories:
                     if category in line:
                         info['category'] = category
@@ -59,7 +59,7 @@ def parse_member_info(md_path):
                         
                         # Alumni 타입 체크
                         if category == 'Alumni':
-                            alumni_types = ['Postdoctoral', 'Doctoral', "Master's", 'Undergraduate']
+                            alumni_types = ['Postdoctoral', 'Doctoral', "Master's", 'Intern']
                             for atype in alumni_types:
                                 if f'{atype} Alumni' in line:
                                     info['alumniType'] = atype
