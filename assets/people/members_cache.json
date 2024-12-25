@@ -1,7 +1,7 @@
 {
-    "Chae Lynne Kim.md": {
-        "name": "Chae Lynne Kim",
-        "category": "Master's Students",
+    "Jeongin Moon.md": {
+        "name": "Jeongin Moon",
+        "category": "Postdoctoral researcher",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
@@ -10,9 +10,9 @@
         ],
         "alumniType": ""
     },
-    "Chihyoeng Lee.md": {
-        "name": "Chihyoeng Lee",
-        "category": "Doctoral Students",
+    "Jangwhan Ahn.md": {
+        "name": "Jangwhan Ahn",
+        "category": "Master's Students",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
@@ -32,31 +32,9 @@
         ],
         "alumniType": ""
     },
-    "Hong Min.md": {
-        "name": "Hong Min",
-        "category": "Interns",
-        "photo": "member_photo.jpg",
-        "position": [
-            "Position Title",
-            "Department Name",
-            "University Name"
-        ],
-        "alumniType": ""
-    },
-    "Hyeonhee Jeong.md": {
-        "name": "Hyeonhee Jeong",
+    "Yoojin Choi.md": {
+        "name": "Yoojin Choi",
         "category": "Master's Students",
-        "photo": "member_photo.jpg",
-        "position": [
-            "Position Title",
-            "Department Name",
-            "University Name"
-        ],
-        "alumniType": ""
-    },
-    "Hyunji Kim.md": {
-        "name": "Hyunji Kim",
-        "category": "Doctoral Students",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
@@ -76,8 +54,30 @@
         ],
         "alumniType": ""
     },
-    "Jangwhan Ahn.md": {
-        "name": "Jangwhan Ahn",
+    "Junyeon Hwang.md": {
+        "name": "Junyeon Hwang",
+        "category": "Master's Students",
+        "photo": "member_photo.jpg",
+        "position": [
+            "Position Title",
+            "Department Name",
+            "University Name"
+        ],
+        "alumniType": ""
+    },
+    "Hyeonhee Jeong.md": {
+        "name": "Hyeonhee Jeong",
+        "category": "Master's Students",
+        "photo": "member_photo.jpg",
+        "position": [
+            "Position Title",
+            "Department Name",
+            "University Name"
+        ],
+        "alumniType": ""
+    },
+    "Chae Lynne Kim.md": {
+        "name": "Chae Lynne Kim",
         "category": "Master's Students",
         "photo": "member_photo.jpg",
         "position": [
@@ -98,17 +98,6 @@
         ],
         "alumniType": ""
     },
-    "Jeongin Moon.md": {
-        "name": "Jeongin Moon",
-        "category": "Postdoctoral researcher",
-        "photo": "member_photo.jpg",
-        "position": [
-            "Position Title",
-            "Department Name",
-            "University Name"
-        ],
-        "alumniType": ""
-    },
     "Jooeun Ahn.md": {
         "name": "Jooeun Ahn",
         "category": "Principal Investigator",
@@ -120,19 +109,9 @@
         ],
         "alumniType": ""
     },
-    "Jun Hyuk Lee.md": {
-        "name": "Jun Hyuk Lee",
-        "category": "Alumni",
-        "photo": "Lee Jun Hyuk.jpg",
-        "position": [
-            "AI Development Specialist",
-            "Republic of Korea Navy"
-        ],
-        "alumniType": "Intern"
-    },
-    "Junyeon Hwang.md": {
-        "name": "Junyeon Hwang",
-        "category": "Master's Students",
+    "Hong Min.md": {
+        "name": "Hong Min",
+        "category": "",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
@@ -141,14 +120,35 @@
         ],
         "alumniType": ""
     },
-    "Yoojin Choi.md": {
-        "name": "Yoojin Choi",
-        "category": "Master's Students",
+    "Chihyoeng Lee.md": {
+        "name": "Chihyoeng Lee",
+        "category": "Doctoral Students",
         "photo": "member_photo.jpg",
         "position": [
             "Position Title",
             "Department Name",
             "University Name"
+        ],
+        "alumniType": ""
+    },
+    "Hyunji Kim.md": {
+        "name": "Hyunji Kim",
+        "category": "Doctoral Students",
+        "photo": "member_photo.jpg",
+        "position": [
+            "Position Title",
+            "Department Name",
+            "University Name"
+        ],
+        "alumniType": ""
+    },
+    "Jun Hyuk Lee.md": {
+        "name": "Jun Hyuk Lee",
+        "category": "Alumni",
+        "photo": "Lee Jun Hyuk.jpg",
+        "position": [
+            "AI Development Specialist",
+            "Republic of Korea Navy"
         ],
         "alumniType": ""
     }
