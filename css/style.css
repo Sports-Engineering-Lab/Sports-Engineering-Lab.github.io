@@ -952,3 +952,23 @@ h1 a:hover {
 .overlay.active {
     display: block;
 } 
+
+.member-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.member-contact a:hover {
+    text-decoration: underline;
+    color: #8C001A;
+} 
+
+.footer__section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__section a:hover {
+    text-decoration: underline;
+    color: #8C001A;
+} 
