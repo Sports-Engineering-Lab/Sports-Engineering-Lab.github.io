@@ -87,17 +87,17 @@
 
 ## Activities 추가 방법
 
-1. assets/photos/ 폴더에 추가하고 싶은 사진을 추가
-2. assets/photos/photos.md 파일을 열기
-3. Facilities에 추가하고 싶으면 ## Facilities 하위에 Activities에 추가하고 싶으면 ## Activities 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+1. assets/activities/ 폴더에 추가하고 싶은 사진을 추가
+2. assets/activities/activities.md 파일을 열기
+3. 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
 
     ```markdown
-    ### Write title of your photo here
-    - file: file_name.jpg
+    ### Write title of your photos here
+    - file: file_name_1.jpg, file_name_2.jpg, file_name_3.jpg
     - description: write description of your photo here. write description of your photo here.
     ```
 
-4. commit을 완료하면 assets/photos/photos.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
+4. commit을 완료하면 assets/activities/activities.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
 
 ## 제작자 및 문의 정보
 
