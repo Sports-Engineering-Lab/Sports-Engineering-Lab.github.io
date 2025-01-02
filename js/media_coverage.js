@@ -36,6 +36,19 @@ function parseMediaCoverage(text) {
     return items;
 }
 
+function adjustFontSize(element) {
+    const maxFontSize = 28;
+    const minFontSize = 20;
+    const maxLength = 100; // 이 길이 이상이면 폰트 크기가 줄어들기 시작
+    
+    const content = element.textContent;
+    if (content.length > maxLength) {
+        const ratio = Math.max(minFontSize / maxFontSize, 1 - ((content.length - maxLength) / 200));
+        const newSize = Math.max(maxFontSize * ratio, minFontSize);
+        element.style.fontSize = `${newSize}px`;
+    }
+}
+
 function displayMediaCoverage(items) {
     const container = document.getElementById('media-coverage-container');
     
@@ -54,6 +67,10 @@ function displayMediaCoverage(items) {
         `;
         
         container.appendChild(mediaItem);
+        
+        // 폰트 크기 조절
+        const textElement = mediaItem.querySelector('.media-text');
+        adjustFontSize(textElement);
     });
 }
 
