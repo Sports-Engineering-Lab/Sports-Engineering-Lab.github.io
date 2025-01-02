@@ -39,4 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// 네비게이션 메뉴 활성화
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath === '/' && linkPath === '/') {
+            link.classList.add('active');
+            link.style.pointerEvents = 'none';
+        }
+    });
 }); 

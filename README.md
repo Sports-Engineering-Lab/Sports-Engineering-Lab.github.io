@@ -87,7 +87,7 @@
 
 ## Activities 추가 방법
 
-1. assets/activities/ 폴더에 추가하고 싶은 사진을 추가
+1. assets/activities/ 폴더에 추가하고 싶은 사진 및 동영상을 추가
 2. assets/activities/activities.md 파일을 열기
 3. 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
 

@@ -201,7 +201,21 @@ function restoreScrollPosition() {
 }
 
 // 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', initializePeoplePage);
+document.addEventListener('DOMContentLoaded', () => {
+    // 네비게이션 메뉴 활성화
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.includes('people') && linkPath.includes('people')) {
+            link.classList.add('active');
+            link.style.pointerEvents = 'none';
+        }
+    });
+
+    initializePeoplePage();
+});
 
 // 페이지를 떠날 때 스크롤 위치 저장
 window.addEventListener('beforeunload', saveScrollPosition);

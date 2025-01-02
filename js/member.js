@@ -232,6 +232,25 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.removeItem('peoplePageScroll');
         });
     });
+
+    // 현재 페이지의 네비게이션 메뉴 아이템 활성화
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        // member 페이지에서는 active 효과를 적용하지 않음
+        if (!currentPath.includes('member')) {
+            if ((currentPath === '/' && linkPath === '/') ||
+                (currentPath.includes('people') && linkPath.includes('people')) ||
+                (currentPath.includes('publications') && linkPath.includes('publications')) ||
+                (currentPath.includes('media_coverage') && linkPath.includes('media_coverage')) ||
+                (currentPath.includes('activities') && linkPath.includes('activities'))) {
+                link.classList.add('active');
+                link.style.pointerEvents = 'none';
+            }
+        }
+    });
 });
 
 function createMemberPage(memberData) {

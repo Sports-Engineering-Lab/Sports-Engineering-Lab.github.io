@@ -77,4 +77,20 @@ function displayMediaCoverage(items) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    // 네비게이션 메뉴 활성화
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.includes('media_coverage') && linkPath.includes('media_coverage')) {
+            link.classList.add('active');
+            link.style.pointerEvents = 'none';
+        }
+    });
+
+    initializeMediaCoveragePage();
+});
+
 document.addEventListener('DOMContentLoaded', loadMediaCoverage); 
