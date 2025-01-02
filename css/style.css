@@ -645,18 +645,29 @@ h1 a:hover {
     justify-content: space-between;
     padding: 15px 0 0;
     margin-bottom: 15px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .sub-page .header-container::after {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -25px;
     height: 10px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
     pointer-events: none;
-} 
+    width: 100vw;
+}
+
+@media (min-width: 2000px) {
+    .sub-page .header-container::after {
+        width: 2000px;
+    }
+}
 
 /* Back to Top Button Styles */
 .back-to-top {
