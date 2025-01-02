@@ -850,9 +850,18 @@ h1 a:hover {
     padding: 15px;
     position: absolute;
     right: 20px;
-    top: 65%;
+    top: calc(50% + 7.5px);
     transform: translateY(-50%);
     z-index: 1000;
+}
+
+@media (max-width: 1100px) {
+    .menu-toggle.active {
+        position: fixed;
+        right: 20px;
+        top: 52px;
+        transform: none;
+    }
 }
 
 .menu-toggle span {
@@ -878,7 +887,7 @@ h1 a:hover {
 }
 
 /* 반응형 네비게이션 */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .menu-toggle {
         display: block;
     }
