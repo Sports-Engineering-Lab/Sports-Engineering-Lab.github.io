@@ -1,30 +1,24 @@
 /* 레이아웃 */
-.top-section {
-    display: grid;
-    grid-template-columns: 1.2fr 3fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+.member-section {
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.bottom-section {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 프로필 왼쪽 영역 */
-.profile-left {
+/* 프로필 카드 */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.profile-left img {
+.profile-card img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -32,36 +26,59 @@
     margin-bottom: 1rem;
 }
 
-.profile-left h2 {
-    margin-bottom: 0.5rem;
-}
-
-.alumni-type {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.position {
-    margin: 0.3rem 0;
-    color: #666;
-    white-space: nowrap;
-    overflow: visible;
-}
-
-/* 프로필 오른쪽 영역 */
-.profile-right {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-}
-
-.member-bio {
+/* Bio 섹션 */
+.bio-section {
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.bio-section ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.bio-section li {
+    padding-left: 0;
+}
+
+/* Contact와 Links 섹션 */
+.side-info {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.member-contact,
+.member-links {
+    box-shadow: none;
+    border: none;
+    padding: 25px;
+    margin: 0;
+    background: none;
+}
+
+/* Description 섹션 */
+.description-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.description-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+    word-break: keep-all;
 }
 
 /* 섹션 헤더 스타일 */
-.member-bio h3,
+.bio-section h3,
 .member-contact h3,
 .member-links h3 {
     color: #8B0000;
@@ -71,49 +88,7 @@
     border-bottom: 1px solid #ddd;
 }
 
-/* Bio 리스트 스타일 */
-.member-bio ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.member-bio li {
-    margin-bottom: 0.5rem;
-}
-
-/* 설명 영역 */
-.description-content {
-    line-height: 1.6;
-}
-
-.description-content p {
-    margin-bottom: 1.5rem;
-}
-
-.description-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* 사이드 정보 영역 */
-.side-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-
-.member-contact,
-.member-links {
-    margin-top: 0.3rem;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-}
-
-.member-contact {
-    margin-bottom: 2rem;
-}
-
+/* Contact 스타일 */
 .member-contact p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
@@ -123,6 +98,7 @@
     font-size: 0.9rem;
 }
 
+/* Links 스타일 */
 .member-links a {
     color: #0066cc;
     text-decoration: none;
@@ -134,85 +110,33 @@
 }
 
 /* 반응형 디자인 */
-@media (max-width: 1024px) {
-    .top-section {
-        grid-template-columns: 1fr 2fr;
-        padding: 0 1rem;
-    }
-
-    .bottom-section {
-        grid-template-columns: 2fr 1fr;
-        padding: 0 1rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .top-section {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .bottom-section {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .profile-left img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .profile-right {
-        align-items: center;
-    }
-
-    .member-bio {
-        text-align: center;
-        order: 1;
-    }
-
-    .member-bio ul {
-        text-align: left;
+    .member-section {
+        padding: 1rem;
     }
 
     .side-info {
-        text-align: center;
-        order: 2;
-    }
-
-    .description-content {
-        margin-bottom: 0;
-        order: 3;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .top-section {
-        gap: 1rem;
-    }
-
-    .bottom-section {
-        gap: 1rem;
-    }
-
-    .profile-left img {
+    .profile-card img {
         width: 150px;
         height: 150px;
     }
 
-    .profile-left h2 {
+    .profile-card h2 {
         font-size: 1.5rem;
     }
 
-    .member-bio h3,
+    .bio-section h3,
     .member-contact h3,
     .member-links h3 {
         font-size: 1.1rem;
     }
 
-    .member-bio li,
     .member-contact p,
     .member-links a {
         font-size: 0.85rem;

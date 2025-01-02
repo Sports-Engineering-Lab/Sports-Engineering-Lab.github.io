@@ -137,7 +137,7 @@ async function parseMemberMD(memberName) {
 
 // 멤버 정보를 페이지에 표시
 function displayMemberProfile(member) {
-    const profileSection = document.querySelector('.member-profile');
+    const memberSection = document.querySelector('.member-section');
     
     // 이미지 로드를 시도하고 실패하면 파비콘으로 대체
     const loadImage = async () => {
@@ -155,54 +155,53 @@ function displayMemberProfile(member) {
     };
 
     loadImage().then(photoSrc => {
-        const topSectionHTML = `
-            <div class="top-section">
-                <div class="profile-left">
-                    <img src="${photoSrc}" 
-                         alt="${member.name}">
-                    <h2>${member.name}</h2>
-                    ${member.category === 'Alumni' && member.alumniType ? 
-                        `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
-                    ${member.position.join('<br>')}
-                </div>
-                <div class="profile-right">
-                    <div class="member-bio">
-                        <h3>Bio</h3>
-                        <ul>
-                            ${member.bio.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        // 프로필 카드
+        const profileCardHTML = `
+            <img src="${photoSrc}" alt="${member.name}">
+            <h2>${member.name}</h2>
+            ${member.category === 'Alumni' && member.alumniType ? 
+                `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
+            ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
+        `;
+        
+        // Bio 섹션
+        const bioSectionHTML = `
+            <h3>Bio</h3>
+            <ul>
+                ${member.bio.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        `;
+        
+        // Contact와 Links 섹션
+        const contactHTML = `
+            <h3>Contact</h3>
+            ${Object.entries(member.contact).map(([key, value]) => 
+                key.toLowerCase() === 'email' ?
+                `<p><strong>${key}:</strong> <a href="mailto:${value}">${value}</a></p>` :
+                `<p><strong>${key}:</strong> ${value}</p>`
+            ).join('')}
+        `;
+        
+        const linksHTML = `
+            <h3>Links</h3>
+            ${member.links.map(link => 
+                `<a href="${link.url}" target="_blank">${link.title}</a>`
+            ).join(' | ')}
+        `;
+        
+        // Description 섹션
+        const descriptionHTML = `
+            ${member.description.split('\n').map(para => 
+                para ? `<p>${para}</p>` : ''
+            ).join('')}
         `;
 
-        const bottomSectionHTML = `
-            <div class="bottom-section">
-                <div class="description-content">
-                    ${member.description.split('\n').map(para => 
-                        para ? `<p>${para}</p>` : ''
-                    ).join('')}
-                </div>
-                <div class="side-info">
-                    <div class="member-contact">
-                        <h3>Contact</h3>
-                        ${Object.entries(member.contact).map(([key, value]) => 
-                            key.toLowerCase() === 'email' ?
-                            `<p><strong>${key}:</strong> <a href="mailto:${value}">${value}</a></p>` :
-                            `<p><strong>${key}:</strong> ${value}</p>`
-                        ).join('')}
-                    </div>
-                    <div class="member-links">
-                        <h3>Links</h3>
-                        ${member.links.map(link => 
-                            `<a href="${link.url}" target="_blank">${link.title}</a>`
-                        ).join(' | ')}
-                    </div>
-                </div>
-            </div>
-        `;
-
-        profileSection.innerHTML = topSectionHTML + bottomSectionHTML;
+        // 각 섹션에 HTML 삽입
+        memberSection.querySelector('.profile-card').innerHTML = profileCardHTML;
+        memberSection.querySelector('.bio-section').innerHTML = bioSectionHTML;
+        memberSection.querySelector('.member-contact').innerHTML = contactHTML;
+        memberSection.querySelector('.member-links').innerHTML = linksHTML;
+        memberSection.querySelector('.description-section').innerHTML = descriptionHTML;
     });
 }
 
