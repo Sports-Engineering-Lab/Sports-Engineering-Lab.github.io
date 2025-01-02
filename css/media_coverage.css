@@ -42,13 +42,13 @@
     line-height: 1.4;
     color: #333;
     margin: 0;
-    padding-top: 40px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, padding-top 0.3s ease;
     word-break: keep-all;
     word-wrap: break-word;
+    min-height: fit-content;
 }
 
 .media-text:hover {
@@ -70,7 +70,6 @@
     
     .media-text {
         font-size: 24px;
-        padding-top: 35px;
     }
 
     .media-date {

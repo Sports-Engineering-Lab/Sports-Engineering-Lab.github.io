@@ -46,6 +46,9 @@ function adjustFontSize(element) {
         const ratio = Math.max(minFontSize / maxFontSize, 1 - ((content.length - maxLength) / 200));
         const newSize = Math.max(maxFontSize * ratio, minFontSize);
         element.style.fontSize = `${newSize}px`;
+        element.style.paddingTop = '40px'; // 폰트 크기가 줄어들 때만 padding 추가
+    } else {
+        element.style.paddingTop = '0'; // 기본 상태에서는 padding 제거
     }
 }
 
