@@ -61,7 +61,7 @@
 ## Publications 추가 방법
 
 1. assets/publications.md 파일을 열기
-2. 내용을 추가하고 싶으면 ## {해당년도} 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+2. 출판 년도에 맞는 ## {해당년도} 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
 
     ```markdown
     Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format.
@@ -70,7 +70,22 @@
 
 3. commit을 완료하면 assets/publications.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
 
-## Photos 추가 방법
+## Media Coverage 추가 방법
+
+1. assets/media_coverage/ 폴더에 썸네일로 사용할 사진 추가
+2. assets/media_coverage/media_coverage.md 파일을 열기
+3. 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+
+    ```markdown
+    - date: YYYY-MM-DD
+    - thumbnail: thumbnail_image.jpg
+    - content: This is sample media coverage content
+    - link: https://media-coverage-sample.com
+    ```
+
+4. commit을 완료하면 assets/media_coverage/media_coverage.md 파일에 적혀있는 순서대로 홈페이지에 자동 반영 됨
+
+## Activities 추가 방법
 
 1. assets/photos/ 폴더에 추가하고 싶은 사진을 추가
 2. assets/photos/photos.md 파일을 열기

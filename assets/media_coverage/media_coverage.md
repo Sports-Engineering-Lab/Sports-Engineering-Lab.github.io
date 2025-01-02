@@ -1,19 +1,26 @@
 # Media Coverage
 
-## Format
-각 미디어 항목은 다음 형식을 따릅니다:
-```yaml
-- date: YYYY-MM-DD
-  title: 제목
-  thumbnail: thumbnails/image_name.jpg
-  link: https://example.com
-  description: 간단한 설명 (선택사항)
-```
-
-## Coverage List
-
 - date: 2024-01-01
-  title: 샘플 미디어 커버리지
-  thumbnail: thumbnails/sample.jpg
-  link: https://example.com
-  description: 이것은 샘플 미디어 커버리지 항목입니다. 
+- thumbnail: Activity_sample1.jpg
+- content: This is sample media coverage content 5
+- link: https://doi.org/10.1098/rsos.240333
+
+- date: 2023-01-01
+- thumbnail: Activity_sample2.jpg
+- content: This is sample media coverage content 4 This is sample media coverage content 4 This is sample media coverage content 4 This is sample media coverage content 4 This is sample media coverage content 4
+- link: https://doi.org/10.1098/rsos.240333
+
+- date: 2022-09-01
+- thumbnail: Bertec_force_treadmil.jpg
+- content: This is sample media coverage content 3
+- link: https://doi.org/10.1098/rsos.240333
+
+- date: 2021-01-21
+- thumbnail: Bertec_force_treadmil2.jpg
+- content: This is sample media coverage content 2
+- link: https://doi.org/10.1098/rsos.240333
+
+- date: 2020-10-23
+- thumbnail: Cosmed_Mask_.jpg
+- content: This is sample media coverage content 1
+- link: https://doi.org/10.1098/rsos.240333
