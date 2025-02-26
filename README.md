@@ -59,7 +59,7 @@
 ## Publications 추가 방법
 
 1. assets/publications.md 파일을 열기
-2. 출판 년도에 맞는 ## {해당년도} 하위에 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+2. 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
 
     ```markdown
     Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format.
