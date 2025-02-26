@@ -73,8 +73,8 @@
 
 .modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90vh;
+    width: 98%;
+    height: 98vh;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -84,13 +84,14 @@
 .carousel-container {
     position: relative;
     width: 100%;
+    height: calc(98vh - 100px); /* 모달 정보 영역 고려 */
     background: #000;
 }
 
 .carousel-track {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
