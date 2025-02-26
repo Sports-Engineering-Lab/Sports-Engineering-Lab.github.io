@@ -6,16 +6,14 @@
 - [ ] Postdoctoral researcher
 - [x] Doctoral Students
 - [ ] Master's Students
-- [ ] Interns
 - [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
   - [ ] Master's Alumni
-  - [ ] Intern Alumni
 
 ## Photo
 <!-- 본인 파일명을 입력하세요. 사진은 assets/people/photos/ 디렉토리에 저장해주세요. -->
-member_photo.jpg
+김현지.jpg
 
 ## Position
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
@@ -31,8 +29,8 @@ Position Title, Department Name, University Name
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
-Email: email@example.com
-Telephone: +82-2-XXX-XXXX
+Email: hyunji94@snu.ac.kr
+Telephone: +82-10-5129-9767
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

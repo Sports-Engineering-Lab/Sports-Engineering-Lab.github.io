@@ -18,6 +18,15 @@ def parse_member_info(md_path):
         with open(md_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
 
+        # 주석 제거 (한 줄 안에 있는 주석만 제거)
+        cleaned_lines = []
+        for line in lines:
+            # 주석이 포함된 부분 제거
+            if '<!--' in line and '-->' in line:
+                line = line[:line.find('<!--')] + line[line.find('-->') + 3:]
+            if line.strip():
+                cleaned_lines.append(line)
+
         info = {
             'name': '',
             'category': '',
@@ -28,30 +37,29 @@ def parse_member_info(md_path):
 
         current_section = ''
         found_required = {'name': False, 'category': False, 'photo': False, 'position': False}
+        i = 0
 
-        for line in lines:
-            line = line.strip()
+        while i < len(cleaned_lines):
+            line = cleaned_lines[i].rstrip()
             
-            # 주석 무시
-            if line.startswith('<!--') or line.endswith('-->'):
-                continue
-
             # 이름 파싱
             if line.startswith('# ') and not found_required['name']:
                 info['name'] = line.replace('# ', '').strip()
                 found_required['name'] = True
+                i += 1
                 continue
 
             # 섹션 확인
             if line.startswith('##'):
                 current_section = line.replace('##', '').strip()
+                i += 1
                 continue
 
             # 카테고리 파싱
-            if line.startswith('- [x]') and not found_required['category']:
+            if '- [x]' in line and not found_required['category']:
                 categories = ['Principal Investigator', 'Postdoctoral researcher', 
                             'Doctoral Students', "Master's Students", 
-                            'Interns', 'Alumni']
+                            'Alumni']
                 for category in categories:
                     if category in line:
                         info['category'] = category
@@ -59,18 +67,30 @@ def parse_member_info(md_path):
                         
                         # Alumni 타입 체크
                         if category == 'Alumni':
-                            alumni_types = ['Postdoctoral', 'Doctoral', "Master's", 'Intern']
-                            for atype in alumni_types:
-                                if f'{atype} Alumni' in line:
-                                    info['alumniType'] = atype
+                            # 다음 줄들을 검사하여 Alumni 타입 찾기
+                            j = i + 1
+                            while j < len(cleaned_lines):
+                                next_line = cleaned_lines[j].rstrip()
+                                # Alumni 타입 체크박스를 찾았을 때
+                                if '- [x]' in next_line and next_line.startswith('  '):
+                                    for atype in ['Postdoctoral', 'Doctoral', "Master's"]:
+                                        if f'{atype} Alumni' in next_line:
+                                            info['alumniType'] = atype
+                                            break
+                                    if info['alumniType']:  # Alumni 타입을 찾았으면 종료
+                                        break
+                                # 들여쓰기가 없는 줄을 만나면 Alumni 타입 체크 종료
+                                elif not next_line.startswith('  '):
                                     break
+                                j += 1
                         break
+                i += 1
                 continue
 
             # 섹션별 정보 파싱
             if current_section == 'Photo' and not found_required['photo']:
                 if line:
-                    info['photo'] = line
+                    info['photo'] = line.strip()
                     found_required['photo'] = True
             elif current_section == 'Position' and not found_required['position']:
                 if line:
@@ -80,6 +100,8 @@ def parse_member_info(md_path):
             # 모든 필수 정보를 찾았으면 종료
             if all(found_required.values()):
                 break
+
+            i += 1
 
         return info
     except Exception as e:

@@ -19,7 +19,7 @@ async function parseMemberMD(filename) {
         // 카테고리 체크
         const categories = ['Principal Investigator', 'Postdoctoral researcher', 
                            'Doctoral Students', "Master's Students", 
-                           'Undergraduate Students', 'Alumni'];
+                           'Alumni'];
         
         let currentSection = '';
         let foundRequiredInfo = {
@@ -68,8 +68,7 @@ async function parseMemberMD(filename) {
                                 if (alumniLine.includes('[x]') && 
                                     (alumniLine.includes('Postdoctoral Alumni') ||
                                      alumniLine.includes('Doctoral Alumni') ||
-                                     alumniLine.includes("Master's Alumni") ||
-                                     alumniLine.includes('Undergraduate Alumni'))) {
+                                     alumniLine.includes("Master's Alumni"))) {
                                     const match = alumniLine.match(/- \[x\] (.*?) Alumni/);
                                     if (match) {
                                         member.alumniType = match[1].trim();

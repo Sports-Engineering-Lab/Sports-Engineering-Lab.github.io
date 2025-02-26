@@ -3,16 +3,14 @@
 - [ ] Principal Investigator
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
-- [ ] Master's Students
-- [x] Interns
+- [x] Master's Students
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
   - [ ] Master's Alumni
-  - [ ] Intern Alumni
 
 ## Photo
-member_photo.jpg
+민홍.jpg
 
 ## Position
 Position Title, Department Name, University Name
@@ -25,8 +23,8 @@ Position Title, Department Name, University Name
 - Best Paper Award, Conference Name (2019)
 
 ## Contact
-Email: email@example.com
-Telephone: +82-2-XXX-XXXX
+Email: m563248@snu.ac.kr
+Telephone: +82-10-4563-1958
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

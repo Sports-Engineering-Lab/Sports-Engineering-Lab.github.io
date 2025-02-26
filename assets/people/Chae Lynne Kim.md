@@ -4,15 +4,13 @@
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [x] Master's Students
-- [ ] Interns
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
   - [ ] Master's Alumni
-  - [ ] Intern Alumni
 
 ## Photo
-member_photo.jpg
+김채린.jpg
 
 ## Position
 Position Title, Department Name, University Name
@@ -25,8 +23,8 @@ Position Title, Department Name, University Name
 - Best Paper Award, Conference Name (2019)
 
 ## Contact
-Email: email@example.com
-Telephone: +82-2-XXX-XXXX
+Email: clynnek22@snu.ac.kr
+Telephone: +82-10-5354-3336
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)
