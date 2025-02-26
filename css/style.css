@@ -21,11 +21,10 @@ html, body {
 
 .mission-statement h2 {
     font-size: 2.2em;
-    color: #333;
+    color: #555;
     margin-bottom: 50px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .mission-statement ul {
@@ -39,9 +38,9 @@ html, body {
 
 .mission-statement ul li {
     font-size: 1.5em;
-    color: #555;
+    color: #333;
     line-height: 1.6;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.3px;
 }
 
