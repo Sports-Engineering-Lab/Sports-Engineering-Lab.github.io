@@ -8,44 +8,31 @@ async function parsePublicationsMD() {
         const text = await response.text();
         const lines = text.split('\n');
         
-        const publications = {
-            byYear: {}
-        };
-        
-        let currentYear = '';
+        const publications = [];
+        let currentPublication = null;
         
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             
-            if (!line) continue;
-            
-            // 년도 체크
-            if (line.startsWith('## ')) {
-                currentYear = line.replace('## ', '');
-                if (!publications.byYear[currentYear]) {
-                    publications.byYear[currentYear] = [];
-                }
-                continue;
-            }
+            if (!line || line.startsWith('# ')) continue;
             
             // 링크 체크
             if (line.startsWith('[')) {
                 const match = line.match(/\[(.*?)\]\((.*?)\)/);
-                if (match && currentYear) {
+                if (match && currentPublication) {
                     const [_, title, url] = match;
-                    publications.byYear[currentYear][
-                        publications.byYear[currentYear].length - 1
-                    ].links.push({ title, url });
+                    currentPublication.links.push({ title, url });
                 }
                 continue;
             }
             
-            // 내용 처리
-            if (currentYear && !line.startsWith('#')) {
-                publications.byYear[currentYear].push({
+            // 새로운 출판물 시작
+            if (!line.startsWith('[')) {
+                currentPublication = {
                     citation: line,
                     links: []
-                });
+                };
+                publications.push(currentPublication);
             }
         }
         
@@ -60,25 +47,18 @@ async function parsePublicationsMD() {
 function displayPublications(publications) {
     const container = document.querySelector('.publications-container');
     
-    const yearsHTML = Object.entries(publications.byYear)
-        .sort(([yearA], [yearB]) => yearB - yearA) // 년도 내림차순 정렬
-        .map(([year, papers]) => `
-            <section class="year-section">
-                <h2>${year}</h2>
-                ${papers.map(paper => `
-                    <div class="publication-entry">
-                        <p class="citation">${paper.citation}</p>
-                        <div class="paper-links">
-                            ${paper.links.map(link => `
-                                <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
-                            `).join(' ')}
-                        </div>
-                    </div>
+    const publicationsHTML = publications.map(paper => `
+        <div class="publication-entry">
+            <p class="citation">${paper.citation}</p>
+            <div class="paper-links">
+                ${paper.links.map(link => `
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
                 `).join('')}
-            </section>
-        `).join('');
+            </div>
+        </div>
+    `).join('');
     
-    container.innerHTML = yearsHTML;
+    container.innerHTML = publicationsHTML;
 }
 
 // 페이지 로드 시 실행

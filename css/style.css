@@ -415,19 +415,6 @@ h1 a:hover {
     letter-spacing: 1px;
 }
 
-.year-section {
-    margin-bottom: 40px;
-}
-
-.year-section h3 {
-    color: #8C001A;
-    font-size: 1.6em;
-    font-weight: 400;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
-}
-
 .publication-list {
     display: flex;
     flex-direction: column;
