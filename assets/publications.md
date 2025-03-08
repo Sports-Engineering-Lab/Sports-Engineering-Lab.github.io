@@ -1,7 +1,7 @@
 # Publications
 
 T. Hong, C. Lee, S. Chang, E. Choi, B. Kim, J. Ahn, YL. Park*, “Design of a fully-soft lift-assist wearable suit powered by flat inflatable artificial muscles”, IEEE Robotics and Automation Letters, 2025
-[DIO](https://dio.org/10.1109/LRA.2025.3541377)
+[DIO](https://doi.org/10.1109/LRA.2025.3541377)
 
 C. Lee, J. Ahn*, BC. Lee*, "The effects of perturbation intensities on backward slip-falls induced by a split-belt treadmill", Scientific Reports, 2025.
 [DOI](https://doi.org/10.21203/rs.3.rs-4677876/v1)
