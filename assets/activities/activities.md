@@ -1,5 +1,13 @@
 # Activities
 
+## 2025 ERC Winter Workshop
+- files: KakaoTalk_20250221_182123553_12.jpg, KakaoTalk_20250221_182123553_04.jpg, KakaoTalk_20250221_182123553_08.jpg, KakaoTalk_20250221_180857570_01.jpg
+- description: 
+
+## 2025 Commencement
+- files: KakaoTalk_20250226_123347303.jpg, KakaoTalk_20250226_123347303_05.jpg
+- description: 
+
 ## 2024 Fall Commencement
 - files: KakaoTalk_20240226_161857746.jpg, KakaoTalk_20240226_161857746_13.jpg, KakaoTalk_20240226_162141402_07.jpg
 - description: 
