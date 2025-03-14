@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: ssjjmon@naver.com
-Telephone: +82-10-7708-2976
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

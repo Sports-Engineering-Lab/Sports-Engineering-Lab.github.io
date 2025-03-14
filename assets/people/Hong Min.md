@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: m563248@snu.ac.kr
-Telephone: +82-10-4563-1958
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

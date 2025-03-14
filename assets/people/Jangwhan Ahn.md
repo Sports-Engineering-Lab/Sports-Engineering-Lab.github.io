@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: xaviniesta@snu.ac.kr
-Telephone: +82-10-4183-7128
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

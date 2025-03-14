@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: ces40320@snu.ac.kr
-Telephone: +82-10-5167-3988
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

@@ -31,7 +31,7 @@ Assistant Professor, Dept. Marine sports, Republic of Korea Naval Academy
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
 Email: kimbd0819@snu.ac.kr
-Telephone: +82-10-3203-8030
+Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

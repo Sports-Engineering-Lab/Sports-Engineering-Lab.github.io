@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: hyeonhee32@snu.ac.kr
-Telephone: +82-10-3517-3285
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: chi0412@snu.ac.kr
-Telephone: +82-10-2852-2750
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

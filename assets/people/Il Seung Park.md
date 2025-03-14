@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: ilseung@snu.ac.kr
-Telephone: +82-10-6553-0937
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)

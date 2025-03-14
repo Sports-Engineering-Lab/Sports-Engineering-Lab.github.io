@@ -31,7 +31,7 @@ Position Title, Department Name, University Name
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
 Email: 123h789@naver.com
-Telephone: +82-10-8731-8143
+Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

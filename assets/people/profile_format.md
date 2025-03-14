@@ -6,7 +6,7 @@
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [ ] Master's Students
-- [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
+- [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. 복수 선택 가능 -->
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
   - [ ] Master's Alumni

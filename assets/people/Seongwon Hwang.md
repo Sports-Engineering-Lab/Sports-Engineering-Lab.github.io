@@ -31,7 +31,7 @@ PhD, University of Southern California
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
 Email: swh0430@snu.ac.kr
-Telephone: +82-10-5399-9231
+Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

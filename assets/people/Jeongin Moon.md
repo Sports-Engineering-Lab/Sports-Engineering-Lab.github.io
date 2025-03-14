@@ -31,7 +31,7 @@ Post-doc, UMass Lowell
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
 Email: moon00@snu.ac.kr
-Telephone: +82-10-9044-7002
+Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

@@ -31,7 +31,7 @@ Position Title, Department Name, University Name
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
 Email: tgn1995@snu.ac.kr
-Telephone: +82-10-2239-9484
+Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->

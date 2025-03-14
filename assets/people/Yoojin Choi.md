@@ -25,7 +25,7 @@ Position Title, Department Name, University Name
 
 ## Contact
 Email: eugene0913@snu.ac.kr
-Telephone: +82-10-8211-1627
+Telephone: 
 
 ## Link
 [Google Scholar](https://scholar.google.com/citations?user=XXXX)
