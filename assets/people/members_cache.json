@@ -13,14 +13,6 @@
         ],
         "zoom": 1.0
     },
-    "Chae Lynne Kim.md": {
-        "name": "Chae Lynne Kim",
-        "category": "Master's Students",
-        "photo": "김채린.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
     "Chihyoeng Lee.md": {
         "name": "Chihyoeng Lee",
         "category": "Doctoral Students",
@@ -29,60 +21,23 @@
         "alumniType": [],
         "zoom": 1.0
     },
-    "Eunsik Choi.md": {
-        "name": "Eunsik Choi",
-        "category": "Doctoral Students",
-        "photo": "최은식.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Hong Min.md": {
-        "name": "Hong Min",
-        "category": "Master's Students",
-        "photo": "민홍.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Hyeonhee Jeong.md": {
-        "name": "Hyeonhee Jeong",
+    "Siddhartha Panday.md": {
+        "name": "Siddhartha Panday",
         "category": "Alumni",
-        "photo": "정현희.jpg",
-        "position": [],
+        "photo": "Siddhartha Panday.jpg",
+        "position": [
+            "Associate Professor",
+            "Hanyang University"
+        ],
         "alumniType": [
-            "Master's"
+            "Doctoral"
         ],
         "zoom": 1.0
     },
-    "Hyunji Kim.md": {
-        "name": "Hyunji Kim",
-        "category": "Doctoral Students",
-        "photo": "김현지.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Il Seung Park.md": {
-        "name": "Il Seung Park",
+    "Minhye Kim.md": {
+        "name": "Minhye Kim",
         "category": "Master's Students",
-        "photo": "박일승.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 0.9
-    },
-    "Jaewoo Cho.md": {
-        "name": "Jaewoo Cho",
-        "category": "Doctoral Students",
-        "photo": "조재우.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Jangwhan Ahn.md": {
-        "name": "Jangwhan Ahn",
-        "category": "Master's Students",
-        "photo": "안장환.jpg",
+        "photo": "김민혜.jpg",
         "position": [],
         "alumniType": [],
         "zoom": 1.0
@@ -94,6 +49,18 @@
         "position": [],
         "alumniType": [],
         "zoom": 1.0
+    },
+    "Jooeun Ahn.md": {
+        "name": "Jooeun Ahn",
+        "category": "Principal Investigator",
+        "photo": "안주은.jpg",
+        "position": [
+            "Associate Professor",
+            "Department of Physical Education",
+            "Seoul National University"
+        ],
+        "alumniType": [],
+        "zoom": 1.4
     },
     "Jeongin Moon.md": {
         "name": "Jeongin Moon",
@@ -110,22 +77,36 @@
         ],
         "zoom": 1.0
     },
-    "Jooeun Ahn.md": {
-        "name": "Jooeun Ahn",
-        "category": "Principal Investigator",
-        "photo": "안주은.jpg",
-        "position": [
-            "Associate Professor",
-            "Department of Physical Education",
-            "Seoul National University"
+    "Hyeonhee Jeong.md": {
+        "name": "Hyeonhee Jeong",
+        "category": "Alumni",
+        "photo": "정현희.jpg",
+        "position": [],
+        "alumniType": [
+            "Master's"
         ],
-        "alumniType": [],
-        "zoom": 1.4
+        "zoom": 1.0
     },
-    "Minhye Kim.md": {
-        "name": "Minhye Kim",
+    "Il Seung Park.md": {
+        "name": "Il Seung Park",
         "category": "Master's Students",
-        "photo": "김민혜.jpg",
+        "photo": "박일승.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 0.9
+    },
+    "Eunsik Choi.md": {
+        "name": "Eunsik Choi",
+        "category": "Doctoral Students",
+        "photo": "최은식.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Chae Lynne Kim.md": {
+        "name": "Chae Lynne Kim",
+        "category": "Master's Students",
+        "photo": "김채린.jpg",
         "position": [],
         "alumniType": [],
         "zoom": 1.0
@@ -143,6 +124,22 @@
         ],
         "zoom": 1.0
     },
+    "Jangwhan Ahn.md": {
+        "name": "Jangwhan Ahn",
+        "category": "Master's Students",
+        "photo": "안장환.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Hong Min.md": {
+        "name": "Hong Min",
+        "category": "Master's Students",
+        "photo": "민홍.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
     "Seongwon Hwang.md": {
         "name": "Seongwon Hwang",
         "category": "Alumni",
@@ -156,18 +153,21 @@
         ],
         "zoom": 1.0
     },
-    "Siddhartha Panday.md": {
-        "name": "Siddhartha Panday",
-        "category": "Alumni",
-        "photo": "Siddhartha Panday.jpg",
-        "position": [
-            "Associate Professor",
-            "Hanyang University"
-        ],
-        "alumniType": [
-            "Doctoral"
-        ],
+    "Jaewoo Cho.md": {
+        "name": "Jaewoo Cho",
+        "category": "Doctoral Students",
+        "photo": "조재우.jpg",
+        "position": [],
+        "alumniType": [],
         "zoom": 1.0
+    },
+    "Yoojin Choi.md": {
+        "name": "Yoojin Choi",
+        "category": "Master's Students",
+        "photo": "최유진.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 0.9
     },
     "Taegyun Park.md": {
         "name": "Taegyun Park",
@@ -179,12 +179,12 @@
         ],
         "zoom": 1.0
     },
-    "Yoojin Choi.md": {
-        "name": "Yoojin Choi",
-        "category": "Master's Students",
-        "photo": "최유진.jpg",
+    "Hyunji Kim.md": {
+        "name": "Hyunji Kim",
+        "category": "Doctoral Students",
+        "photo": "김현지.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 0.9
+        "zoom": 1.0
     }
 }
