@@ -156,6 +156,9 @@ function showActivityModal(activityJson) {
             existingModal.remove();
         }
 
+        // 현재 슬라이드 인덱스 초기화
+        currentSlide = 0;
+
         const modal = document.createElement('div');
         modal.className = 'photo-modal';
         
