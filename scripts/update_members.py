@@ -94,7 +94,11 @@ def parse_member_info(md_path):
                     found_required['photo'] = True
             elif current_section == 'Position' and not found_required['position']:
                 if line:
-                    info['position'] = [pos.strip() for pos in line.split(',')]
+                    # 예시 텍스트인 경우 공란으로 처리
+                    if line.strip() == "Position Title, Department Name, University Name":
+                        info['position'] = []
+                    else:
+                        info['position'] = [pos.strip() for pos in line.split(',')]
                     found_required['position'] = True
 
             # 모든 필수 정보를 찾았으면 종료
