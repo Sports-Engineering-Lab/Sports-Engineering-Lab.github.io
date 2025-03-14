@@ -17,7 +17,7 @@
 
 ## Position
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
-Professor, Department of Physical Education, Seoul National University
+Associate Professor, Department of Physical Education, Seoul National University
 
 ## Bio
 <!-- 본인의 학력, 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
