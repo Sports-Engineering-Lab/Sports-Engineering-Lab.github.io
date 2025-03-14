@@ -32,7 +32,7 @@ def parse_member_info(md_path):
             'category': '',
             'photo': '',
             'position': [],
-            'alumniType': '',
+            'alumniType': [],  # 배열로 변경하여 복수 타입 저장
             'zoom': 1  # 기본값 1로 설정
         }
 
@@ -65,21 +65,18 @@ def parse_member_info(md_path):
                         info['category'] = category
                         found_required['category'] = True
                         
-                        # Alumni인 경우 타입 체크
+                        # Alumni인 경우 타입 체크 (복수 선택 가능)
                         if category == 'Alumni':
                             j = i + 1
                             while j < len(cleaned_lines):
                                 alumni_line = cleaned_lines[j].strip()
                                 if '[x]' in alumni_line:
                                     if 'Postdoctoral Alumni' in alumni_line:
-                                        info['alumniType'] = 'Postdoctoral'
-                                        break
+                                        info['alumniType'].append('Postdoctoral')
                                     elif 'Doctoral Alumni' in alumni_line:
-                                        info['alumniType'] = 'Doctoral'
-                                        break
+                                        info['alumniType'].append('Doctoral')
                                     elif "Master's Alumni" in alumni_line:
-                                        info['alumniType'] = "Master's"
-                                        break
+                                        info['alumniType'].append("Master's")
                                 if '##' in alumni_line:  # 다음 섹션 시작
                                     break
                                 j += 1

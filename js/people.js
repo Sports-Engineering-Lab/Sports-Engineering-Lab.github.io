@@ -164,6 +164,24 @@ function addMemberToSection(memberInfo, filename) {
         imgStyle = `transform: scale(${zoomValue}); transform-origin: center;`;
     }
 
+    // Alumni 타입 표시 처리
+    let alumniTypeDisplay = '';
+    if (memberInfo.category === 'Alumni' && memberInfo.alumniType && memberInfo.alumniType.length > 0) {
+        // 배열인 경우 (복수 선택)
+        if (Array.isArray(memberInfo.alumniType)) {
+            // 순서 변경: Master's, Doctoral, Postdoctoral 순으로 정렬
+            const sortedTypes = [];
+            if (memberInfo.alumniType.includes("Master's")) sortedTypes.push("Master's");
+            if (memberInfo.alumniType.includes("Doctoral")) sortedTypes.push("Doctoral");
+            if (memberInfo.alumniType.includes("Postdoctoral")) sortedTypes.push("Postdoctoral");
+            
+            alumniTypeDisplay = `<p class="alumni-type">${sortedTypes.join(', ')} ${memberInfo.category}</p>`;
+        } else {
+            // 문자열인 경우 (이전 버전 호환성)
+            alumniTypeDisplay = `<p class="alumni-type">${memberInfo.alumniType} ${memberInfo.category}</p>`;
+        }
+    }
+
     memberElement.innerHTML = `
         <a href="/member/?name=${encodeURIComponent(filename.replace('.md', ''))}">
             <div class="person-img-container">
@@ -173,8 +191,7 @@ function addMemberToSection(memberInfo, filename) {
                      onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">
             </div>
             <h3>${memberInfo.name}</h3>
-            ${memberInfo.category === 'Alumni' && memberInfo.alumniType ? 
-                `<p class="alumni-type">${memberInfo.alumniType} ${memberInfo.category}</p>` : ''}
+            ${alumniTypeDisplay}
             ${memberInfo.position.map(pos => `<p>${pos}</p>`).join('')}
         </a>
     `;

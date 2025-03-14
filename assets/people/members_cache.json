@@ -8,7 +8,9 @@
             "Dept. Marine sports",
             "Republic of Korea Naval Academy"
         ],
-        "alumniType": "Master's",
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Chae Lynne Kim.md": {
@@ -16,7 +18,7 @@
         "category": "Master's Students",
         "photo": "김채린.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Chihyoeng Lee.md": {
@@ -24,7 +26,7 @@
         "category": "Doctoral Students",
         "photo": "이치형.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Eunsik Choi.md": {
@@ -32,7 +34,7 @@
         "category": "Doctoral Students",
         "photo": "최은식.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Hong Min.md": {
@@ -40,7 +42,7 @@
         "category": "Master's Students",
         "photo": "민홍.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Hyeonhee Jeong.md": {
@@ -48,7 +50,9 @@
         "category": "Alumni",
         "photo": "정현희.jpg",
         "position": [],
-        "alumniType": "Master's",
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Hyunji Kim.md": {
@@ -56,7 +60,7 @@
         "category": "Doctoral Students",
         "photo": "김현지.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Il Seung Park.md": {
@@ -64,7 +68,7 @@
         "category": "Master's Students",
         "photo": "박일승.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 0.9
     },
     "Jaewoo Cho.md": {
@@ -72,7 +76,7 @@
         "category": "Doctoral Students",
         "photo": "조재우.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Jangwhan Ahn.md": {
@@ -80,7 +84,7 @@
         "category": "Master's Students",
         "photo": "안장환.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Jeong Ho Lee.md": {
@@ -88,7 +92,7 @@
         "category": "Master's Students",
         "photo": "이정호.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Jeongin Moon.md": {
@@ -99,7 +103,11 @@
             "Post-doc",
             "UMass Lowell"
         ],
-        "alumniType": "Postdoctoral",
+        "alumniType": [
+            "Postdoctoral",
+            "Doctoral",
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Jooeun Ahn.md": {
@@ -111,7 +119,7 @@
             "Department of Physical Education",
             "Seoul National University"
         ],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.4
     },
     "Minhye Kim.md": {
@@ -119,7 +127,7 @@
         "category": "Master's Students",
         "photo": "김민혜.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 1.0
     },
     "Prabhat Pathak.md": {
@@ -130,7 +138,9 @@
             "Post-doc",
             "Harvard University"
         ],
-        "alumniType": "Doctoral",
+        "alumniType": [
+            "Doctoral"
+        ],
         "zoom": 1.0
     },
     "Seongwon Hwang.md": {
@@ -141,7 +151,9 @@
             "PhD",
             "University of Southern California"
         ],
-        "alumniType": "Master's",
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Siddhartha Panday.md": {
@@ -152,7 +164,9 @@
             "Associate Professor",
             "Hanyang University"
         ],
-        "alumniType": "Doctoral",
+        "alumniType": [
+            "Doctoral"
+        ],
         "zoom": 1.0
     },
     "Taegyun Park.md": {
@@ -160,7 +174,9 @@
         "category": "Alumni",
         "photo": "박태균.jpg",
         "position": [],
-        "alumniType": "Master's",
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Yoojin Choi.md": {
@@ -168,7 +184,7 @@
         "category": "Master's Students",
         "photo": "최유진.jpg",
         "position": [],
-        "alumniType": "",
+        "alumniType": [],
         "zoom": 0.9
     }
 }

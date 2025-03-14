@@ -23,7 +23,7 @@ async function parseMemberMD(memberName) {
             contact: {},
             links: [],
             description: '',
-            alumniType: '',
+            alumniType: [],  // 배열로 변경
             zoom: 1 // 기본값 1로 설정
         };
 
@@ -61,21 +61,18 @@ async function parseMemberMD(memberName) {
                     if (line.includes(category)) {
                         member.category = category;
                         
-                        // Alumni인 경우 타입 체크
+                        // Alumni인 경우 타입 체크 (복수 선택 가능)
                         if (category === 'Alumni') {
                             // 다음 라인들을 검사하여 Alumni 타입 찾기
                             for (let j = i + 1; j < lines.length && !lines[j].startsWith('##'); j++) {
                                 const alumniLine = lines[j].trim();
                                 if (alumniLine.includes('[x]')) {
                                     if (alumniLine.includes('Postdoctoral Alumni')) {
-                                        member.alumniType = 'Postdoctoral';
-                                        break;
+                                        member.alumniType.push('Postdoctoral');
                                     } else if (alumniLine.includes('Doctoral Alumni')) {
-                                        member.alumniType = 'Doctoral';
-                                        break;
+                                        member.alumniType.push('Doctoral');
                                     } else if (alumniLine.includes("Master's Alumni")) {
-                                        member.alumniType = "Master's";
-                                        break;
+                                        member.alumniType.push("Master's");
                                     }
                                 }
                             }
@@ -110,8 +107,11 @@ async function parseMemberMD(memberName) {
                     }
                     break;
                 case 'Position':
-                    const positions = line.split(',').map(p => p.trim());
-                    member.position.push(...positions);
+                    // "Position Title, Department Name, University Name"인 경우 공란으로 처리
+                    if (line !== "Position Title, Department Name, University Name") {
+                        const positions = line.split(',').map(p => p.trim());
+                        member.position.push(...positions);
+                    }
                     break;
                 case 'Bio':
                     if (line.startsWith('-')) {
@@ -184,14 +184,31 @@ function displayMemberProfile(member) {
             imgStyle = `transform: scale(${zoomValue}); transform-origin: center;`;
         }
         
+        // Alumni 타입 표시 처리
+        let alumniTypeDisplay = '';
+        if (member.category === 'Alumni' && member.alumniType && member.alumniType.length > 0) {
+            // 배열인 경우 (복수 선택)
+            if (Array.isArray(member.alumniType)) {
+                // 순서 변경: Master's, Doctoral, Postdoctoral 순으로 정렬
+                const sortedTypes = [];
+                if (member.alumniType.includes("Master's")) sortedTypes.push("Master's");
+                if (member.alumniType.includes("Doctoral")) sortedTypes.push("Doctoral");
+                if (member.alumniType.includes("Postdoctoral")) sortedTypes.push("Postdoctoral");
+                
+                alumniTypeDisplay = `<p class="alumni-type">${sortedTypes.join(', ')} Alumni</p>`;
+            } else {
+                // 문자열인 경우 (이전 버전 호환성)
+                alumniTypeDisplay = `<p class="alumni-type">${member.alumniType} Alumni</p>`;
+            }
+        }
+        
         // 프로필 카드
         const profileCardHTML = `
             <div class="profile-img-container">
                 <img src="${photoSrc}" alt="${member.name}" style="${imgStyle}">
             </div>
             <h2>${member.name}</h2>
-            ${member.category === 'Alumni' && member.alumniType ? 
-                `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}
+            ${alumniTypeDisplay}
             ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
         `;
         
