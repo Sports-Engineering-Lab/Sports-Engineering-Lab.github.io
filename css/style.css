@@ -337,15 +337,23 @@ h1 a:hover {
     display: block;
 }
 
-.person img {
+.person-img-container {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.person img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center 15%;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .person h3 {
@@ -368,22 +376,6 @@ h1 a:hover {
     font-style: italic;
     margin-top: 5px;
     font-size: 0.9em !important;
-}
-
-.person-links {
-    margin-top: 20px;
-}
-
-.person-links a {
-    color: #8C001A;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
-
-.person-links a:hover {
-    color: #bf0023;
 }
 
 .people-grid {

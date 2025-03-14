@@ -32,82 +32,98 @@ def parse_member_info(md_path):
             'category': '',
             'photo': '',
             'position': [],
-            'alumniType': ''
+            'alumniType': '',
+            'zoom': 1  # 기본값 1로 설정
         }
 
         current_section = ''
         found_required = {'name': False, 'category': False, 'photo': False, 'position': False}
         i = 0
-
+        
         while i < len(cleaned_lines):
-            line = cleaned_lines[i].rstrip()
+            line = cleaned_lines[i].strip()
             
-            # 이름 파싱
+            # 이름 파싱 (첫 번째 # 으로 시작하는 라인)
             if line.startswith('# ') and not found_required['name']:
                 info['name'] = line.replace('# ', '').strip()
                 found_required['name'] = True
                 i += 1
                 continue
-
-            # 섹션 확인
-            if line.startswith('##'):
-                current_section = line.replace('##', '').strip()
+            
+            # 섹션 헤더 확인
+            if line.startswith('## '):
+                current_section = line.replace('## ', '').strip()
                 i += 1
                 continue
-
-            # 카테고리 파싱
-            if '- [x]' in line and not found_required['category']:
+            
+            # 카테고리 찾기
+            if '[x]' in line and not found_required['category']:
                 categories = ['Principal Investigator', 'Postdoctoral researcher', 
-                            'Doctoral Students', "Master's Students", 
-                            'Alumni']
+                             'Doctoral Students', "Master's Students", 'Alumni']
                 for category in categories:
                     if category in line:
                         info['category'] = category
                         found_required['category'] = True
                         
-                        # Alumni 타입 체크
+                        # Alumni인 경우 타입 체크
                         if category == 'Alumni':
-                            # 다음 줄들을 검사하여 Alumni 타입 찾기
                             j = i + 1
                             while j < len(cleaned_lines):
-                                next_line = cleaned_lines[j].rstrip()
-                                # Alumni 타입 체크박스를 찾았을 때
-                                if '- [x]' in next_line and next_line.startswith('  '):
-                                    for atype in ['Postdoctoral', 'Doctoral', "Master's"]:
-                                        if f'{atype} Alumni' in next_line:
-                                            info['alumniType'] = atype
-                                            break
-                                    if info['alumniType']:  # Alumni 타입을 찾았으면 종료
+                                alumni_line = cleaned_lines[j].strip()
+                                if '[x]' in alumni_line:
+                                    if 'Postdoctoral Alumni' in alumni_line:
+                                        info['alumniType'] = 'Postdoctoral'
                                         break
-                                # 들여쓰기가 없는 줄을 만나면 Alumni 타입 체크 종료
-                                elif not next_line.startswith('  '):
+                                    elif 'Doctoral Alumni' in alumni_line:
+                                        info['alumniType'] = 'Doctoral'
+                                        break
+                                    elif "Master's Alumni" in alumni_line:
+                                        info['alumniType'] = "Master's"
+                                        break
+                                if '##' in alumni_line:  # 다음 섹션 시작
                                     break
                                 j += 1
                         break
                 i += 1
                 continue
-
-            # 섹션별 정보 파싱
+            
+            # 현재 섹션에 따라 정보 파싱
             if current_section == 'Photo' and not found_required['photo']:
-                if line:
-                    info['photo'] = line.strip()
-                    found_required['photo'] = True
+                info['photo'] = line
+                found_required['photo'] = True
+                
+                # 다음 줄에 zoom 속성이 있는지 확인
+                if i + 1 < len(cleaned_lines):
+                    next_line = cleaned_lines[i + 1].strip()
+                    if next_line.startswith('zoom:'):
+                        try:
+                            zoom_value = float(next_line.replace('zoom:', '').strip())
+                            info['zoom'] = zoom_value
+                        except ValueError:
+                            pass  # 숫자로 변환할 수 없는 경우 기본값 유지
+                
+                i += 1
+                continue
             elif current_section == 'Position' and not found_required['position']:
-                if line:
-                    # 예시 텍스트인 경우 공란으로 처리
-                    if line.strip() == "Position Title, Department Name, University Name":
-                        info['position'] = []
-                    else:
-                        info['position'] = [pos.strip() for pos in line.split(',')]
-                    found_required['position'] = True
-
-            # 모든 필수 정보를 찾았으면 종료
-            if all(found_required.values()):
-                break
-
+                # "Position Title, Department Name, University Name"인 경우 공란으로 처리
+                if line == "Position Title, Department Name, University Name":
+                    info['position'] = []
+                else:
+                    positions = [pos.strip() for pos in line.split(',')]
+                    info['position'] = positions
+                found_required['position'] = True
+                i += 1
+                continue
+            
             i += 1
-
-        return info
+        
+        # 필수 정보가 모두 있는지 확인
+        if all(found_required.values()):
+            return info
+        else:
+            print(f"Warning: Missing required information in {md_path}")
+            return info if info['name'] and info['category'] else None
+    
     except Exception as e:
         print(f"Error parsing {md_path}: {e}")
         return None

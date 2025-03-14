@@ -23,7 +23,8 @@ async function parseMemberMD(memberName) {
             contact: {},
             links: [],
             description: '',
-            alumniType: ''
+            alumniType: '',
+            zoom: 1 // 기본값 1로 설정
         };
 
         // 카테고리 체크
@@ -59,25 +60,24 @@ async function parseMemberMD(memberName) {
                 for (const category of categories) {
                     if (line.includes(category)) {
                         member.category = category;
+                        
                         // Alumni인 경우 타입 체크
                         if (category === 'Alumni') {
-                            // Alumni 타입 체크를 위해 현재 위치부터 검사
-                            let j = i;
-                            while (j < lines.length) {
+                            // 다음 라인들을 검사하여 Alumni 타입 찾기
+                            for (let j = i + 1; j < lines.length && !lines[j].startsWith('##'); j++) {
                                 const alumniLine = lines[j].trim();
-                                
-                                if (alumniLine.includes('[x]') && 
-                                    (alumniLine.includes('Postdoctoral Alumni') ||
-                                     alumniLine.includes('Doctoral Alumni') ||
-                                     alumniLine.includes("Master's Alumni") ||
-                                     alumniLine.includes('Intern Alumni'))) {
-                                    const match = alumniLine.match(/- \[x\] (.*?) Alumni/);
-                                    if (match) {
-                                        member.alumniType = match[1].trim();
+                                if (alumniLine.includes('[x]')) {
+                                    if (alumniLine.includes('Postdoctoral Alumni')) {
+                                        member.alumniType = 'Postdoctoral';
+                                        break;
+                                    } else if (alumniLine.includes('Doctoral Alumni')) {
+                                        member.alumniType = 'Doctoral';
+                                        break;
+                                    } else if (alumniLine.includes("Master's Alumni")) {
+                                        member.alumniType = "Master's";
                                         break;
                                     }
                                 }
-                                j++;
                             }
                         }
                         break;
@@ -86,14 +86,28 @@ async function parseMemberMD(memberName) {
                 continue;
             }
             
-            // 빈 라인이나 주석 라인 무시
-            if (!line || line.startsWith('<!--')) {
+            // 빈 라인 무시
+            if (!line) {
                 continue;
             }
             
+            // 현재 섹션에 따라 정보 파싱
             switch (currentSection) {
                 case 'Photo':
-                    member.photo = line;
+                    if (!member.photo) {
+                        member.photo = line;
+                        
+                        // 다음 줄에 zoom 속성이 있는지 확인
+                        if (i + 1 < lines.length) {
+                            const nextLine = lines[i + 1].trim();
+                            if (nextLine.startsWith('zoom:')) {
+                                const zoomValue = parseFloat(nextLine.replace('zoom:', '').trim());
+                                if (!isNaN(zoomValue)) {
+                                    member.zoom = zoomValue;
+                                }
+                            }
+                        }
+                    }
                     break;
                 case 'Position':
                     const positions = line.split(',').map(p => p.trim());
@@ -155,9 +169,26 @@ function displayMemberProfile(member) {
     };
 
     loadImage().then(photoSrc => {
+        // zoom 속성을 적용하기 위한 스타일 생성
+        const zoomValue = member.zoom || 1;
+        
+        // 확대/축소에 따라 다른 스타일 적용
+        // 축소(zoom < 1)일 경우: object-fit 크기를 조절하여 더 넓은 영역이 보이게 함
+        // 확대(zoom >= 1)일 경우: 이미지를 확대
+        let imgStyle;
+        if (zoomValue < 1) {
+            // 축소할 때는 object-fit 크기를 조절하여 더 넓은 영역이 보이게 함
+            imgStyle = `object-fit: contain; width: ${100 * zoomValue}%; height: ${100 * zoomValue}%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);`;
+        } else {
+            // 확대할 때는 transform: scale()로 확대
+            imgStyle = `transform: scale(${zoomValue}); transform-origin: center;`;
+        }
+        
         // 프로필 카드
         const profileCardHTML = `
-            <img src="${photoSrc}" alt="${member.name}">
+            <div class="profile-img-container">
+                <img src="${photoSrc}" alt="${member.name}" style="${imgStyle}">
+            </div>
             <h2>${member.name}</h2>
             ${member.category === 'Alumni' && member.alumniType ? 
                 `<p class="alumni-type">${member.alumniType} Alumni</p>` : ''}

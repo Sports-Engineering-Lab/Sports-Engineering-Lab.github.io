@@ -11,6 +11,7 @@
 
 ## Photo
 안장환.jpg
+zoom: 1
 
 ## Position
 Position Title, Department Name, University Name

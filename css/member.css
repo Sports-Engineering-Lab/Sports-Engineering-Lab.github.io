@@ -18,13 +18,21 @@
     margin: 0 auto;
 }
 
-.profile-card img {
+.profile-img-container {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center 15%;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
 /* Bio 섹션 */
@@ -123,7 +131,7 @@
 }
 
 @media (max-width: 480px) {
-    .profile-card img {
+    .profile-img-container {
         width: 150px;
         height: 150px;
     }

@@ -11,6 +11,7 @@
 
 ## Photo
 최유진.jpg
+zoom: 0.9
 
 ## Position
 Position Title, Department Name, University Name

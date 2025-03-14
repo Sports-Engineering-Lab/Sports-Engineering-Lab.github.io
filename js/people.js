@@ -13,7 +13,8 @@ async function parseMemberMD(filename) {
             category: '',
             photo: '',
             position: [],
-            alumniType: ''
+            alumniType: '',
+            zoom: 1 // 기본값 1로 설정
         };
 
         // 카테고리 체크
@@ -96,6 +97,18 @@ async function parseMemberMD(filename) {
                     if (!foundRequiredInfo.photo) {
                         member.photo = line;
                         foundRequiredInfo.photo = true;
+                        
+                        // 다음 줄에 zoom 속성이 있는지 확인
+                        if (i + 1 < lines.length) {
+                            const nextLine = lines[i + 1].trim();
+                            if (nextLine.startsWith('zoom:')) {
+                                const zoomValue = parseFloat(nextLine.replace('zoom:', '').trim());
+                                if (!isNaN(zoomValue)) {
+                                    member.zoom = zoomValue;
+                                }
+                            }
+                        }
+                        
                         // 모든 필수 정보를 찾았는지 확인
                         if (Object.values(foundRequiredInfo).every(v => v)) break;
                     }
@@ -135,12 +148,30 @@ function addMemberToSection(memberInfo, filename) {
 
     // 이미지 로드 실패 시 기본 로고로 대체하는 이벤트 핸들러 추가
     const imgSrc = memberInfo.photo ? `../assets/people/photos/${memberInfo.photo}` : '../assets/logo/SEL_favicon.png';
+    
+    // zoom 속성을 적용하기 위한 스타일 생성
+    const zoomValue = memberInfo.zoom || 1;
+    
+    // 확대/축소에 따라 다른 스타일 적용
+    // 축소(zoom < 1)일 경우: object-fit 크기를 조절하여 더 넓은 영역이 보이게 함
+    // 확대(zoom >= 1)일 경우: 이미지를 확대
+    let imgStyle;
+    if (zoomValue < 1) {
+        // 축소할 때는 object-fit 크기를 조절하여 더 넓은 영역이 보이게 함
+        imgStyle = `object-fit: contain; width: ${100 * zoomValue}%; height: ${100 * zoomValue}%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);`;
+    } else {
+        // 확대할 때는 transform: scale()로 확대
+        imgStyle = `transform: scale(${zoomValue}); transform-origin: center;`;
+    }
 
     memberElement.innerHTML = `
         <a href="/member/?name=${encodeURIComponent(filename.replace('.md', ''))}">
-            <img src="${imgSrc}" 
-                 alt="${memberInfo.name}"
-                 onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">
+            <div class="person-img-container">
+                <img src="${imgSrc}" 
+                     alt="${memberInfo.name}"
+                     style="${imgStyle}"
+                     onerror="this.onerror=null; this.src='../assets/logo/SEL_favicon.png';">
+            </div>
             <h3>${memberInfo.name}</h3>
             ${memberInfo.category === 'Alumni' && memberInfo.alumniType ? 
                 `<p class="alumni-type">${memberInfo.alumniType} ${memberInfo.category}</p>` : ''}

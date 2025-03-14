@@ -11,6 +11,7 @@
 
 ## Photo
 김채린.jpg
+zoom: 1
 
 ## Position
 Position Title, Department Name, University Name

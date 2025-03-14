@@ -11,6 +11,7 @@
 
 ## Photo
 박일승.jpg
+zoom: 0.9
 
 ## Position
 Position Title, Department Name, University Name
