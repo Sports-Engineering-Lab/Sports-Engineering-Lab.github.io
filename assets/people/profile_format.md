@@ -17,6 +17,7 @@ member_photo.jpg
 
 ## Position
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
+<!-- 스포츠 공학실의 대학원생이거나 소속이 없는 경우 그대로 놔두세요 -->
 Position Title, Department Name, University Name
 
 ## Bio

@@ -1,4 +1,15 @@
 {
+    "Beomdo Kim.md": {
+        "name": "Beomdo Kim",
+        "category": "Alumni",
+        "photo": "김범도.jpg",
+        "position": [
+            "Assistant Professor",
+            "Dept. Marine sports",
+            "Republic of Korea Naval Academy"
+        ],
+        "alumniType": "Master's"
+    },
     "Chae Lynne Kim.md": {
         "name": "Chae Lynne Kim",
         "category": "Master's Students",
@@ -106,6 +117,16 @@
             "Harvard University"
         ],
         "alumniType": "Doctoral"
+    },
+    "Seongwon Hwang.md": {
+        "name": "Seongwon Hwang",
+        "category": "Alumni",
+        "photo": "황성원.jpg",
+        "position": [
+            "PhD",
+            "University of Southern California"
+        ],
+        "alumniType": "Master's"
     },
     "Siddhartha Panday.md": {
         "name": "Siddhartha Panday",
