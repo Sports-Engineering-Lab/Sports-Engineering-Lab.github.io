@@ -184,8 +184,8 @@ function displayMemberProfile(member) {
             imgStyle = `transform: scale(${zoomValue}); transform-origin: center;`;
         }
         
-        // Alumni 타입 표시 처리
-        let alumniTypeDisplay = '';
+        // 카테고리 표시 처리
+        let categoryDisplay = '';
         if (member.category === 'Alumni' && member.alumniType && member.alumniType.length > 0) {
             // 배열인 경우 (복수 선택)
             if (Array.isArray(member.alumniType)) {
@@ -195,11 +195,25 @@ function displayMemberProfile(member) {
                 if (member.alumniType.includes("Doctoral")) sortedTypes.push("Doctoral");
                 if (member.alumniType.includes("Postdoctoral")) sortedTypes.push("Postdoctoral");
                 
-                alumniTypeDisplay = `<p class="alumni-type">${sortedTypes.join(', ')} Alumni</p>`;
+                categoryDisplay = `<p class="alumni-type">${sortedTypes.join(', ')} Alumni</p>`;
             } else {
                 // 문자열인 경우 (이전 버전 호환성)
-                alumniTypeDisplay = `<p class="alumni-type">${member.alumniType} Alumni</p>`;
+                categoryDisplay = `<p class="alumni-type">${member.alumniType} Alumni</p>`;
             }
+        } else if (member.category) {
+            // Alumni가 아닌 다른 카테고리도 동일한 스타일로 표시
+            let displayCategory = member.category;
+            
+            // 카테고리 이름 포맷 변경
+            if (displayCategory === 'Postdoctoral researcher') {
+                displayCategory = 'Postdoctoral Researcher';
+            } else if (displayCategory === 'Doctoral Students') {
+                displayCategory = 'Doctoral Student';
+            } else if (displayCategory === "Master's Students") {
+                displayCategory = "Master's Student";
+            }
+            
+            categoryDisplay = `<p class="alumni-type">${displayCategory}</p>`;
         }
         
         // 프로필 카드
@@ -208,7 +222,7 @@ function displayMemberProfile(member) {
                 <img src="${photoSrc}" alt="${member.name}" style="${imgStyle}">
             </div>
             <h2>${member.name}</h2>
-            ${alumniTypeDisplay}
+            ${categoryDisplay}
             ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
         `;
         
