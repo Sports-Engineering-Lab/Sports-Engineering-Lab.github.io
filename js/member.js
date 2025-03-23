@@ -266,9 +266,13 @@ function displayMemberProfile(member) {
         // Contact 섹션
         const contactSectionHTML = `
             <h3>Contact</h3>
-            ${Object.entries(member.contact).map(([key, value]) => 
-                `<p><strong>${key}:</strong> ${value}</p>`
-            ).join('')}
+            ${Object.entries(member.contact).map(([key, value]) => {
+                // 이메일인 경우 mailto 링크 추가
+                if (key.toLowerCase() === 'email') {
+                    return `<p><strong>${key}:</strong> <a href="mailto:${value}">${value}</a></p>`;
+                }
+                return `<p><strong>${key}:</strong> ${value}</p>`;
+            }).join('')}
         `;
 
         // Links 섹션

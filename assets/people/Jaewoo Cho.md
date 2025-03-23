@@ -20,13 +20,11 @@ zoom: 1
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
 Position Title, Department Name, University Name
 
-## Bio
-<!-- 본인의 학력, 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Ph.D. in Sports Science, University Name (2020-Present)
-- M.S. in Biomechanics, University Name (2018-2020)
-- B.S. in Sports Science, University Name (2014-2018)
-- Research Intern, Research Institute Name (2017)
-- Best Paper Award, Conference Name (2019)
+## Education
+<!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
+
+## Professional Careers
+<!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
@@ -41,6 +39,3 @@ Telephone:
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->
-Write a detailed description about the member here. This can include research interests, academic background, achievements, and current projects.
-
-Multiple paragraphs can be added for longer descriptions. Make sure to add a blank line between paragraphs.

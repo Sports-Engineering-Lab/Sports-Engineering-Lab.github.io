@@ -20,13 +20,16 @@ zoom: 1.4
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
 Associate Professor, Department of Physical Education, Seoul National University
 
-## Bio
-<!-- 본인의 학력, 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Professor, Department of Physical Education, Seoul National University (2020-Present)
-- Associate Professor, Department of Physical Education, Seoul National University (2000-2000)
+## Education
+<!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 - Ph.D. in Mechanical Engineering, MIT (2000-2000)
 - M.S. in Mechanical Engineering, MIT (2000-2000)
 - B.S. in Mechanical Engineering, Seoul National University (2000-2000)
+
+## Professional Careers
+<!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
+- Professor, Department of Physical Education, Seoul National University (2020-Present)
+- Associate Professor, Department of Physical Education, Seoul National University (2000-2000)
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->

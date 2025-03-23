@@ -21,11 +21,14 @@ zoom: 1
 <!-- 스포츠 공학실의 대학원생이거나 소속이 없는 경우 그대로 놔두세요 -->
 Position Title, Department Name, University Name
 
-## Bio
-<!-- 본인의 학력, 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
+## Education
+<!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 - Ph.D. in Sports Science, University Name (2020-Present)
 - M.S. in Biomechanics, University Name (2018-2020)
 - B.S. in Sports Science, University Name (2014-2018)
+
+## Professional Careers
+<!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 - Research Intern, Research Institute Name (2017)
 - Best Paper Award, Conference Name (2019)
 
