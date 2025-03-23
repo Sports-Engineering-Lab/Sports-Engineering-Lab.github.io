@@ -39,5 +39,3 @@ Telephone:
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->
-
-Multiple paragraphs can be added for longer descriptions. Make sure to add a blank line between paragraphs.
