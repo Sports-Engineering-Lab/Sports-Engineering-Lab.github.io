@@ -3,8 +3,8 @@
 
 <!-- 소속 카테고리를 선택하세요. 해당하는 카테고리 앞의 [ ]에 x를 넣어주세요. 꼭 하나만 선택하세요. -->
 - [ ] Director
-- [ ] Postdoctoral researcher
-- [x] Doctoral Students
+- [x] Postdoctoral researcher
+- [ ] Doctoral Students
 - [ ] Master's Students
 - [ ] Alumni
   - [ ] Postdoctoral Alumni
