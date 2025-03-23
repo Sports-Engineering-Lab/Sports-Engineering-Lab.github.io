@@ -43,13 +43,33 @@
     padding: 25px;
 }
 
-.education-section ul {
-    list-style-position: inside;
-    padding-left: 0;
+.education-section ul,
+.professional-careers-section ul {
+    list-style-type: disc;
+    padding-left: 25px;
 }
 
-.education-section li {
+.education-section li,
+.professional-careers-section li {
     padding-left: 0;
+    margin-bottom: 8px;
+    display: list-item;
+    position: relative;
+    padding-right: 100px;
+}
+
+.education-section li .content,
+.professional-careers-section li .content {
+    display: inline;
+}
+
+.education-section li .date,
+.professional-careers-section li .date {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #666;
+    padding-left: 10px;
 }
 
 /* Professional Careers 섹션 */
@@ -58,15 +78,6 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 25px;
-}
-
-.professional-careers-section ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
-
-.professional-careers-section li {
-    padding-left: 0;
 }
 
 /* Contact와 Links 섹션 */

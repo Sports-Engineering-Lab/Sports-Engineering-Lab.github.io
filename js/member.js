@@ -251,7 +251,17 @@ function displayMemberProfile(member) {
         const educationSectionHTML = `
             <h3>Education</h3>
             <ul>
-                ${member.education.map(item => `<li>${item}</li>`).join('')}
+                ${member.education.map(item => {
+                    // 괄호 안의 날짜 부분을 찾습니다
+                    const match = item.match(/\(([^)]+)\)$/);
+                    if (match) {
+                        // 날짜 부분을 제외한 내용과 날짜를 분리합니다
+                        const content = item.replace(/\s*\([^)]+\)$/, '');
+                        const date = match[0];
+                        return `<li><span class="content">${content}</span><span class="date">${date}</span></li>`;
+                    }
+                    return `<li><span class="content">${item}</span></li>`;
+                }).join('')}
             </ul>
         `;
         
@@ -259,7 +269,17 @@ function displayMemberProfile(member) {
         const professionalCareersSectionHTML = `
             <h3>Professional Careers</h3>
             <ul>
-                ${member.professionalCareers.map(item => `<li>${item}</li>`).join('')}
+                ${member.professionalCareers.map(item => {
+                    // 괄호 안의 날짜 부분을 찾습니다
+                    const match = item.match(/\(([^)]+)\)$/);
+                    if (match) {
+                        // 날짜 부분을 제외한 내용과 날짜를 분리합니다
+                        const content = item.replace(/\s*\([^)]+\)$/, '');
+                        const date = match[0];
+                        return `<li><span class="content">${content}</span><span class="date">${date}</span></li>`;
+                    }
+                    return `<li><span class="content">${item}</span></li>`;
+                }).join('')}
             </ul>
         `;
         
