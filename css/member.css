@@ -35,20 +35,37 @@
     transition: transform 0.3s ease;
 }
 
-/* Bio 섹션 */
-.bio-section {
+/* Education 섹션 */
+.education-section {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: 25px;
 }
 
-.bio-section ul {
+.education-section ul {
     list-style-position: inside;
     padding-left: 0;
 }
 
-.bio-section li {
+.education-section li {
+    padding-left: 0;
+}
+
+/* Professional Careers 섹션 */
+.professional-careers-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.professional-careers-section ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.professional-careers-section li {
     padding-left: 0;
 }
 
@@ -87,7 +104,8 @@
 }
 
 /* 섹션 헤더 스타일 */
-.bio-section h3,
+.education-section h3,
+.professional-careers-section h3,
 .member-contact h3,
 .member-links h3 {
     color: #8B0000;
@@ -118,6 +136,11 @@
     text-decoration: underline;
 }
 
+.member-links p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .member-section {
@@ -140,7 +163,8 @@
         font-size: 1.5rem;
     }
 
-    .bio-section h3,
+    .education-section h3,
+    .professional-careers-section h3,
     .member-contact h3,
     .member-links h3 {
         font-size: 1.1rem;

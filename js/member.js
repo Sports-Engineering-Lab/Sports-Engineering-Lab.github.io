@@ -19,7 +19,8 @@ async function parseMemberMD(memberName) {
             category: '',
             photo: '',
             position: [],
-            bio: [],
+            education: [],     // Bio 대신 education으로 변경
+            professionalCareers: [], // 새로운 professional careers 필드 추가
             contact: {},
             links: [],
             description: '',
@@ -127,10 +128,16 @@ async function parseMemberMD(memberName) {
                         member.position.push(...positions);
                     }
                     break;
-                case 'Bio':
+                case 'Education': // Bio 대신 Education으로 변경
                     if (line.startsWith('-')) {
-                        const bioItem = line.substring(2).trim();
-                        member.bio.push(bioItem);
+                        const educationItem = line.substring(2).trim();
+                        member.education.push(educationItem);
+                    }
+                    break;
+                case 'Professional Careers': // 새로운 Professional Careers 섹션 추가
+                    if (line.startsWith('-')) {
+                        const careerItem = line.substring(2).trim();
+                        member.professionalCareers.push(careerItem);
                     }
                     break;
                 case 'Contact':
@@ -240,44 +247,95 @@ function displayMemberProfile(member) {
             ${member.position.map(pos => `<p class="position">${pos}</p>`).join('')}
         `;
         
-        // Bio 섹션
-        const bioSectionHTML = `
-            <h3>Bio</h3>
+        // Education 섹션 (Bio 대신)
+        const educationSectionHTML = `
+            <h3>Education</h3>
             <ul>
-                ${member.bio.map(item => `<li>${item}</li>`).join('')}
+                ${member.education.map(item => `<li>${item}</li>`).join('')}
             </ul>
         `;
         
-        // Contact와 Links 섹션
-        const contactHTML = `
+        // Professional Careers 섹션 (새로 추가)
+        const professionalCareersSectionHTML = `
+            <h3>Professional Careers</h3>
+            <ul>
+                ${member.professionalCareers.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        `;
+        
+        // Contact 섹션
+        const contactSectionHTML = `
             <h3>Contact</h3>
             ${Object.entries(member.contact).map(([key, value]) => 
-                key.toLowerCase() === 'email' ?
-                `<p><strong>${key}:</strong> <a href="mailto:${value}">${value}</a></p>` :
                 `<p><strong>${key}:</strong> ${value}</p>`
             ).join('')}
         `;
-        
-        const linksHTML = `
+
+        // Links 섹션
+        const linksSectionHTML = `
             <h3>Links</h3>
-            ${member.links.map(link => 
-                `<a href="${link.url}" target="_blank">${link.title}</a>`
-            ).join(' | ')}
+            <p>
+                ${member.links.map((link, index) => 
+                    `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>${index < member.links.length - 1 ? ' | ' : ''}`
+                ).join('')}
+            </p>
         `;
-        
+
         // Description 섹션
-        const descriptionHTML = `
+        const descriptionSectionHTML = `
             ${member.description.split('\n').map(para => 
                 para ? `<p>${para}</p>` : ''
             ).join('')}
         `;
 
-        // 각 섹션에 HTML 삽입
-        memberSection.querySelector('.profile-card').innerHTML = profileCardHTML;
-        memberSection.querySelector('.bio-section').innerHTML = bioSectionHTML;
-        memberSection.querySelector('.member-contact').innerHTML = contactHTML;
-        memberSection.querySelector('.member-links').innerHTML = linksHTML;
-        memberSection.querySelector('.description-section').innerHTML = descriptionHTML;
+        // 페이지에 정보 표시
+        const profileCard = document.querySelector('.profile-card');
+        if (profileCard) {
+            profileCard.innerHTML = profileCardHTML;
+        }
+        
+        // Education 섹션 - 내용이 있을 때만 표시
+        const educationSection = document.querySelector('.education-section');
+        if (educationSection) {
+            if (member.education && member.education.length > 0) {
+                educationSection.innerHTML = educationSectionHTML;
+                educationSection.style.display = 'block';
+            } else {
+                educationSection.style.display = 'none';
+            }
+        }
+        
+        // Professional Careers 섹션 - 내용이 있을 때만 표시
+        const professionalCareersSection = document.querySelector('.professional-careers-section');
+        if (professionalCareersSection) {
+            if (member.professionalCareers && member.professionalCareers.length > 0) {
+                professionalCareersSection.innerHTML = professionalCareersSectionHTML;
+                professionalCareersSection.style.display = 'block';
+            } else {
+                professionalCareersSection.style.display = 'none';
+            }
+        }
+
+        // Description 섹션
+        const descriptionSection = document.querySelector('.description-section');
+        if (descriptionSection && member.description) {
+            descriptionSection.innerHTML = descriptionSectionHTML;
+            descriptionSection.style.display = 'block';
+        } else if (descriptionSection) {
+            descriptionSection.style.display = 'none';
+        }
+
+        // Contact 정보 - 항상 표시
+        const contactSection = document.querySelector('.member-contact');
+        if (contactSection) {
+            contactSection.innerHTML = contactSectionHTML;
+        }
+
+        // 링크 정보 - 항상 표시
+        const linksSection = document.querySelector('.member-links');
+        if (linksSection) {
+            linksSection.innerHTML = linksSectionHTML;
+        }
     });
 }
 
