@@ -22,14 +22,20 @@ Associate Professor, Department of Physical Education, Seoul National University
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Ph.D. in Mechanical Engineering, MIT (2000-2000)
-- M.S. in Mechanical Engineering, MIT (2000-2000)
-- B.S. in Mechanical Engineering, Seoul National University (2000-2000)
+- Ph.D., MIT, Department of Mechanical Engineering (June, 2011)
+- MS, MIT, Department of Mechanical Engineering (Sept, 2006)
+- BS (with Summa cum laude honor), Seoul National University, Department of Mechanical & Aerospace Engineering (Feb, 2001)
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Professor, Department of Physical Education, Seoul National University (2020-Present)
-- Associate Professor, Department of Physical Education, Seoul National University (2000-2000)
+- Associate Professor, Dept. of Physical Education, Seoul National University (2020.9-present)
+- Director, Korean Society of Sport Biomechanics (2019.4-present)
+- Assistant Professor, Dept. of Physical Education, Seoul National University (2016.9-2020.8)
+- Assistant Professor, Dept. of Mechanical Engineering, University of Victoria (2014-2016.8)
+- Post-Doctoral Associate, Northeastern University (2014)
+- Post-Doctoral Associate, MIT (2011-2014)
+- Research Staff, Providence VA Medical Center (2010-2012)
+- Engineering Designer, Hyundai Heavy Industries, Dept. of Special & Naval Shipbuilding (2001-2004)
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
@@ -38,16 +44,10 @@ Telephone: +82-2-880-7785
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=0000-0000-0000-0000&hl=en)
-[ORCID](https://orcid.org/0000-0000-0000-0000)
-[LinkedIn](https://www.linkedin.com/in/jooeun-ahn-0000000000)
+[Google Scholar](https://scholar.google.com/citations?user=h9P_dSEAAAAJ&hl=ko&authuser=3)
+[ORCID](https://orcid.org/0000-0002-7964-5148)
+[LinkedIn](https://kr.linkedin.com/in/jooeun-ahn-6b101aa2)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->
-Jooeun Ahn is a professor at Seoul National University. Her research focuses on sports biomechanics and engineering, utilizing various cutting-edge equipment and technologies to understand human movement and performance. test test. github actions test.
-
-We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both.
-
-We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both.
-
-We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both. We have an instrumented treadmill, force platforms, multiple high-speed motion capture cameras, EMG sensors, a wearable metabolic system, etc. However, the most valuable assets to our lab are the students. They are the 'Avengers' in the field of sports engineering, who have strong passion and expertise in either kinesiology, engineering or both.
+Jooeun Ahn is a tenured Associate Professor at the Department of Physical Education at Seoul National University. His research area includes the wide spectrum of sports engineering ranging from applied mathematics for reliable quantification of human motor performance to extremely practical interventions for rehabilitation and motor performance enhancement. He actively collaborates with global leaders in robotics, biomechanics, informatics, and rehabilitation engineering, demonstrating the success of synergistic multi-disciplinary research.
