@@ -35,13 +35,26 @@ async function parseMemberMD(memberName) {
         let currentSection = '';
         let descriptionLines = [];
         
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i].trim();
-            
-            // 주석 라인 무시
-            if (line.startsWith('<!--') || line.includes('-->')) {
+        // 주석 제거 전처리
+        const cleanedLines = [];
+        for (let line of lines) {
+            // 주석이 포함된 부분 제거
+            if (line.includes('<!--') && line.includes('-->')) {
+                line = line.replace(/<!--.*?-->/g, '');
+                if (line.trim()) {
+                    cleanedLines.push(line);
+                }
+            } else if (line.startsWith('<!--') || line.includes('-->')) {
+                // 주석 시작이나 끝만 있는 라인은 무시
                 continue;
+            } else if (line.trim()) {
+                // 비어있지 않은 라인만 추가
+                cleanedLines.push(line);
             }
+        }
+        
+        for (let i = 0; i < cleanedLines.length; i++) {
+            const line = cleanedLines[i].trim();
             
             // 이름 파싱 (첫 번째 # 으로 시작하는 라인)
             if (line.startsWith('# ') && !member.name) {
@@ -64,8 +77,9 @@ async function parseMemberMD(memberName) {
                         // Alumni인 경우 타입 체크 (복수 선택 가능)
                         if (category === 'Alumni') {
                             // 다음 라인들을 검사하여 Alumni 타입 찾기
-                            for (let j = i + 1; j < lines.length && !lines[j].startsWith('##'); j++) {
-                                const alumniLine = lines[j].trim();
+                            for (let j = i + 1; j < cleanedLines.length && !cleanedLines[j].startsWith('##'); j++) {
+                                const alumniLine = cleanedLines[j].trim();
+                                
                                 if (alumniLine.includes('[x]')) {
                                     if (alumniLine.includes('Postdoctoral Alumni')) {
                                         member.alumniType.push('Postdoctoral');
@@ -95,8 +109,8 @@ async function parseMemberMD(memberName) {
                         member.photo = line;
                         
                         // 다음 줄에 zoom 속성이 있는지 확인
-                        if (i + 1 < lines.length) {
-                            const nextLine = lines[i + 1].trim();
+                        if (i + 1 < cleanedLines.length) {
+                            const nextLine = cleanedLines[i + 1].trim();
                             if (nextLine.startsWith('zoom:')) {
                                 const zoomValue = parseFloat(nextLine.replace('zoom:', '').trim());
                                 if (!isNaN(zoomValue)) {
