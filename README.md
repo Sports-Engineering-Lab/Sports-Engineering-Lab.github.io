@@ -13,8 +13,8 @@
     - [ ] Director
     - [ ] Postdoctoral researcher
     - [ ] Doctoral Students
-    - [x] Master's Students
-    - [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
+    - [ ] Master's Students
+    - [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. 복수 선택 가능 -->
       - [ ] Postdoctoral Alumni
       - [ ] Doctoral Alumni
       - [ ] Master's Alumni
@@ -22,16 +22,21 @@
     ## Photo
     <!-- 본인 파일명을 입력하세요. 사진은 assets/people/photos/ 디렉토리에 저장해주세요. -->
     member_photo.jpg
+    zoom: 1
 
     ## Position
     <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
+    <!-- 스포츠 공학실의 대학원생이거나 소속이 없는 경우 그대로 놔두세요 -->
     Position Title, Department Name, University Name
 
-    ## Bio
-    <!-- 본인의 학력, 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
+    ## Education
+    <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
     - Ph.D. in Sports Science, University Name (2020-Present)
     - M.S. in Biomechanics, University Name (2018-2020)
     - B.S. in Sports Science, University Name (2014-2018)
+
+    ## Professional Careers
+    <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
     - Research Intern, Research Institute Name (2017)
     - Best Paper Award, Conference Name (2019)
 
