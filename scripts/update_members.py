@@ -58,7 +58,7 @@ def parse_member_info(md_path):
             
             # 카테고리 찾기
             if '[x]' in line and not found_required['category']:
-                categories = ['Principal Investigator', 'Postdoctoral researcher', 
+                categories = ['Director', 'Postdoctoral researcher', 
                              'Doctoral Students', "Master's Students", 'Alumni']
                 for category in categories:
                     if category in line:

@@ -28,7 +28,7 @@ async function parseMemberMD(memberName) {
         };
 
         // 카테고리 체크
-        const categories = ['Principal Investigator', 'Postdoctoral researcher', 
+        const categories = ['Director', 'Postdoctoral researcher', 
                            'Doctoral Students', "Master's Students", 
                            'Alumni'];
         

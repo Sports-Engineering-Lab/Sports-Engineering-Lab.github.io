@@ -1,6 +1,6 @@
 # Jangwhan Ahn
 
-- [ ] Principal Investigator
+- [ ] Director
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [x] Master's Students

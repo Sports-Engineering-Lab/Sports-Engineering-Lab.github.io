@@ -1,6 +1,6 @@
 # Chae Lynne Kim
 
-- [ ] Principal Investigator
+- [ ] Director
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [x] Master's Students

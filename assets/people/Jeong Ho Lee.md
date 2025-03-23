@@ -1,6 +1,6 @@
 # Jeong Ho Lee
 
-- [ ] Principal Investigator
+- [ ] Director
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [x] Master's Students

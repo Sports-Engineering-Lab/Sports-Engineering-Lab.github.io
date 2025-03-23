@@ -1,6 +1,6 @@
 # Hyeonhee Jeong
 
-- [ ] Principal Investigator
+- [ ] Director
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
 - [ ] Master's Students

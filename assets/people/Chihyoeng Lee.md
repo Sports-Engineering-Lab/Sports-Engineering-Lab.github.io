@@ -1,6 +1,6 @@
 # Chihyoeng Lee
 
-- [ ] Principal Investigator
+- [ ] Director
 - [ ] Postdoctoral researcher
 - [x] Doctoral Students
 - [ ] Master's Students
