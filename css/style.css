@@ -38,9 +38,9 @@ html, body {
 
 .mission-statement ul li {
     font-size: 1.5em;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 0.3px;
 }
 
