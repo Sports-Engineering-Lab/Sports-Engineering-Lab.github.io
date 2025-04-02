@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.appendChild(firstClone);
     carousel.insertBefore(lastClone, carousel.firstChild);
 
-    // 복제 후 슬라이드와 도트 선택
+    // 복제 후 슬라이드 선택
     const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
     
     let currentSlide = 0;
     const totalSlides = originalSlides.length;
@@ -30,24 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         carousel.style.transform = `translateX(-${(index + 1) * 100}%)`;
         currentSlide = index;
-        updateDots();
 
         if (instant) {
             // 강제 리플로우
             carousel.offsetHeight;
             carousel.style.transition = 'transform 0.5s ease-in-out';
         }
-    }
-
-    // 도트 업데이트 함수
-    function updateDots() {
-        dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
     }
 
     // 다음 슬라이드로 이동
@@ -86,15 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(slideInterval);
         }
     }
-
-    // 도트 클릭 이벤트
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            stopSlideShow();
-            moveToSlide(index);
-            startSlideShow();
-        });
-    });
 
     // 트랜지션 종료 이벤트
     carousel.addEventListener('transitionend', () => {

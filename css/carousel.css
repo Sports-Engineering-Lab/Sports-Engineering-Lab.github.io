@@ -19,13 +19,45 @@
 .carousel-slide {
     min-width: 100%;
     height: 600px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
+    height: auto;
+    display: block;
+}
+
+/* 화면 너비가 1500px 이상일 때 적용되는 스타일 */
+@media (min-width: 1500px) {
+    .carousel-slide img {
+        width: 1500px;
+        max-width: 100%;
+    }
+}
+
+/* 화면 너비가 1100px 미만일 때 적용되는 스타일 */
+@media (max-width: 1099px) {
+    .carousel-container {
+        overflow: hidden;
+    }
+    
+    .carousel-slide {
+        height: auto; /* 높이 자동 조절 */
+        min-height: 0; /* 최소 높이 제거 */
+        display: block; /* flex에서 block으로 변경 */
+        align-items: initial; /* 세로 중앙 정렬 제거 */
+        justify-content: initial; /* 가로 중앙 정렬 제거 */
+    }
+    
+    .carousel-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .carousel-button {
@@ -33,12 +65,7 @@
 }
 
 .carousel-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
+    display: none; /* 도트 네비게이션 숨김 처리 */
 }
 
 .dot {
