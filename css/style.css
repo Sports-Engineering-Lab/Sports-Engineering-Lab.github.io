@@ -186,7 +186,8 @@ h1 a:hover {
 }
 
 .top-bar__container {
-    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
 }

@@ -32,9 +32,9 @@
 }
 
 /* 화면 너비가 1500px 이상일 때 적용되는 스타일 */
-@media (min-width: 1500px) {
+@media (min-width: 1700px) {
     .carousel-slide img {
-        width: 1500px;
+        width: 1700px;
         max-width: 100%;
     }
 }
