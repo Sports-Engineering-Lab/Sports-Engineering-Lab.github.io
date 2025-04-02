@@ -1,5 +1,13 @@
 # Activities
 
+## 2025 Lab Gathering
+- files: 2025LG1.jpg, 2025LG2.jpg, 2025LG3.jpg
+- description: 
+
+## 2025 DTM Students Lab Tour
+- files: DTM1.jpg, DTM2.jpg, DTM3.jpg, DTM4.jpg, DTM5.jpg, DTM6.jpg
+- description: 
+
 ## 2025 ERC Winter Workshop
 - files: KakaoTalk_20250221_182123553_12.jpg, KakaoTalk_20250221_182123553_04.jpg, KakaoTalk_20250221_182123553_08.jpg, KakaoTalk_20250221_180857570_01.jpg
 - description: 
