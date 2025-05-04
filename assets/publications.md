@@ -1,10 +1,13 @@
 # Publications
 
+SH Park, H Park, J Ahn, BC Lee*, "A novel adaptive propulsion enhancement eXperience (APEX) system: development and preliminary validation for enhancing gait propulsion in stroke survivors", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025.
+[DOI](https://ieeexplore.ieee.org/document/10964362)
+
 T. Hong, C. Lee, S. Chang, E. Choi, B. Kim, J. Ahn, YL. Park*, “Design of a fully-soft lift-assist wearable suit powered by flat inflatable artificial muscles”, IEEE Robotics and Automation Letters, 2025
 [DOI](https://doi.org/10.1109/LRA.2025.3541377)
 
 C. Lee, J. Ahn*, BC. Lee*, "The effects of perturbation intensities on backward slip-falls induced by a split-belt treadmill", Scientific Reports, 2025.
-[DOI](https://doi.org/10.21203/rs.3.rs-4677876/v1)
+[DOI](https://www.nature.com/articles/s41598-025-89531-x)
 
 J. Ahn, H. Jung, J. Moon, C. Kwon, J. Ahn*, "A comprehensive assessment of a passive back support exoskeleton for load handling assistance", Scientific Reports, 2025.
 [DOI](https://doi.org/10.1038/s41598-025-88471-w)
@@ -16,7 +19,7 @@ H. Kim, S. Hong, W. Park*, J. Ahn*, "Classifying wheelchair propulsion strategie
 [DOI](https://doi.org/10.1109/EMBC53108.2024.10782146)
 
 H. Moon, S. Lee, J. Park, C. An, J. Ahn*, "Improving the method for assessing flexibility in PAPS using individual heights", Asian Journal of Physical Education and Sport Science, 2024.
-[DOI](https://doi.org/10.1016/j.heliyon.2024.e34707)
+[DOI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003144390)
 
 I. Park, J. Lee, J. Ahn*, "Effects of the kinematic variable, delay and data length on test-retest reliability of the maximal Lyapunov exponent of human walking", Royal Society Open Science, 2024.
 [DOI](https://doi.org/10.1098/rsos.240333)
@@ -28,22 +31,22 @@ O. Save, S. Das, E. Carlson, J. Ahn, H. Lee*, "Human gait entrainment to soft ro
 [DOI](https://doi.org/10.1109/TNSRE.2024.3354851)
 
 D. Yoo, C. Lee, J. Ahn*, BC. Lee*, "Age-related adaptation of the body's kinematic responses to unpredictable trip perturbations induced by a split-belt treadmill", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2023.
-[DOI](https://doi.org/10.1109/EMBC40787.2023.1034065)
+[DOI](https://ieeexplore.ieee.org/document/10340651)https://commons.nmu.edu/isbs/vol41/iss1/21/
 
 J. Cho, E. Choi, S. Cheon, SW. Hwang, J. Ahn*, "Effects of calf anchoring compression levels on ankle kinematics, motor unit behavior, energy cost, and discomfort during walking", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
-[DOI](https://doi.org/10.1016/j.heliyon.2023.e20946)
+[DOI](https://commons.nmu.edu/isbs/vol41/iss1/21/)
 
 B. Kim, J. Ahn*, "Real-time prediction of failure in resistance training: application to arm curl", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
-[DOI](https://doi.org/10.3390/bioengineering10101142)
+[DOI](https://commons.nmu.edu/isbs/vol41/iss1/60/)
 
 C. Lee, J. Ahn*, "Real-time backward slip detection using a slip-inducing system and machine learning methods", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
-[DOI](https://doi.org/10.1371/journal.pone.0291914)
+[DOI](https://commons.nmu.edu/isbs/vol41/iss1/70/)
 
 D. Yoo, C. Lee, J. Ahn, BC. Lee*, "Association between age and body's kinematic responses to unpredictable gait perturbation", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
-[DOI](https://doi.org/10.1016/j.chaos.2023.113916)
+[DOI](https://commons.nmu.edu/isbs/vol41/iss1/115/)
 
 H. Kim, J. Ahn*, "Accute effects of shoe conditions on foot strike pattern on runners with different habitual patterns", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
-[DOI](https://doi.org/10.3389/fnhum.2023.1236065)
+[DOI](https://commons.nmu.edu/isbs/vol41/iss1/62/)
 
 P. Pathak, J. Ahn*, "Application of vibration to the soles increases long-range correlations in the stride parameters during walking", Heliyon, 2023.
 [DOI](https://doi.org/10.1016/j.heliyon.2023.e20946)
@@ -69,17 +72,8 @@ A. Nasirzadeh, S. Yang, J. Yun, J. Yang, Y. Bae, J. Park, J. Ahn, G. Lee*, "Infl
 P. Pathak, J. Ahn*, "Taping-induced cutaneous stimulation to the ankle tendons reduces minimum toe clearance variability", Heliyon, 2023.
 [DOI](https://doi.org/10.1016/j.heliyon.2022.e12682)
 
-C. Lee, J. Ahn*, "Real-time slip detection using a fall-inducing system and machine learning methods", International Conference of Korean Society of Sport Biomechanics, 2022.
-[DOI](https://doi.org/10.1016/j.heliyon.2022.e12682)
-
-H. Kim, Y. Choi, K. Kim, S. Chung, H. Lee, J. Ahn*, "Quantifying the effect of 3D printed footwear soles on foot pressure distribution", International Conference of Korean Society of Sport Biomechanics, 2022.
-[DOI](https://doi.org/10.1371/journal.pone.0266597)
-
-B. Kim, J. Ahn*, "Failure prediction model in resistance training: application to arm curl", International Conference of Korean Society of Sport Biomechanics, 2022.
-[DOI](https://doi.org/10.1002/admt.202101543)
-
 P. Pathak, J. H. Park, J. Ahn*, "A pilot study assessing effects of taping the ankle tendons on postural control under unpredictable perturbation", Conference of the International Society of Biomechanics in Sports (ISBS), 2022.
-[DOI](https://doi.org/10.1371/journal.pone.0261732)
+[DOI](https://commons.nmu.edu/isbs/vol40/iss1/132/)
 
 J. Moon, P. Pathak, S. Kim, S. Roh, C. Roh, Y. Shim, J. Ahn*, "Supra-threshold vibration applied to the foot soles enhances jump height under maximum effort", Public Library of Science ONE (PLoS ONE), 2022.
 [DOI](https://doi.org/10.1371/journal.pone.0266597)
@@ -92,12 +86,6 @@ P. Pathak, J. Moon, S. Roh, C. Roh, Y. Shim, J. Ahn*, "Application of vibration 
 
 P. Pathak, S. B. Panday, J. Ahn*, "Artificial neural network model effectively estimates muscle and fat mass using simple demographic and anthropometric measures", Clinical Nutrition, 2022.
 [DOI](https://doi.org/10.1016/j.clnu.2021.11.027)
-
-P. Pathak, J. Moon, S. Rho, C. Rho, Y. Shim, J. Ahn*, "Effect of vibration to the soles of feet on the minimum toe clearance during walking", International Conference of Korean Society of Sport Biomechanics, 2021.
-[DOI](https://doi.org/10.15857/ksep.2021.30.3.361)
-
-H. Kim, J. Ahn*, "Effects of performance boosting running shoes on muscle and joint loads", International Conference of Korean Society of Sport Biomechanics, 2021.
-[DOI](https://doi.org/10.3390/s21165511)
 
 BG. Lim, H. Kim, JH. Bae, JW. Seo, SE. Kwak, CY. Shin, J. Ahn, W. Song*, "Effect of masticatory movement using gum on walking and cycling: a randomized crossover design", Exercise Science, 2021.
 [DOI](https://doi.org/10.15857/ksep.2021.30.3.361)
@@ -130,7 +118,7 @@ S. B. Panday, P. Pathak, J. Moon, J. Ahn*, "Aging induces a step-like change in 
 [DOI](https://doi.org/10.18632/aging.102126)
 
 J. Park, J. Ahn*, H. Moon, Y. Kim, H. Um, "Analysis of relationship among physical fitness measurement factors in high school students using PAPS", Secondary Education Research, 2017.
-[DOI](https://doi.org/10.5103/KJSB.2017.27.2.83)
+[DOI](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002296909)
 
 J. Lee, J. Song, J. Ahn, J. Park*, "The effect of short- term muscle vibration on knee joint torque and muscle firing patterns during a maximal voluntary isometric contraction", Korean Journal of Sports Biomechanics, 2017.
 [DOI](https://doi.org/10.5103/KJSB.2017.27.2.83)
@@ -163,7 +151,7 @@ J. Ahn*, N. Hogan, "Walking is not like reaching: Evidence from periodic mechani
 [DOI](https://doi.org/10.1371/journal.pone.0031767)
 
 J. Ahn*, T. Patterson, H. Lee, D. Klenk, A. Lo, H. I. Krebs, N. Hogan, "Feasibility of dynamic entrainment with ankle mechanical perturbation to treat locomotor deficits of neurologically impaired patients", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2011.
-[DOI](https://doi.org/10.1109/IEMBS.2010.5627892)
+[DOI](https://ieeexplore.ieee.org/document/6091844)
 
 H. Lee*, T. Patterson, J. Ahn, D. Klenk, A. Lo, H. I. Krebs, N. Hogan, "Static ankle impedance in stroke and multiple sclerosis: Feasibility study", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2011.
 [DOI](https://doi.org/10.1109/IEMBS.2011.6092103)
