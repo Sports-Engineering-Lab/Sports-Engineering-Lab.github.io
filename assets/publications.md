@@ -31,7 +31,7 @@ O. Save, S. Das, E. Carlson, J. Ahn, H. Lee*, "Human gait entrainment to soft ro
 [DOI](https://doi.org/10.1109/TNSRE.2024.3354851)
 
 D. Yoo, C. Lee, J. Ahn*, BC. Lee*, "Age-related adaptation of the body's kinematic responses to unpredictable trip perturbations induced by a split-belt treadmill", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2023.
-[DOI](https://ieeexplore.ieee.org/document/10340651)https://commons.nmu.edu/isbs/vol41/iss1/21/
+[DOI](https://ieeexplore.ieee.org/document/10340651)
 
 J. Cho, E. Choi, S. Cheon, SW. Hwang, J. Ahn*, "Effects of calf anchoring compression levels on ankle kinematics, motor unit behavior, energy cost, and discomfort during walking", Conference of the International Society of Biomechanics in Sports (ISBS), 2023.
 [DOI](https://commons.nmu.edu/isbs/vol41/iss1/21/)
