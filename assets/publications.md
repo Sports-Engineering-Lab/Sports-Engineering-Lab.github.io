@@ -120,7 +120,7 @@ S. B. Panday, P. Pathak, J. Moon, J. Ahn*, "Aging induces a step-like change in 
 J. Park, J. Ahn*, H. Moon, Y. Kim, H. Um, "Analysis of relationship among physical fitness measurement factors in high school students using PAPS", Secondary Education Research, 2017.
 [DOI](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002296909)
 
-J. Lee, J. Song, J. Ahn, J. Park*, "The effect of short- term muscle vibration on knee joint torque and muscle firing patterns during a maximal voluntary isometric contraction", Korean Journal of Sports Biomechanics, 2017.
+J. Lee, J. Song, J. Ahn, J. Park*, "The effect of short-term muscle vibration on knee joint torque and muscle firing patterns during a maximal voluntary isometric contraction", Korean Journal of Sports Biomechanics, 2017.
 [DOI](https://doi.org/10.5103/KJSB.2017.27.2.83)
 
 J. Ahn*, N. Hogan, "Noise induces biased estimation of the correction gain", Public Library of Science ONE (PLoS ONE), 2016.
@@ -139,7 +139,7 @@ J. Ahn*, N. Hogan, "Long-range correlations in stride intervals may emerge from 
 [DOI](https://doi.org/10.1371/journal.pone.0073239)
 
 H. I. Krebs, A. Roy, P. Artemiadis, J. Ahn, and N. Hogan, "Beyond human or robot administered treadmill training", at Neurorehabilitation Technology, Dietz Volker, Nef Tobias, Rymer William Zev (Editors), pp. 233-252, Springer London, 2012.
-[DOI](https://doi.org/10.1007/978-1-4471-2277-7)
+[DOI]()
 
 J. Ahn*, N. Hogan, "A simple state-determined model reproduces entrainment and phase-locking of human walking", Public Library of Science ONE (PLoS ONE), 2012.
 [DOI](https://doi.org/10.1371/journal.pone.0047963)
