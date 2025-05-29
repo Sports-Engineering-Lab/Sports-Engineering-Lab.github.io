@@ -1,6 +1,9 @@
 # Publications
 
-SH Park, H Park, J Ahn, BC Lee*, "A novel adaptive propulsion enhancement eXperience (APEX) system: development and preliminary validation for enhancing gait propulsion in stroke survivors", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025.
+H. Kim, J. Ahn*, “Technologically advanced running shoes reduce biomechanical factors of running related injury risk”, Scientific Reports, 2025
+[DOI](https://www.nature.com/articles/s41598-025-03029-0)
+
+SH. Park, H. Park, J. Ahn, BC. Lee*, "A novel adaptive propulsion enhancement eXperience (APEX) system: development and preliminary validation for enhancing gait propulsion in stroke survivors", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025.
 [DOI](https://ieeexplore.ieee.org/document/10964362)
 
 T. Hong, C. Lee, S. Chang, E. Choi, B. Kim, J. Ahn, YL. Park*, “Design of a fully-soft lift-assist wearable suit powered by flat inflatable artificial muscles”, IEEE Robotics and Automation Letters, 2025
