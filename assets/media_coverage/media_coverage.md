@@ -1,7 +1,7 @@
 # Media Coverage
 
 - date: 2025-07-01
-- thumbnail: SNU_people.png
+- thumbnail: SNU_people.jpg
 - content: SNU People - Prof. Ahn "Toward the world departing from knowledge"
 - link: https://people.snu.ac.kr/en/80/4
 
