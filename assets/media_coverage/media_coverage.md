@@ -1,5 +1,10 @@
 # Media Coverage
 
+- date: 2025-07-01
+- thumbnail: SNU_people.png
+- content: SNU People - Prof. Ahn "Toward the world departing from knowledge"
+- link: https://people.snu.ac.kr/en/80/4
+
 - date: 2024-06-27
 - thumbnail: college_of_engineering.png
 - content: An interview with Prof. Ahn - SNU College of Engineering
