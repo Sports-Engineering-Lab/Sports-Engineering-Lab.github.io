@@ -51,6 +51,13 @@
             </div>
         </div>
 
+        <div class="people-category" data-category="Visiting Scholar">
+            <h2>Visiting Scholar</h2>
+            <div class="people-grid">
+                <!-- Add visiting scholar profiles here -->
+            </div>
+        </div>
+
         <div class="people-category" data-category="Postdoctoral researcher">
             <h2>Postdoctoral Researcher</h2>
             <div class="people-grid">
@@ -106,5 +113,20 @@
     <script src="../js/back-to-top.js"></script>
     <script src="../js/people.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Dynamically add Visiting Scholar (Beom-Chan Lee) without altering existing parsing logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const visitingMember = await parseMemberMD('Beom-Chan Lee.md');
+                if (visitingMember) {
+                    visitingMember.category = 'Visiting Scholar';
+                    addMemberToSection(visitingMember, 'Beom-Chan Lee.md');
+                }
+            } catch (error) {
+                console.error('Error adding Visiting Scholar:', error);
+            }
+        });
+    </script>
 </body>
 </html> 
