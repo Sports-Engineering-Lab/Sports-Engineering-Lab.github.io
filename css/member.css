@@ -55,12 +55,15 @@
     margin-bottom: 8px;
     display: list-item;
     position: relative;
-    padding-right: 100px;
+    /* reserve extra space on the right for the date so text doesn't overlap */
+    padding-right: 160px;
 }
 
 .education-section li .content,
 .professional-careers-section li .content {
-    display: inline;
+    display: inline-block; /* behave like inline text but width controllable */
+    max-width: calc(100%); /* prevent overlap with right-aligned date */
+    vertical-align: top;
 }
 
 .education-section li .date,
