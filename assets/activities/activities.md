@@ -1,5 +1,9 @@
 # Activities
 
+## Farewell to Jangwhan and Il Seung
+- files: farewell_JW_IS.jpg, farewell_JW_IS_01.jpg, farewell_JW_IS_02.jpg, farewell_JW_IS_03.jpg, farewell_JW_IS_04.jpg, farewell_JW_IS_05.jpg, farewell_JW_IS_06.jpg, farewell_JW_IS_07.jpg, farewell_JW_IS_08.jpg
+- description:
+
 ## 2025 ESB
 - files: ESB_2025_1.jpg, ESB_2025_2.jpg, ESB_2025_3.jpg
 - description: 
