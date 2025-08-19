@@ -1,5 +1,8 @@
 # Publications
 
+J. Moon, J. Ahn*, "The effect of sampling methods on the validity and reliability of the estimation of the orbital stability of human gait", Royal Society Open Science, 2025.
+[DOI](https://doi.org/10.1098/rsos.250106)
+
 H. Kim, J. Ahn*, “Technologically advanced running shoes reduce biomechanical factors of running related injury risk”, Scientific Reports, 2025
 [DOI](https://www.nature.com/articles/s41598-025-03029-0)
 
