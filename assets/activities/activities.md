@@ -1,5 +1,9 @@
 # Activities
 
+## 2025 KSOROS
+- files: 2025_KSOROS_1.jpg, 2025_KSOROS_2.jpg, 2025_KSOROS_3.jpg, 2025_KSOROS_4.jpg, 2025_KSOROS_5.jpg
+- description:
+
 ## 2025 ASB
 - files: 2025ASB1.jpg, 2025ASB2.jpg, 2025ASB3.jpg, 2025ASB4.jpg, 2025ASB5.jpg, 2025ASB6.jpg, 2025ASB7.jpg, 2025ASB8.jpg, 2025ASB9.jpg, 2025ASB10.jpg, 2025ASB11.jpg, 2025ASB12.jpg
 - description:
