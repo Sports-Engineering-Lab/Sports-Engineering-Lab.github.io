@@ -1,5 +1,8 @@
 # Publications
 
+S. Hong†, H. Kim†, J. Ahn*, W. Park*, “Influence of time since injury and physical activity level on upper limb kinematics and muscle activation during wheelchair propulsion in complete T12/L1 spinal cord injury”, BMC Musculoskeletal Disorders, 2025 (†: Equal contribution)
+[DOI](https://doi.org/10.1186/s12891-025-08987-0)
+
 J. Moon, J. Ahn*, "The effect of sampling methods on the validity and reliability of the estimation of the orbital stability of human gait", Royal Society Open Science, 2025.
 [DOI](https://doi.org/10.1098/rsos.250106)
 
