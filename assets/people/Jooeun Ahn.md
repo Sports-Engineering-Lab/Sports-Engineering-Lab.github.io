@@ -18,7 +18,7 @@ zoom: 1
 
 ## Position
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
-Associate Professor, Department of Physical Education, Seoul National University
+Professor, Department of Physical Education, Seoul National University
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
@@ -28,7 +28,8 @@ Associate Professor, Department of Physical Education, Seoul National University
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Associate Professor, Dept. of Physical Education, Seoul National University (2020.9-present)
+- Full Professor, Dept. of Physical Education, Seoul National University (2025.9-present)
+- Associate Professor, Dept. of Physical Education, Seoul National University (2020.9-2025.8)
 - Director, Korean Society of Sport Biomechanics (2019.4-present)
 - Assistant Professor, Dept. of Physical Education, Seoul National University (2016.9-2020.8)
 - Assistant Professor, Dept. of Mechanical Engineering, University of Victoria (2014-2016.8)
@@ -50,4 +51,4 @@ Telephone: +82-2-880-7785
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->
-Jooeun Ahn is a tenured Associate Professor at the Department of Physical Education at Seoul National University. His research area includes the wide spectrum of sports engineering ranging from applied mathematics for reliable quantification of human motor performance to extremely practical interventions for rehabilitation and motor performance enhancement. He actively collaborates with global leaders in robotics, biomechanics, informatics, and rehabilitation engineering, demonstrating the success of synergistic multi-disciplinary research.
+Jooeun Ahn is a Full Professor at the Department of Physical Education at Seoul National University. His research area includes the wide spectrum of sports engineering ranging from applied mathematics for reliable quantification of human motor performance to extremely practical interventions for rehabilitation and motor performance enhancement. He actively collaborates with global leaders in robotics, biomechanics, informatics, and rehabilitation engineering, demonstrating the success of synergistic multi-disciplinary research.
