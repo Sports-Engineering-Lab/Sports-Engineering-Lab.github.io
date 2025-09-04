@@ -149,18 +149,28 @@
     },
     "Jangwhan Ahn.md": {
         "name": "Jangwhan Ahn",
-        "category": "Master's Students",
+        "category": "Alumni",
         "photo": "안장환.jpg",
-        "position": [],
-        "alumniType": [],
+        "position": [
+            "PhD Student",
+            "University of North Carolina at Chapel Hill"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Il Seung Park.md": {
         "name": "Il Seung Park",
-        "category": "Master's Students",
+        "category": "Alumni",
         "photo": "박일승.jpg",
-        "position": [],
-        "alumniType": [],
+        "position": [
+            "PhD Student",
+            "Carnegie Mellon University"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 0.9
     },
     "Beomdo Kim.md": {
