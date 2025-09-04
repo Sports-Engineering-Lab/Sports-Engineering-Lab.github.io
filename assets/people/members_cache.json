@@ -160,6 +160,30 @@
         ],
         "zoom": 1.0
     },
+    "Junsik Oh.md": {
+        "name": "Junsik Oh",
+        "category": "Master's Students",
+        "photo": "오준식.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Gaju Shin.md": {
+        "name": "Gaju Shin",
+        "category": "Master's Students",
+        "photo": "신가주.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Jun Hyuk Lee.md": {
+        "name": "Jun Hyuk Lee",
+        "category": "Master's Students",
+        "photo": "이준혁.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
     "Il Seung Park.md": {
         "name": "Il Seung Park",
         "category": "Alumni",
@@ -172,6 +196,14 @@
             "Master's"
         ],
         "zoom": 0.9
+    },
+    "Hyeonyong Lee.md": {
+        "name": "Hyeonyong Lee",
+        "category": "Master's Students",
+        "photo": "이현용.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
     },
     "Beomdo Kim.md": {
         "name": "Beomdo Kim",
