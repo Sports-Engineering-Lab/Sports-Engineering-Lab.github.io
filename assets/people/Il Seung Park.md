@@ -5,11 +5,11 @@
 - [ ] Director
 - [ ] Postdoctoral researcher
 - [ ] Doctoral Students
-- [x] Master's Students
-- [ ] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
+- [ ] Master's Students
+- [x] Alumni <!-- Alumni를 선택한 경우 어떤 Alumni인지 아래 체크박스에 체크해주세요. -->
   - [ ] Postdoctoral Alumni
   - [ ] Doctoral Alumni
-  - [ ] Master's Alumni
+  - [x] Master's Alumni
 
 ## Photo
 <!-- 본인 파일명을 입력하세요. 사진은 assets/people/photos/ 디렉토리에 저장해주세요. -->
@@ -18,7 +18,7 @@ zoom: 0.9
 
 ## Position
 <!-- 직위, 소속 학과(소속 팀), 대학교(회사 혹인 기관) 순서로 작성해주세요. 꼭 쉼표로 구분해주세요. -->
-Position Title, Department Name, University Name
+PhD Student, Carnegie Mellon University
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
