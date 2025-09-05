@@ -22,6 +22,8 @@ Position Title, Department Name, University Name
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
+- MS, Seoul National University, Department of Physical Education (Aug, 2024)
+- BS, Yonsei University, Department of Biomedical Engineering (Feb, 2022)
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
@@ -33,9 +35,9 @@ Telephone:
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=XXXX)
-[ORCID](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-[LinkedIn](https://www.linkedin.com/in/username)
+[Google Scholar](https://scholar.google.com/citations?user=LZV_dAMAAAAJ&hl=ko&oi=sra)
+[ORCID](https://orcid.org/0009-0004-1118-4607)
+[LinkedIn](https://www.linkedin.com/in/eunsik-choi-8b6781371/)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. --> 
