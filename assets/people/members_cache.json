@@ -67,7 +67,11 @@
         "name": "Hyeonhee Jeong",
         "category": "Alumni",
         "photo": "정현희.jpg",
-        "position": [],
+        "position": [
+            "Researcher",
+            "Biomedical Engineering Research Center",
+            "Asan Medical Center"
+        ],
         "alumniType": [
             "Master's"
         ],
