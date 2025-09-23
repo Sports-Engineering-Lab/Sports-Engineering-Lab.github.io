@@ -1,5 +1,8 @@
 # Publications
 
+K. Kim†, H. Kim†, W. Hwang, Y. Choi, K. Kim*, J. Ahn*, H. Lee*, “A multidisciplinary review on footwear 3D printing: from biomechanics to therapeutics”, International Journal of Bioprinting, 2025 (†: Equal contribution)
+[DOI](https://doi.org/10.36922/IJB025210204)
+
 S. Hong†, H. Kim†, J. Ahn*, W. Park*, “Influence of time since injury and physical activity level on upper limb kinematics and muscle activation during wheelchair propulsion in complete T12/L1 spinal cord injury”, BMC Musculoskeletal Disorders, 2025 (†: Equal contribution)
 [DOI](https://doi.org/10.1186/s12891-025-08987-0)
 
