@@ -1,5 +1,8 @@
 # Publications
 
+H. Kim†, S. Hong†, W. Park*, J. Ahn*, “A bottom-up classification of wheelchair users based on propulsion kinematics beyond injury level: exploratory findings”, IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025 (†: Equal contribution)
+[DOI](https://ieeexplore.ieee.org/document/11177588)
+
 K. Kim†, H. Kim†, W. Hwang, Y. Choi, K. Kim*, J. Ahn*, H. Lee*, “A multidisciplinary review on footwear 3D printing: from biomechanics to therapeutics”, International Journal of Bioprinting, 2025 (†: Equal contribution)
 [DOI](https://doi.org/10.36922/IJB025210204)
 
