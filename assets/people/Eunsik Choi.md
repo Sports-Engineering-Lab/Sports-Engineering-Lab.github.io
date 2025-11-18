@@ -22,8 +22,9 @@ Position Title, Department Name, University Name
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- MS, Seoul National University, Department of Physical Education (Aug, 2024)
-- BS, Yonsei University, Department of Biomedical Engineering (Feb, 2022)
+- PhD, Seoul National University, Department of Physical Education with Data Science (Sep, 2024 - )
+- MS, Seoul National University, Department of Physical Education (Mar, 2022 - Aug, 2024)
+- BS, Yonsei University, Department of Biomedical Engineering (Mar, 2015 - Feb, 2022)
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
