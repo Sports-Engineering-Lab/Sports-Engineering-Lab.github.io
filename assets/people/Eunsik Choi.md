@@ -27,7 +27,7 @@ Position Title, Department Name, University Name
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- Invited Speaker, "Development of Biomechanical Evaluation Metrics for Wearable Assistive Robots", 2025 Active Aging HAI International Conference (12, Nov, 2025)
+- Invited Speaker, "Development of Biomechanical Evaluation Metrics for Wearable Assistive Robots", 2025 Active Aging HAI International Conference (Info.: https://www.snuactiveaging.com/conference#h.akuosmh6231i) (12, Nov, 2025)
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
