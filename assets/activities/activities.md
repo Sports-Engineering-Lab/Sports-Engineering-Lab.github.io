@@ -1,5 +1,9 @@
 # Activities
 
+## 2025 ICMST
+- files: 2025_ICMST_1.jpg, 2025_ICMST_2.jpg
+- description:
+
 ## 2025 KSOROS
 - files: 2025_KSOROS_1.jpg, 2025_KSOROS_2.jpg, 2025_KSOROS_3.jpg, 2025_KSOROS_4.jpg, 2025_KSOROS_5.jpg
 - description:
