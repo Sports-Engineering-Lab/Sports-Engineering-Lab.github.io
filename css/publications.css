@@ -5,6 +5,33 @@
     padding: 2rem;
 }
 
+/* 년도 섹션 */
+.year-section {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.year-section h2 {
+    font-size: 4em;
+    color: #8C001A;  /* 메인 테마 색상 */
+    margin-bottom: 2rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    position: relative;
+    display: inline-block;
+}
+
+.year-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0.3em;
+    left: 100%;
+    margin-left: 2rem;
+    width: calc(100vw - 100% - 3rem);  /* 화면 끝까지 확장 */
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+}
+
 /* Publication 항목 */
 .publication-entry {
     margin-left: 0.5rem;
@@ -50,8 +77,12 @@
     .publications-container {
         padding: 1rem;
     }
-
+    
     .paper-links {
         flex-wrap: wrap;
+    }
+    
+    .year-section h2 {
+        font-size: 3em;
     }
 } 
