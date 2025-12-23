@@ -116,15 +116,6 @@ P. Pathak, J. Moon, S. Roh, C. Roh, Y. Shim, J. Ahn*, "Application of vibration 
 P. Pathak, S. B. Panday, J. Ahn*, "Artificial neural network model effectively estimates muscle and fat mass using simple demographic and anthropometric measures", Clinical Nutrition, 2022.
 [DOI](https://doi.org/10.1016/j.clnu.2021.11.027)
 
-C. Lee, J. Ahn*, “Real-time slip detection using a fall-inducing system and machine learning methods”, International Conference of Korean Society of Sport Biomechanics, 2022 (The Best Oral Presentation Award)
-[DOI]()
-
-H. Kim, Y. Choi, K. Kim, S. Chung, H. Lee, J. Ahn*, “Quantifying the effect of 3D printed footwear soles on foot pressure distribution”, International Conference of Korean Society of Sport Biomechanics, 2022 (The Best Poster Presentation Award)
-[DOI]()
-
-B. Kim, J. Ahn*, “Failure prediction model in resistance training: application to arm curl”, International Conference of Korean Society of Sport Biomechanics, 2022
-[DOI]()
-
 P. Pathak, J. H. Park, J. Ahn*, "A pilot study assessing effects of taping the ankle tendons on postural control under unpredictable perturbation", Conference of the International Society of Biomechanics in Sports (ISBS), 2022.
 [DOI](https://commons.nmu.edu/isbs/vol40/iss1/132/)
 
@@ -144,12 +135,6 @@ S. Cheon, D. Kim, S. Kim, B. B. Kang, J. Lee, H. S. Gong, S. Jo, K. J. Cho*, J. 
 
 P. Pathak, S. B. Panday, B. K. Jung, J. Ahn*, "Analysis of the aging-induced changes in the motor ability structure using large population fitness test results", Aging, 2021.
 [DOI](https://doi.org/10.18632/aging.202461)
-
-P. Pathak, J. Moon, S. Rho, C. Rho, Y. Shim, J. Ahn*, “Effect of vibration to the soles of feet on the minimum toe clearance during walking”, International Conference of Korean Society of Sport Biomechanics, 2021 (The Best Oral Presentation Award)
-[DOI]()
-
-H. Kim, J. Ahn*, “Effects of performance boosting running shoes on muscle and joint loads”, International Conference of Korean Society of Sport Biomechanics, 2021 (Excellent Oral Presentation Award)
-[DOI]()
 
 ## 2020
 
@@ -211,9 +196,6 @@ J. Ahn*, N. Hogan, "A simple state-determined model reproduces entrainment and p
 
 J. Ahn*, N. Hogan, "Walking is not like reaching: Evidence from periodic mechanical perturbations", Public Library of Science ONE (PLoS ONE), 2012.
 [DOI](https://doi.org/10.1371/journal.pone.0031767)
-
-H. I. Krebs, A. Roy, P. Artemiadis, J. Ahn, and N. Hogan, "Beyond human or robot administered treadmill training", at Neurorehabilitation Technology, Dietz Volker, Nef Tobias, Rymer William Zev (Editors), pp. 233-252, Springer London, 2012.
-[DOI](https://doi.org/10.1007/978-3-319-28603-7_20)
 
 J. Ahn*, D. Klenk, N. Hogan, "A simple bipedal walking model reproduces entrainment of human locomotion", IEEE International Conference on Robotics and Automations (ICRA), 2012.
 [DOI](https://doi.org/10.1109/ICRA.2012.6225088)
