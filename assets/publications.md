@@ -1,5 +1,7 @@
 # Publications
 
+## 2025
+
 H. Kim†, S. Hong†, W. Park*, J. Ahn*, “A bottom-up classification of wheelchair users based on propulsion kinematics beyond injury level: exploratory findings”, IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025 (†: Equal contribution)
 [DOI](https://ieeexplore.ieee.org/document/11177588)
 
@@ -27,6 +29,8 @@ C. Lee, J. Ahn*, BC. Lee*, "The effects of perturbation intensities on backward 
 J. Ahn, H. Jung, J. Moon, C. Kwon, J. Ahn*, "A comprehensive assessment of a passive back support exoskeleton for load handling assistance", Scientific Reports, 2025.
 [DOI](https://doi.org/10.1038/s41598-025-88471-w)
 
+## 2024
+
 S. Hong, H. Kim, J. Ahn*, W. Park*, "Impacts of disability duration and physical activity level on wheelchair propulsion strategies in people with T12/L1 spinal cord injury", HFES International Annual Meeting, 2024.
 [DOI](https://doi.org/10.1177/10711813241262448)
 
@@ -44,6 +48,8 @@ S. B. Panday, P. Pathak, J. Ahn*, "Professional long distance runners achieve hi
 
 O. Save, S. Das, E. Carlson, J. Ahn, H. Lee*, "Human gait entrainment to soft robotic hip perturbation during simulated overground walking", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2024.
 [DOI](https://doi.org/10.1109/TNSRE.2024.3354851)
+
+## 2023
 
 D. Yoo, C. Lee, J. Ahn*, BC. Lee*, "Age-related adaptation of the body's kinematic responses to unpredictable trip perturbations induced by a split-belt treadmill", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2023.
 [DOI](https://ieeexplore.ieee.org/document/10340651)
@@ -87,6 +93,8 @@ A. Nasirzadeh, S. Yang, J. Yun, J. Yang, Y. Bae, J. Park, J. Ahn, G. Lee*, "Infl
 P. Pathak, J. Ahn*, "Taping-induced cutaneous stimulation to the ankle tendons reduces minimum toe clearance variability", Heliyon, 2023.
 [DOI](https://doi.org/10.1016/j.heliyon.2022.e12682)
 
+## 2022
+
 P. Pathak, J. H. Park, J. Ahn*, "A pilot study assessing effects of taping the ankle tendons on postural control under unpredictable perturbation", Conference of the International Society of Biomechanics in Sports (ISBS), 2022.
 [DOI](https://commons.nmu.edu/isbs/vol40/iss1/132/)
 
@@ -102,6 +110,8 @@ P. Pathak, J. Moon, S. Roh, C. Roh, Y. Shim, J. Ahn*, "Application of vibration 
 P. Pathak, S. B. Panday, J. Ahn*, "Artificial neural network model effectively estimates muscle and fat mass using simple demographic and anthropometric measures", Clinical Nutrition, 2022.
 [DOI](https://doi.org/10.1016/j.clnu.2021.11.027)
 
+## 2021
+
 BG. Lim, H. Kim, JH. Bae, JW. Seo, SE. Kwak, CY. Shin, J. Ahn, W. Song*, "Effect of masticatory movement using gum on walking and cycling: a randomized crossover design", Exercise Science, 2021.
 [DOI](https://doi.org/10.15857/ksep.2021.30.3.361)
 
@@ -113,6 +123,8 @@ S. Cheon, D. Kim, S. Kim, B. B. Kang, J. Lee, H. S. Gong, S. Jo, K. J. Cho*, J. 
 
 P. Pathak, S. B. Panday, B. K. Jung, J. Ahn*, "Analysis of the aging-induced changes in the motor ability structure using large population fitness test results", Aging, 2021.
 [DOI](https://doi.org/10.18632/aging.202461)
+
+## 2020
 
 H. Xia, J. Kwon, P. Pathak, J. Ahn, P. Shull, Y. Park*, "Design of a multi-functional soft ankle exoskeleton for foot-drop prevention, propulsion assistance, and inversion/eversion stabilization", IEEE International Conference on Biomedical Robotics and Biomechatronics (BioRob), 2020.
 [DOI](https://doi.org/10.1109/BioRob49111.2020.9224420)
@@ -126,11 +138,15 @@ J. Lee, K. Cho, J. Ahn, Y. Nam, M. Yun*, "Usability evaluation for South Korean 
 J. Moon, P. Pathak, S. Kim, S. Roh, C. Roh, Y. Shim, J. Ahn*, "Shoes with active insoles mitigate declines in balance after fatigue", Scientific Reports, 2020.
 [DOI](https://doi.org/10.1038/s41598-020-58815-9)
 
+## 2019
+
 A. Tielke, J. Ahn*, H. Lee, "Non-ideal behavior of a treadmill depends on gait phase, speed, and weight", Scientific Reports, 2019.
 [DOI](https://doi.org/10.1038/s41598-019-49272-0)
 
 S. B. Panday, P. Pathak, J. Moon, J. Ahn*, "Aging induces a step-like change in the motor ability structure of athletes", Aging, 2019.
 [DOI](https://doi.org/10.18632/aging.102126)
+
+## 2017
 
 J. Park, J. Ahn*, H. Moon, Y. Kim, H. Um, "Analysis of relationship among physical fitness measurement factors in high school students using PAPS", Secondary Education Research, 2017.
 [DOI](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002296909)
@@ -138,11 +154,17 @@ J. Park, J. Ahn*, H. Moon, Y. Kim, H. Um, "Analysis of relationship among physic
 J. Lee, J. Song, J. Ahn, J. Park*, "The effect of short-term muscle vibration on knee joint torque and muscle firing patterns during a maximal voluntary isometric contraction", Korean Journal of Sports Biomechanics, 2017.
 [DOI](https://doi.org/10.5103/KJSB.2017.27.2.83)
 
+## 2016
+
 J. Ahn*, N. Hogan, "Noise induces biased estimation of the correction gain", Public Library of Science ONE (PLoS ONE), 2016.
 [DOI](https://doi.org/10.1371/journal.pone.0158466)
 
+## 2015
+
 J. Ahn*, N. Hogan, "Improved assessment of orbital stability of rhythmic motion with noise", Public Library of Science ONE (PLoS ONE), 2015.
 [DOI](https://doi.org/10.1371/journal.pone.0119596)
+
+## 2014
 
 J. Lee*, D. Hyun, J. Ahn, S. Kim, N. Hogan, "On the dynamics of a quadruped robot model with impedance control; self-stabilizing high speed trot-running and period-doubling bifurcations", IEEE International Conference on Intelligent Robots and Systems (IROS), 2014.
 [DOI](https://doi.org/10.1109/IROS.2014.6943260)
@@ -150,11 +172,15 @@ J. Lee*, D. Hyun, J. Ahn, S. Kim, N. Hogan, "On the dynamics of a quadruped robo
 J. Ahn*, N. Hogan, "Is estimation of Floquet multipliers of human walking valid?", IEEE Northeast Bioengineering Conference (NEBEC), 2014.
 [DOI](https://doi.org/10.1109/NEBEC.2014.6972705)
 
+## 2013
+
 J. Ahn*, N. Hogan, "Long-range correlations in stride intervals may emerge from non-chaotic walking dynamics", Public Library of Science ONE (PLoS ONE), 2013.
 [DOI](https://doi.org/10.1371/journal.pone.0073239)
 
+## 2012
+
 H. I. Krebs, A. Roy, P. Artemiadis, J. Ahn, and N. Hogan, "Beyond human or robot administered treadmill training", at Neurorehabilitation Technology, Dietz Volker, Nef Tobias, Rymer William Zev (Editors), pp. 233-252, Springer London, 2012.
-[DOI]()
+[DOI](https://doi.org/10.1007/978-3-319-28603-7_20)
 
 J. Ahn*, N. Hogan, "A simple state-determined model reproduces entrainment and phase-locking of human walking", Public Library of Science ONE (PLoS ONE), 2012.
 [DOI](https://doi.org/10.1371/journal.pone.0047963)
@@ -165,14 +191,20 @@ J. Ahn*, D. Klenk, N. Hogan, "A simple bipedal walking model reproduces entrainm
 J. Ahn*, N. Hogan, "Walking is not like reaching: Evidence from periodic mechanical perturbations", Public Library of Science ONE (PLoS ONE), 2012.
 [DOI](https://doi.org/10.1371/journal.pone.0031767)
 
+## 2011
+
 J. Ahn*, T. Patterson, H. Lee, D. Klenk, A. Lo, H. I. Krebs, N. Hogan, "Feasibility of dynamic entrainment with ankle mechanical perturbation to treat locomotor deficits of neurologically impaired patients", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2011.
 [DOI](https://ieeexplore.ieee.org/document/6091844)
 
 H. Lee*, T. Patterson, J. Ahn, D. Klenk, A. Lo, H. I. Krebs, N. Hogan, "Static ankle impedance in stroke and multiple sclerosis: Feasibility study", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2011.
 [DOI](https://doi.org/10.1109/IEMBS.2011.6092103)
 
+## 2010
+
 J. Ahn*, N. Hogan, "Feasibility of dynamic entrainment with ankle mechanical perturbation to treat human locomotor deficits", International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2010.
 [DOI](https://doi.org/10.1109/IEMBS.2010.5627892)
+
+## 2008
 
 J. Ahn*, N. Hogan, "The basin of entrainment of human gait under mechanical perturbation", ASME Dynamic System and Control Conference (DSCC), 2008.
 [DOI](https://doi.org/10.1115/DSCC2008-2168)
