@@ -65,8 +65,11 @@
 
 1. assets/publications.md 파일을 열기
 2. 아래와 같은 형식으로 내용 추가 (주의: 위 아래 내용과 반드시 줄바꿈으로 구분할 것)
+3. 년도는 `## 2023` 과 같이 적어야 함 (주의: 논문이 년도의 하위 항목으로 들어가지 않으면 페이지에 나타나지 않음)
 
     ```markdown
+    ## 2023
+
     Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format. Write your paper here in APA format.
     [DOI](https://doi.org/~~~~)
     ```
