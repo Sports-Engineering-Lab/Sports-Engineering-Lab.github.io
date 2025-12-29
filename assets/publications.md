@@ -3,7 +3,7 @@
 ## 2025
 
 E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2025
-[DOI](https://doi.org/10.1016/j.isci.2025.114146)
+[DOI](https://www.sciencedirect.com/science/article/pii/S2589004225024071)
 
 H. Kim†, S. Hong†, W. Park*, J. Ahn*, “A bottom-up classification of wheelchair users based on propulsion kinematics beyond injury level: exploratory findings”, IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025 (†: Equal contribution)
 [DOI](https://ieeexplore.ieee.org/document/11177588)
