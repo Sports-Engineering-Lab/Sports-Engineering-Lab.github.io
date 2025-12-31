@@ -1,5 +1,9 @@
 # Activities
 
+## Hyunji Kim's PhD Defense
+- files: Hyunji_defense_1.jpg, Hyunji_defense_2.jpg, Hyunji_defense_3.jpg, Hyunji_defense_4.jpg
+- description:
+
 ## 2025 Lab Basketball & Gathering
 - files: 2025_basketball_1.jpg, 2025_basketball_2.jpg, 2025_basketball_3.jpg
 - description:
