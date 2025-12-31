@@ -112,7 +112,7 @@
 - files: KakaoTalk_20220930_185733066_01.jpg, KakaoTalk_20220930_194800193_08.jpg, KakaoTalk_20220930_204736151_02.jpg
 - description: 
 
-## 2022 Spring hiking & picnic
+## 2022 Spring Hiking & Picnic
 - files: KakaoTalk_20220415_114447639.jpg, KakaoTalk_20220415_121354385.jpg, KakaoTalk_20220415_171511592_10.jpg
 - description: 
 
