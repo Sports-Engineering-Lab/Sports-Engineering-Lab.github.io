@@ -104,11 +104,11 @@
 - files: KakaoTalk_20220829_113606294_02.jpg, KakaoTalk_20220829_115738384_01.jpg
 - description: 
 
-## 2022 Fall hiking
+## 2022 Fall Hiking
 - files: KakaoTalk_20221028_111609616_01.jpg, KakaoTalk_20221028_121232750.jpg, KakaoTalk_20221028_121459036_04.jpg, KakaoTalk_20221029_155330965.jpg, KakaoTalk_20221029_155330965_02.jpg
 - description: 
 
-## 2022 Graduate student sports day
+## 2022 Graduate Student Sports Day
 - files: KakaoTalk_20220930_185733066_01.jpg, KakaoTalk_20220930_194800193_08.jpg, KakaoTalk_20220930_204736151_02.jpg
 - description: 
 
