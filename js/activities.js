@@ -63,7 +63,7 @@ function displayActivities(activities) {
                 ${activities.map(activity => {
                     const safeActivityJson = JSON.stringify(activity)
                         .replace(/\\/g, '\\\\')
-                        .replace(/'/g, "\\'")
+                        .replace(/'/g, "\\u0027")
                         .replace(/"/g, '\\"')
                         .replace(/\n/g, '\\n')
                         .replace(/\r/g, '\\r')
