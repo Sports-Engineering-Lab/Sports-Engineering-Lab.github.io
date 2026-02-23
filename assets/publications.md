@@ -128,7 +128,7 @@ BG. Lim, H. Kim, JH. Bae, JW. Seo, SE. Kwak, CY. Shin, J. Ahn, W. Song*, "Effect
 [DOI](https://doi.org/10.15857/ksep.2021.30.3.361)
 
 P. Pathak, J. Ahn*, "A pressure-pad-embedded treadmill yields time-dependent errors in estimating ground reaction force during walking", Sensors, 2021.
-[DOI](https://doi.org/10.3390/s21165511)
+[DOI](https://www.mdpi.com/1424-8220/21/16/5511)
 
 S. Cheon, D. Kim, S. Kim, B. B. Kang, J. Lee, H. S. Gong, S. Jo, K. J. Cho*, J. Ahn*, "Single EMG sensor-driven robotic glove control for reliable augmentation of power grasping", IEEE Transactions on Medical Robotics and Bionics, 2021.
 [DOI](https://doi.org/10.1109/TMRB.2020.3046847)
