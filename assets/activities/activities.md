@@ -4,6 +4,18 @@
 - files: 2026_commencement_1.jpg, 2026_commencement_2.jpg, 2026_commencement_3.jpg, 2026_commencement_4.jpg
 - description:
 
+## Hyunji Kim's PhD Defense
+- files: Hyunji_defense_1.jpg, Hyunji_defense_2.jpg, Hyunji_defense_3.jpg, Hyunji_defense_4.jpg
+- description:
+
+## 2025 Lab Basketball & Gathering
+- files: 2025_basketball_1.jpg, 2025_basketball_2.jpg, 2025_basketball_3.jpg
+- description:
+
+## 2025 ICMST
+- files: 2025_ICMST_1.jpg, 2025_ICMST_2.jpg
+- description:
+
 ## 2025 KSOROS
 - files: 2025_KSOROS_1.jpg, 2025_KSOROS_2.jpg, 2025_KSOROS_3.jpg, 2025_KSOROS_4.jpg, 2025_KSOROS_5.jpg
 - description:
@@ -96,15 +108,15 @@
 - files: KakaoTalk_20220829_113606294_02.jpg, KakaoTalk_20220829_115738384_01.jpg
 - description: 
 
-## 2022 Fall hiking
+## 2022 Fall Hiking
 - files: KakaoTalk_20221028_111609616_01.jpg, KakaoTalk_20221028_121232750.jpg, KakaoTalk_20221028_121459036_04.jpg, KakaoTalk_20221029_155330965.jpg, KakaoTalk_20221029_155330965_02.jpg
 - description: 
 
-## 2022 Graduate student sports day
+## 2022 Graduate Student Sports Day
 - files: KakaoTalk_20220930_185733066_01.jpg, KakaoTalk_20220930_194800193_08.jpg, KakaoTalk_20220930_204736151_02.jpg
 - description: 
 
-## 2022 Spring hiking & picnic
+## 2022 Spring Hiking & Picnic
 - files: KakaoTalk_20220415_114447639.jpg, KakaoTalk_20220415_121354385.jpg, KakaoTalk_20220415_171511592_10.jpg
 - description: 
 
