@@ -1,5 +1,10 @@
 # Media Coverage
 
+- date: 2026-05-11
+- thumbnail: unreal_science.png
+- content: An interview with Prof. Ahn and Dr. Kim - Unrealscience
+- link: https://youtu.be/N5owbePhvbM?si=D2ZD81ncrAlZ6zjq
+
 - date: 2025-07-01
 - thumbnail: SNU_people.jpg
 - content: SNU People - Prof. Ahn "Toward the world departing from knowledge"
