@@ -1,9 +1,14 @@
 # Publications
 
-## 2025
+## 2026
 
-E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2025
+O. M. Save, S. Das, E. Carlson, A. Kruse, J. Ahn and H. Lee, "Effects of Mechanical Perturbation Magnitude on Human Gait Entrainment", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
+[DOI](https://doi.org/10.1109/TNSRE.2026.3670885)
+
+E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2026
 [DOI](https://www.sciencedirect.com/science/article/pii/S2589004225024071)
+
+## 2025
 
 H. Kim†, S. Hong†, W. Park*, J. Ahn*, “A bottom-up classification of wheelchair users based on propulsion kinematics beyond injury level: exploratory findings”, IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2025 (†: Equal contribution)
 [DOI](https://ieeexplore.ieee.org/document/11177588)
