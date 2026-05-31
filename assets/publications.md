@@ -2,6 +2,9 @@
 
 ## 2026
 
+Seoung Hoon Park, Jooeun Ahn, and Beom-Chan Lee*, "State-space modeling of real-time visual biofeedback and late-stance belt modulation for quantifying error- and use-dependent learning of gait propulsion in individuals post-stroke", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
+[DOI](https://doi.org/10.1109/TNSRE.2026.3694720)
+
 O. M. Save, S. Das, E. Carlson, A. Kruse, J. Ahn and H. Lee, "Effects of Mechanical Perturbation Magnitude on Human Gait Entrainment", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
 [DOI](https://doi.org/10.1109/TNSRE.2026.3670885)
 
