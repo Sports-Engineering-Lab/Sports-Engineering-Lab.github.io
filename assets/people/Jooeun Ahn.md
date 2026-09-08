@@ -30,7 +30,6 @@ Professor, Department of Physical Education, Seoul National University
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 - Full Professor, Dept. of Physical Education, Seoul National University (2025.9-present)
 - Associate Professor, Dept. of Physical Education, Seoul National University (2020.9-2025.8)
-- Director, Korean Society of Sport Biomechanics (2019.4-present)
 - Assistant Professor, Dept. of Physical Education, Seoul National University (2016.9-2020.8)
 - Assistant Professor, Dept. of Mechanical Engineering, University of Victoria (2014-2016.8)
 - Post-Doctoral Associate, Northeastern University (2014)
