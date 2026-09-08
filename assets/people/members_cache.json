@@ -74,10 +74,12 @@
     },
     "Hong Min.md": {
         "name": "Hong Min",
-        "category": "Master's Students",
+        "category": "Alumni",
         "photo": "민홍.jpg",
         "position": [],
-        "alumniType": [],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Hyunji Kim.md": {
@@ -177,10 +179,14 @@
     },
     "Yoojin Choi.md": {
         "name": "Yoojin Choi",
-        "category": "Master's Students",
+        "category": "Alumni",
         "photo": "최유진.jpg",
-        "position": [],
-        "alumniType": [],
+        "position": [
+            "Exosystems"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 0.9
     },
     "Hyeonyong Lee.md": {
@@ -252,6 +258,14 @@
         "alumniType": [
             "Doctoral"
         ],
+        "zoom": 1.0
+    },
+    "Jooyoung Moon.md": {
+        "name": "Jooyoung Moon",
+        "category": "Master's Students",
+        "photo": "문주영.jpg",
+        "position": [],
+        "alumniType": [],
         "zoom": 1.0
     }
 }
