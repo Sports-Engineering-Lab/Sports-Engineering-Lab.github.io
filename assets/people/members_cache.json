@@ -23,7 +23,7 @@
         "photo": "고서영.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 1.0
+        "zoom": 1.1
     },
     "Seongwon Hwang.md": {
         "name": "Seongwon Hwang",
@@ -126,7 +126,7 @@
         "photo": "최선묵.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 1.0
+        "zoom": 0.9
     },
     "Il Seung Park.md": {
         "name": "Il Seung Park",
@@ -266,6 +266,6 @@
         "photo": "문주영.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 1.0
+        "zoom": 0.9
     }
 }
