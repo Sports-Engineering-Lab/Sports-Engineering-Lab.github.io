@@ -1,5 +1,25 @@
 # Activities
 
+## 2026 Fall Commencement
+- files: 2026_fall_commencement_1.jpg, 2026_fall_commencement_2.jpg, 2026_fall_commencement_3.jpg, 2026_fall_commencement_4.jpg, 2026_fall_commencement_5.jpg, 2026_fall_commencement_6.jpg
+- description:
+
+## SNU Robotics Opening Ceremony
+- files: 2026_SNU_robotics_opening_1.jpg, 2026_SNU_robotics_opening_2.jpg, 2026_SNU_robotics_opening_3.jpg
+- description:
+
+## Farewell to Hong and Yoojin
+- files: farewell_Hong_Yoojin_1.jpg, farewell_Hong_Yoojin_2.jpg
+- description:
+
+## Farewell to Hyunji
+- files: farewell_Hyunji_1.png, farewell_Hyunji_2.png, farewell_Hyunji_3.jpg
+- description:
+
+## 2026 WCB
+- files: 2026_WCB_1.jpg, 2026_WCB_2.jpg, 2026_WCB_3.jpg, 2026_WCB_4.jpg, 2026_WCB_5.jpg, 2026_WCB_6.jpg, 2026_WCB_7.jpg, 2026_WCB_8.jpg, 2026_WCB_9.jpg, 2026_WCB_10.jpg, 2026_WCB_11.jpg, 2026_WCB_12.jpg, 2026_WCB_13.jpg, 2026_WCB_14.jpg, 2026_WCB_15.jpg
+- description:
+
 ## 2026 Commencement
 - files: 2026_commencement_1.jpg, 2026_commencement_2.jpg, 2026_commencement_3.jpg, 2026_commencement_4.jpg
 - description:
@@ -48,7 +68,7 @@
 - files: KakaoTalk_20250226_123347303.jpg, KakaoTalk_20250226_123347303_05.jpg
 - description: 
 
-## 2024 Fall Commencement
+## 2024 Commencement
 - files: KakaoTalk_20240226_161857746.jpg, KakaoTalk_20240226_161857746_13.jpg, KakaoTalk_20240226_162141402_07.jpg
 - description: 
 
