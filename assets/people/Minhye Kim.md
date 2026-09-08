@@ -28,14 +28,14 @@ Position Title, Department Name, University Name
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
-Email: 123h789@naver.com
+Email: ksi2417@snu.ac.kr
 Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=XXXX)
-[ORCID](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-[LinkedIn](https://www.linkedin.com/in/username)
+[Google Scholar](https://scholar.google.co.kr/citations?user=G9BcyEIiwAsC&hl=ko)
+[ORCID](https://orcid.org/0009-0005-6293-2000)
+[LinkedIn](https://www.linkedin.com/in/%EB%AF%BC%ED%98%9C-%EA%B9%80-785a80312/)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->

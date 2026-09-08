@@ -33,9 +33,8 @@ Telephone:
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=XXXX)
-[ORCID](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-[LinkedIn](https://www.linkedin.com/in/username)
+[ORCID](https://orcid.org/0009-0008-0526-2858)
+[LinkedIn](https://www.linkedin.com/in/%EB%AC%B8%EC%A3%BC%EC%98%81-%ED%95%99%EC%83%9D-%EC%B2%B4%EC%9C%A1%EA%B5%90%EC%9C%A1%EA%B3%BC-a01413434)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. -->

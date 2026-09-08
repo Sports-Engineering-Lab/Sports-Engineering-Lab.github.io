@@ -33,9 +33,9 @@ Telephone:
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=XXXX)
-[ORCID](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-[LinkedIn](https://www.linkedin.com/in/username)
+[Google Scholar](https://scholar.google.com/citations?user=w2A9LGkAAAAJ)
+[ORCID](https://orcid.org/0009-0002-4335-9825)
+[LinkedIn](https://www.linkedin.com/in/chihyeong-lee-7b9907373/)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. --> 

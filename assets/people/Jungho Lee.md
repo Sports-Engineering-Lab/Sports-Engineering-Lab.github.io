@@ -28,14 +28,12 @@ PhD Student, University of Michigan
 
 ## Contact
 <!-- 연락처 정보를 입력하세요. 이메일은 필수입니다. -->
-Email: ssjjmon@naver.com
+Email: umkinjh@umich.edu
 Telephone: 
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
-[Google Scholar](https://scholar.google.com/citations?user=XXXX)
-[ORCID](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-[LinkedIn](https://www.linkedin.com/in/username)
+[LinkedIn](https://www.linkedin.com/in/jungho-lee-54825b36a)
 
 ## Description
 <!-- 본인에 대한 자세한 설명을 작성하세요. 연구 관심사, 학력, 업적, 현재 프로젝트 등을 자유롭게 포함할 수 있습니다. --> 
