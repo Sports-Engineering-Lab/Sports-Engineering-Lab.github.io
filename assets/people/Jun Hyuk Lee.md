@@ -22,7 +22,7 @@ Position Title, Department Name, University Name
 
 ## Education
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
-- M.S. in Physical Education, Seoul National University (Sep. 2025 - Present)
+- M.S. in Sports Science, Seoul National University (Sep. 2025 - Present)
 - Bachelor of Science in Artificial Intelligence, Seoul National University (Mar. 2018 - Aug. 2023)
 - Bachelor of Sports Science, Seoul National University (Mar. 2018 - Aug. 2023)
 
