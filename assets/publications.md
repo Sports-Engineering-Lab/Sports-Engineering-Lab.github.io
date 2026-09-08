@@ -13,7 +13,7 @@ J. Lee, C. Lee, J. Ahn*, "Lambda-Hold Control: Human-Like Movement Emerges from 
 H. Park, E. Choi, SM. Nam, J. Jeong, J. Ahn, D. Ryu*, "Lower limb coordination variability in Temps Levé Sauté: effects of skill level and tempo", Perceptual and Motor Skills, 2026
 [DOI](https://doi.org/10.1177/00315125261456858)
 
-I. Park, E. Choi, Jangwhan Ahn, J. Ahn*, "Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation", arXiv preprint, 2026
+I. Park†, E. Choi†, Jangwhan Ahn, J. Ahn*, "Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation", arXiv preprint, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.48550/arXiv.2603.10474)
 
 SH. Park, J. Ahn, BC. Lee*, "State-space modeling of real-time visual biofeedback and late-stance belt modulation for quantifying error- and use-dependent learning of gait propulsion in individuals post-stroke", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
