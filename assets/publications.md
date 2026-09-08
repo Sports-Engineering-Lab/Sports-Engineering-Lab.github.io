@@ -2,6 +2,20 @@
 
 ## 2026
 
+J. Lee†, CL. Kim†, I. Park, J. Moon, J. Ahn*, "The adaptive role of the knee joint in maintaining the orbital stability during slope walking", Royal Society Open Science, 2026 (†: Equal contribution)
+
+SH. Park, C. Lee, H. Park, J. Ahn*, BC. Lee*, "Independent and combined effects of visual biofeedback and phase-specific belt deceleration on affected-leg propulsion in post-stroke split-belt treadmill training", Journal of NeuroEngineering and Rehabilitation, 2026
+[DOI](https://doi.org/10.1186/s12984-026-02139-8)
+
+J. Lee, C. Lee, J. Ahn*, "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation", arXiv preprint, 2026
+[DOI](https://doi.org/10.48550/arXiv.2608.17030)
+
+H. Park, E. Choi, SM. Nam, J. Jeong, J. Ahn, D. Ryu*, "Lower limb coordination variability in Temps Levé Sauté: effects of skill level and tempo", Perceptual and Motor Skills, 2026
+[DOI](https://doi.org/10.1177/00315125261456858)
+
+I. Park, E. Choi, Jangwhan Ahn, J. Ahn*, "Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation", arXiv preprint, 2026
+[DOI](https://doi.org/10.48550/arXiv.2603.10474)
+
 SH. Park, J. Ahn, BC. Lee*, "State-space modeling of real-time visual biofeedback and late-stance belt modulation for quantifying error- and use-dependent learning of gait propulsion in individuals post-stroke", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
 [DOI](https://doi.org/10.1109/TNSRE.2026.3694720)
 
