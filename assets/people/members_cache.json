@@ -126,7 +126,7 @@
         "photo": "최선묵.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 0.9
+        "zoom": 0.95
     },
     "Il Seung Park.md": {
         "name": "Il Seung Park",
@@ -266,6 +266,6 @@
         "photo": "문주영.jpg",
         "position": [],
         "alumniType": [],
-        "zoom": 0.9
+        "zoom": 0.95
     }
 }
