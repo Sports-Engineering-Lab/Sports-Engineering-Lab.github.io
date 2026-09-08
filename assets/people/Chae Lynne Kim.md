@@ -33,6 +33,7 @@ Telephone:
 
 ## Link
 <!-- 관련 학술 프로필 링크를 입력하세요. 선택사항입니다. -->
+[Google Scholar](https://scholar.google.com/citations?user=1cV13kcAAAAJ&hl=ko)
 [ORCID](https://orcid.org/0009-0003-1270-9586)
 [LinkedIn](https://www.linkedin.com/in/chae-lynne-kim)
 
