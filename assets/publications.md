@@ -3,6 +3,7 @@
 ## 2026
 
 J. Lee†, CL. Kim†, I. Park, J. Moon, J. Ahn*, "The adaptive role of the knee joint in maintaining the orbital stability during slope walking", Royal Society Open Science, 2026 (†: Equal contribution)
+[DOI](https://doi.org/10.1098/rsos.252138)
 
 SH. Park, C. Lee, H. Park, J. Ahn*, BC. Lee*, "Independent and combined effects of visual biofeedback and phase-specific belt deceleration on affected-leg propulsion in post-stroke split-belt treadmill training", Journal of NeuroEngineering and Rehabilitation, 2026
 [DOI](https://doi.org/10.1186/s12984-026-02139-8)
