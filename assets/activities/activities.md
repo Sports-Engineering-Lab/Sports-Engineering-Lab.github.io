@@ -8,7 +8,7 @@
 - files: 2026_SNU_robotics_opening_1.jpg, 2026_SNU_robotics_opening_2.jpg, 2026_SNU_robotics_opening_3.jpg
 - description:
 
-## Farewell to Hong and Yoojin
+## Farewell to Jungho, Yoojin and Hong
 - files: farewell_Hong_Yoojin_1.jpg, farewell_Hong_Yoojin_2.jpg
 - description:
 
@@ -88,6 +88,10 @@
 - files: KakaoTalk_20240205_133654204.jpg
 - description: 
 
+## 2023 KSSB
+- files: KakaoTalk_20231202_115636349.jpg, KakaoTalk_20231202_132833688.jpg
+- description: 
+
 ## 2023 Fall Commencement
 - files: KakaoTalk_20230829_105025048_02.jpg, KakaoTalk_20230829_105025048_18.jpg, KakaoTalk_20230829_113141248_04.jpg, KakaoTalk_20230829_114622272_01.jpg
 - description: 
@@ -112,10 +116,6 @@
 - files: KakaoTalk_20231013_170303654.jpg, KakaoTalk_20231013_212011388.jpg, KakaoTalk_20231013_212524574.jpg
 - description: 
 
-## 2023 KSSB
-- files: KakaoTalk_20231202_115636349.jpg, KakaoTalk_20231202_132833688.jpg
-- description: 
-
 ## 2023 Ski Trip
 - files: KakaoTalk_20230217_151717510_05.jpg, KakaoTalk_20230217_152006966.jpg, KakaoTalk_20230217_152006966_02.jpg
 - description: 
@@ -136,16 +136,16 @@
 - files: KakaoTalk_20220930_185733066_01.jpg, KakaoTalk_20220930_194800193_08.jpg, KakaoTalk_20220930_204736151_02.jpg
 - description: 
 
-## 2022 Spring Hiking & Picnic
-- files: KakaoTalk_20220415_114447639.jpg, KakaoTalk_20220415_121354385.jpg, KakaoTalk_20220415_171511592_10.jpg
-- description: 
-
 ## 2022 BioRob
 - files: KakaoTalk_20220823_201405758.jpg, KakaoTalk_20220823_232044103.jpg, KakaoTalk_20220823_235809192_01.jpg
 - description: 
 
 ## 2022 ERC Workshop
 - files: KakaoTalk_20220826_132006684.jpg, KakaoTalk_20220826_132006684_01.jpg, KakaoTalk_20220826_214248458_03.jpg
+- description: 
+
+## 2022 Spring Hiking & Picnic
+- files: KakaoTalk_20220415_114447639.jpg, KakaoTalk_20220415_121354385.jpg, KakaoTalk_20220415_171511592_10.jpg
 - description: 
 
 ## 2022 KSSB
