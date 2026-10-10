@@ -1,5 +1,9 @@
 # Activities
 
+## 2026 ICNR
+- files: 2026_ICNR_1.jpg, 2026_ICNR_2.jpg, 2026_ICNR_3.jpg, 2026_ICNR_4.jpg, 2026_ICNR_5.jpg, 2026_ICNR_6.jpg, 2026_ICNR_7.jpg, 2026_ICNR_8.jpg, 2026_ICNR_9.jpg, 2026_ICNR_10.jpg, 2026_ICNR_11.jpg, 2026_ICNR_12.jpg, 2026_ICNR_13.jpg, 2026_ICNR_14.jpg
+- description:
+
 ## 2026 Fall Commencement
 - files: 2026_fall_commencement_1.jpg, 2026_fall_commencement_2.jpg, 2026_fall_commencement_3.jpg, 2026_fall_commencement_4.jpg, 2026_fall_commencement_5.jpg, 2026_fall_commencement_6.jpg
 - description:
