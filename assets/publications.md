@@ -2,7 +2,7 @@
 
 ## 2026
 
-H. Jung†, Jangwhan Ahn†, E. Choi, J. Moon, K. Kong, J. Ahn*, "Dissociation between muscle activation, spinal joint load, and subjective perception in passive back support exoskeleton use", Public Library of Science ONE (PLoS ONE), 2026 (†: Equal contribution)
+H. Jung†, J. Ahn†, E. Choi, J. Moon, K. Kong, J. Ahn*, "Dissociation between muscle activation, spinal joint load, and subjective perception in passive back support exoskeleton use", Public Library of Science ONE (PLoS ONE), 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.1371/journal.pone.0361338)
 
 J. Lee†, CL. Kim†, I. Park, J. Moon, J. Ahn*, "The adaptive role of the knee joint in maintaining the orbital stability during slope walking", Royal Society Open Science, 2026 (†: Equal contribution)
@@ -17,7 +17,7 @@ JH. Lee, C. Lee, J. Ahn*, "Lambda-Hold Control: Human-Like Movement Emerges from
 H. Park, E. Choi, SM. Nam, J. Jeong, J. Ahn, D. Ryu*, "Lower limb coordination variability in Temps Levé Sauté: effects of skill level and tempo", Perceptual and Motor Skills, 2026
 [DOI](https://doi.org/10.1177/00315125261456858)
 
-I. Park†, E. Choi†, Jangwhan Ahn, J. Ahn*, "Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation", arXiv preprint, 2026 (†: Equal contribution)
+I. Park†, E. Choi†, J. Ahn, J. Ahn*, "Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation", arXiv preprint, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.48550/arXiv.2603.10474)
 
 SH. Park, J. Ahn, BC. Lee*, "State-space modeling of real-time visual biofeedback and late-stance belt modulation for quantifying error- and use-dependent learning of gait propulsion in individuals post-stroke", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
@@ -29,7 +29,7 @@ O. M. Save, S. Das, E. Carlson, A. Kruse, J. Ahn, H. Lee*, "Effects of Mechanica
 HJ. Joung†, SB. Panday†, JH. Lee, J. Ahn*, MS. Park*, "Sex-specific variance in gait biomechanics: machine learning-based feature prioritization for personalized assessment", Sex- and Gender-Specific Biomedicine, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.65400/SGBM.2026.1.1.64)
 
-E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2026
+E. Choi, I. Park, J. Moon, J. Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2026
 [DOI](https://www.sciencedirect.com/science/article/pii/S2589004225024071)
 
 ## 2025
