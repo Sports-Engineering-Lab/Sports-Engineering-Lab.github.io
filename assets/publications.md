@@ -11,7 +11,7 @@ J. Lee†, CL. Kim†, I. Park, J. Moon, J. Ahn*, "The adaptive role of the knee
 SH. Park†, C. Lee†, H. Park, J. Ahn*, BC. Lee*, "Independent and combined effects of visual biofeedback and phase-specific belt deceleration on affected-leg propulsion in post-stroke split-belt treadmill training", Journal of NeuroEngineering and Rehabilitation, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.1186/s12984-026-02139-8)
 
-J. Lee, C. Lee, J. Ahn*, "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation", arXiv preprint, 2026
+JH. Lee, C. Lee, J. Ahn*, "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation", arXiv preprint, 2026
 [DOI](https://doi.org/10.48550/arXiv.2608.17030)
 
 H. Park, E. Choi, SM. Nam, J. Jeong, J. Ahn, D. Ryu*, "Lower limb coordination variability in Temps Levé Sauté: effects of skill level and tempo", Perceptual and Motor Skills, 2026
@@ -26,7 +26,7 @@ SH. Park, J. Ahn, BC. Lee*, "State-space modeling of real-time visual biofeedbac
 O. M. Save, S. Das, E. Carlson, A. Kruse, J. Ahn, H. Lee*, "Effects of Mechanical Perturbation Magnitude on Human Gait Entrainment", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
 [DOI](https://doi.org/10.1109/TNSRE.2026.3670885)
 
-HJ. Joung†, SB. Panday†, J. Lee, J. Ahn*, MS. Park*, "Sex-specific variance in gait biomechanics: machine learning-based feature prioritization for personalized assessment", Sex- and Gender-Specific Biomedicine, 2026 (†: Equal contribution)
+HJ. Joung†, SB. Panday†, JH. Lee, J. Ahn*, MS. Park*, "Sex-specific variance in gait biomechanics: machine learning-based feature prioritization for personalized assessment", Sex- and Gender-Specific Biomedicine, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.65400/SGBM.2026.1.1.64)
 
 E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2026
@@ -72,7 +72,7 @@ C. Lee, J. Ahn*, BC. Lee*, “Evaluating the impact of different slipping veloci
 H. Moon, S. Lee, J. Park, C. An, J. Ahn*, "Improving the method for assessing flexibility in PAPS using individual heights", Asian Journal of Physical Education and Sport Science, 2024.
 [DOI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003144390)
 
-I. Park, J. Lee, J. Ahn*, "Effects of the kinematic variable, delay and data length on test-retest reliability of the maximal Lyapunov exponent of human walking", Royal Society Open Science, 2024.
+I. Park, JH. Lee, J. Ahn*, "Effects of the kinematic variable, delay and data length on test-retest reliability of the maximal Lyapunov exponent of human walking", Royal Society Open Science, 2024.
 [DOI](https://doi.org/10.1098/rsos.240333)
 
 S. B. Panday, P. Pathak, J. Ahn*, "Professional long distance runners achieve high efficiency at the cost of weak orbital stability", Helyon, 2024.
@@ -98,7 +98,7 @@ C. Lee, J. Ahn*, BC. Lee*, "A systematic review of the long-term effects of usin
 P. Pathak, HS. Kim, H. Kim, J. Park, G. Lee, J. Ahn*, "Feasibility of mitigating out-toeing gait using compression tights with inward-directing taping lines", Public Library of Science ONE (PLoS ONE), 2023.
 [DOI](https://doi.org/10.1371/journal.pone.0291914)
 
-J. Lee, I. Park, J. Ahn*, "Noise-robust estimation of the maximal Lyapunov exponent based on state space reconstruction with principal components", Chaos, Solitons & Fractals, 2023.
+JH. Lee, I. Park, J. Ahn*, "Noise-robust estimation of the maximal Lyapunov exponent based on state space reconstruction with principal components", Chaos, Solitons & Fractals, 2023.
 [DOI](https://doi.org/10.1016/j.chaos.2023.113916)
 
 B. Lee*, J. Choi, J. Ahn, B. Martin, "The different contributions of the eight prefrontal cortex subregions to reactive responses after unpredictable slip perturbations and vibrotactile cueing", Frontiers in Human Neuroscience, 2023.
