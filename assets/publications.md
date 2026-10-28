@@ -2,6 +2,9 @@
 
 ## 2026
 
+H. Jung†, Jangwhan Ahn†, E. Choi, J. Moon, K. Kong, J. Ahn*, "Dissociation between muscle activation, spinal joint load, and subjective perception in passive back support exoskeleton use", Public Library of Science ONE (PLoS ONE), 2026 (†: Equal contribution)
+[DOI](https://doi.org/10.1371/journal.pone.0361338)
+
 J. Lee†, CL. Kim†, I. Park, J. Moon, J. Ahn*, "The adaptive role of the knee joint in maintaining the orbital stability during slope walking", Royal Society Open Science, 2026 (†: Equal contribution)
 [DOI](https://doi.org/10.1098/rsos.252138)
 
