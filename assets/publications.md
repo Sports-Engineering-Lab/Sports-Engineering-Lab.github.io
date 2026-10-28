@@ -26,6 +26,9 @@ SH. Park, J. Ahn, BC. Lee*, "State-space modeling of real-time visual biofeedbac
 O. M. Save, S. Das, E. Carlson, A. Kruse, J. Ahn, H. Lee*, "Effects of Mechanical Perturbation Magnitude on Human Gait Entrainment", IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026
 [DOI](https://doi.org/10.1109/TNSRE.2026.3670885)
 
+HJ. Joung†, SB. Panday†, J. Lee, J. Ahn*, MS. Park*, "Sex-specific variance in gait biomechanics: machine learning-based feature prioritization for personalized assessment", Sex- and Gender-Specific Biomedicine, 2026 (†: Equal contribution)
+[DOI](https://doi.org/10.65400/SGBM.2026.1.1.64)
+
 E. Choi, I. Park, J. Moon, Jangwhan Ahn, J. Ahn*, "Effects of external hand force modeling on validity of inverse analysis of lifting", iScience, 2026
 [DOI](https://www.sciencedirect.com/science/article/pii/S2589004225024071)
 
