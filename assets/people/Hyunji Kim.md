@@ -24,7 +24,7 @@ Postdoctoral Research Fellow, Peter Munk Cardiac Centre, University Health Netwo
 <!-- 본인의 학력을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
 - Ph.D. in Sports Science, Seoul National University (Sep. 2021 - Feb. 2026)
 - M.S. in Sports Science, Seoul National University (Sep. 2019 - Aug. 2021)
-- Bachelor of Science (Chemistry Education), Seoul National University (Mar. 2018 - Aug. 2023)
+- Bachelor of Science (Chemistry Education), Seoul National University (Mar. 2014 - Aug. 2018)
 
 ## Professional Careers
 <!-- 본인의 경력, 수상 내역 등을 한 줄씩 입력해주세요. 최신 내용이 위로 가도록 작성해주세요. -->
