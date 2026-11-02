@@ -12,29 +12,6 @@
         ],
         "zoom": 1.0
     },
-    "Taegyun Park.md": {
-        "name": "Taegyun Park",
-        "category": "Alumni",
-        "photo": "박태균.jpg",
-        "position": [],
-        "alumniType": [
-            "Master's"
-        ],
-        "zoom": 1.0
-    },
-    "Prabhat Pathak.md": {
-        "name": "Prabhat Pathak",
-        "category": "Alumni",
-        "photo": "Prabhat Pathak.jpg",
-        "position": [
-            "Assistant Professor",
-            "Seoul National University of Science and Technology"
-        ],
-        "alumniType": [
-            "Doctoral"
-        ],
-        "zoom": 1.0
-    },
     "Beomdo Kim.md": {
         "name": "Beomdo Kim",
         "category": "Alumni",
@@ -47,6 +24,133 @@
         "alumniType": [
             "Master's"
         ],
+        "zoom": 1.0
+    },
+    "Seoyoung Koh.md": {
+        "name": "Seoyoung Koh",
+        "category": "Master's Students",
+        "photo": "고서영.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.1
+    },
+    "Minhye Kim.md": {
+        "name": "Minhye Kim",
+        "category": "Master's Students",
+        "photo": "김민혜.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Eunsik Choi.md": {
+        "name": "Eunsik Choi",
+        "category": "Doctoral Students",
+        "photo": "최은식.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Sun Mook Choi.md": {
+        "name": "Sun Mook Choi",
+        "category": "Master's Students",
+        "photo": "최선묵.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 0.95
+    },
+    "Il Seung Park.md": {
+        "name": "Il Seung Park",
+        "category": "Alumni",
+        "photo": "박일승.jpg",
+        "position": [
+            "PhD Student",
+            "Carnegie Mellon University"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
+        "zoom": 0.9
+    },
+    "Chae Lynne Kim.md": {
+        "name": "Chae Lynne Kim",
+        "category": "Master's Students",
+        "photo": "김채린.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Jun Hyuk Lee.md": {
+        "name": "Jun Hyuk Lee",
+        "category": "Master's Students",
+        "photo": "이준혁.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 0.9
+    },
+    "Jaewoo Cho.md": {
+        "name": "Jaewoo Cho",
+        "category": "Doctoral Students",
+        "photo": "조재우.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Yoojin Choi.md": {
+        "name": "Yoojin Choi",
+        "category": "Alumni",
+        "photo": "최유진.jpg",
+        "position": [
+            "Exosystems"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
+        "zoom": 0.9
+    },
+    "Hyunji Kim.md": {
+        "name": "Hyunji Kim",
+        "category": "Alumni",
+        "photo": "김현지.jpg",
+        "position": [
+            "Postdoctoral Research Fellow",
+            "Peter Munk Cardiac Centre",
+            "University Health Network (UHN)",
+            "Canada"
+        ],
+        "alumniType": [
+            "Postdoctoral",
+            "Doctoral",
+            "Master's"
+        ],
+        "zoom": 1.0
+    },
+    "Seongwon Hwang.md": {
+        "name": "Seongwon Hwang",
+        "category": "Alumni",
+        "photo": "황성원.jpg",
+        "position": [
+            "PhD Student",
+            "University of Southern California"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
+        "zoom": 1.0
+    },
+    "Hyeonyong Lee.md": {
+        "name": "Hyeonyong Lee",
+        "category": "Master's Students",
+        "photo": "이현용.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Junsik Oh.md": {
+        "name": "Junsik Oh",
+        "category": "Master's Students",
+        "photo": "오준식.jpg",
+        "position": [],
+        "alumniType": [],
         "zoom": 1.0
     },
     "Hyeonhee Jeong.md": {
@@ -63,6 +167,27 @@
         ],
         "zoom": 1.0
     },
+    "Gaju Shin.md": {
+        "name": "Gaju Shin",
+        "category": "Master's Students",
+        "photo": "신가주.jpg",
+        "position": [],
+        "alumniType": [],
+        "zoom": 1.0
+    },
+    "Prabhat Pathak.md": {
+        "name": "Prabhat Pathak",
+        "category": "Alumni",
+        "photo": "Prabhat Pathak.jpg",
+        "position": [
+            "Assistant Professor",
+            "Seoul National University of Science and Technology"
+        ],
+        "alumniType": [
+            "Doctoral"
+        ],
+        "zoom": 1.0
+    },
     "Hong Min.md": {
         "name": "Hong Min",
         "category": "Alumni",
@@ -73,28 +198,27 @@
         ],
         "zoom": 1.0
     },
-    "Jaewoo Cho.md": {
-        "name": "Jaewoo Cho",
-        "category": "Doctoral Students",
-        "photo": "조재우.jpg",
-        "position": [],
-        "alumniType": [],
+    "Jungho Lee.md": {
+        "name": "Jungho Lee",
+        "category": "Alumni",
+        "photo": "이정호.jpg",
+        "position": [
+            "PhD Student",
+            "University of Michigan"
+        ],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
-    "Jun Hyuk Lee.md": {
-        "name": "Jun Hyuk Lee",
-        "category": "Master's Students",
-        "photo": "이준혁.jpg",
+    "Taegyun Park.md": {
+        "name": "Taegyun Park",
+        "category": "Alumni",
+        "photo": "박태균.jpg",
         "position": [],
-        "alumniType": [],
-        "zoom": 0.9
-    },
-    "Chae Lynne Kim.md": {
-        "name": "Chae Lynne Kim",
-        "category": "Master's Students",
-        "photo": "김채린.jpg",
-        "position": [],
-        "alumniType": [],
+        "alumniType": [
+            "Master's"
+        ],
         "zoom": 1.0
     },
     "Jeongin Moon.md": {
@@ -112,34 +236,13 @@
         ],
         "zoom": 1.0
     },
-    "Hyunji Kim.md": {
-        "name": "Hyunji Kim",
-        "category": "Postdoctoral researcher",
-        "photo": "김현지.jpg",
+    "Chihyoeng Lee.md": {
+        "name": "Chihyoeng Lee",
+        "category": "Doctoral Students",
+        "photo": "이치형.jpg",
         "position": [],
         "alumniType": [],
         "zoom": 1.0
-    },
-    "Seongwon Hwang.md": {
-        "name": "Seongwon Hwang",
-        "category": "Alumni",
-        "photo": "황성원.jpg",
-        "position": [
-            "PhD Student",
-            "University of Southern California"
-        ],
-        "alumniType": [
-            "Master's"
-        ],
-        "zoom": 1.0
-    },
-    "Seoyoung Koh.md": {
-        "name": "Seoyoung Koh",
-        "category": "Master's Students",
-        "photo": "고서영.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.1
     },
     "Jooyoung Moon.md": {
         "name": "Jooyoung Moon",
@@ -148,72 +251,6 @@
         "position": [],
         "alumniType": [],
         "zoom": 0.95
-    },
-    "Jungho Lee.md": {
-        "name": "Jungho Lee",
-        "category": "Alumni",
-        "photo": "이정호.jpg",
-        "position": [
-            "PhD Student",
-            "University of Michigan"
-        ],
-        "alumniType": [
-            "Master's"
-        ],
-        "zoom": 1.0
-    },
-    "Gaju Shin.md": {
-        "name": "Gaju Shin",
-        "category": "Master's Students",
-        "photo": "신가주.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Minhye Kim.md": {
-        "name": "Minhye Kim",
-        "category": "Master's Students",
-        "photo": "김민혜.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Sun Mook Choi.md": {
-        "name": "Sun Mook Choi",
-        "category": "Master's Students",
-        "photo": "최선묵.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 0.95
-    },
-    "Siddhartha Panday.md": {
-        "name": "Siddhartha Panday",
-        "category": "Alumni",
-        "photo": "Siddhartha Panday.jpg",
-        "position": [
-            "Associate Professor",
-            "Hanyang University"
-        ],
-        "alumniType": [
-            "Doctoral"
-        ],
-        "zoom": 1.0
-    },
-    "Eunsik Choi.md": {
-        "name": "Eunsik Choi",
-        "category": "Doctoral Students",
-        "photo": "최은식.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Junsik Oh.md": {
-        "name": "Junsik Oh",
-        "category": "Master's Students",
-        "photo": "오준식.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
     },
     "Jooeun Ahn.md": {
         "name": "Jooeun Ahn",
@@ -227,45 +264,17 @@
         "alumniType": [],
         "zoom": 1.0
     },
-    "Hyeonyong Lee.md": {
-        "name": "Hyeonyong Lee",
-        "category": "Master's Students",
-        "photo": "이현용.jpg",
-        "position": [],
-        "alumniType": [],
-        "zoom": 1.0
-    },
-    "Il Seung Park.md": {
-        "name": "Il Seung Park",
+    "Siddhartha Panday.md": {
+        "name": "Siddhartha Panday",
         "category": "Alumni",
-        "photo": "박일승.jpg",
+        "photo": "Siddhartha Panday.jpg",
         "position": [
-            "PhD Student",
-            "Carnegie Mellon University"
+            "Associate Professor",
+            "Hanyang University"
         ],
         "alumniType": [
-            "Master's"
+            "Doctoral"
         ],
-        "zoom": 0.9
-    },
-    "Chihyoeng Lee.md": {
-        "name": "Chihyoeng Lee",
-        "category": "Doctoral Students",
-        "photo": "이치형.jpg",
-        "position": [],
-        "alumniType": [],
         "zoom": 1.0
-    },
-    "Yoojin Choi.md": {
-        "name": "Yoojin Choi",
-        "category": "Alumni",
-        "photo": "최유진.jpg",
-        "position": [
-            "Exosystems"
-        ],
-        "alumniType": [
-            "Master's"
-        ],
-        "zoom": 0.9
     }
 }
